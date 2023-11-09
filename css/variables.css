@@ -1,5 +1,42 @@
-
+@import url('https://fonts.googleapis.com/css2?family=Belleza&family=Montserrat:wght@300;500;600;700&display=swap');
 
 :root {
+    /*  BACKGROUND COLORS   */
+    --color_bg_main: rgb(242, 242, 238);
+    --color_bg_second: rgb(198, 180, 156);
 
+
+    /*  FONT STYLING    */
+    --font_heading: 'Belleza', sans-serif;
+    --font_size_h1: 96px;
+    --font_size_h2: 60px;
+    --font_size_h3: 30px;
+    --font_paragraph: 'Montserrat', sans-serif;
+    --font_size_p: 17px;
+    --color_font: rgb(30, 30, 30);
+
+
+    /*  BUTTON STYLING  */
+    --color_button_bg: rgb(82, 82, 82);
+    --color_button_font: white;
+    --border_button_radius: 0.5rem;
+    --button_width: 215px;
+    --button_height: 45px;
+    
+
+    /*  ICONS STYLING   */
+    --color_icons: rgb(82, 82, 82);
+    --width_icons: 27px;
+    
+
+    /*  IMG STYLING */
+    --img_hw_grid: 282px;
+    --img_hw_cart: 148px;
+    --img_bg_color: white;
+
+
+    /*  NAV STYLING */
+    --color_links: rgb(30, 30, 30);
+    --font_links: 'Belleza', sans-serif;
+    --font_size_nav: 26px;
 }

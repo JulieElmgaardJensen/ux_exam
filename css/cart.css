@@ -1,0 +1,73 @@
+/* Er lidt i tvivl om man skal lave url på den her? ved ikke hvad han vil have*/
+@import "/css/variables.css";
+
+* {
+    margin: 0;
+    padding: 0;
+}
+
+/*  FOR ALL ELEMENTS    */
+body {
+    background-color: var(--color_bg_main);
+}
+
+h2, h3, h4 {
+    font-family: var(--font_heading);
+    color: var(--color_font);
+}
+
+p, a, ul, li {
+    font-family: var(--font_paragraph);
+    color: var(--color_font);
+}
+
+section {
+    margin-bottom: 15px;
+}
+
+h2 {
+    font-size: 30px;
+    text-align: center;
+}
+
+form {
+
+}
+
+input {
+    border: none;
+    border-radius: calc(var(--border_btn_radius) / 2.5 );
+    width: 100%;
+}
+
+/*  BREADCRUMB  */
+
+/* Style the list */
+ul.breadcrumb {
+    list-style: none;
+  }
+  
+  /* Display list items side by side */
+  ul.breadcrumb li {
+    display: inline;
+    font-size: var(--font_size_p);
+  }
+  
+  /* Add a slash symbol (/) before/behind each list item */
+  ul.breadcrumb li+li:before {
+    padding: 8px;
+    color: var(--color_font);
+    content: "/\00a0";
+  }
+  
+  /* Add a color to all links inside the list */
+  ul.breadcrumb li a {
+    color: var(--color_font);
+    text-decoration: none;
+  }
+
+
+.darker_background {
+    background-color: var(--color_bg_second);
+    padding: 35px;
+}

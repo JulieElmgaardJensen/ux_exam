@@ -17,9 +17,9 @@
 
 
     /*  BUTTON STYLING  */
-    --color_button_bg: rgb(82, 82, 82);
-    --color_button_font: white;
-    --border_button_radius: 0.5rem;
+    --color_btn_bg: rgb(82, 82, 82);
+    --color_btn_font: white;
+    --border_btn_radius: 0.5rem;
     --button_width: 215px;
     --button_height: 45px;
     

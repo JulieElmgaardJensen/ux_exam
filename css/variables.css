@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Belleza&family=Montserrat:wght@300;500;600;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Belleza&family=Montserrat:wght@300;400;500;600;700&display=swap');
 
 :root {
     /*  BACKGROUND COLORS   */
@@ -20,12 +20,12 @@
     --color_btn_bg: rgb(82, 82, 82);
     --color_btn_font: white;
     --border_btn_radius: 0.5rem;
-    --button_width: 215px;
-    --button_height: 45px;
+    --btn_width: 215px;    /* RETTET*/
+    --btn_height: 45px;    /* RETTET*/
     
 
     /*  ICONS STYLING   */
-    --color_icons: rgb(82, 82, 82);
+    --color_icons: rgb(30, 30, 30);
     --width_icons: 27px;
     
 
@@ -39,4 +39,14 @@
     --color_links: rgb(30, 30, 30);
     --font_links: 'Belleza', sans-serif;
     --font_size_nav: 26px;
+
+    /*  DEFAULT MARGIN*/
+    --d_m_body_mobile: 35px;
+    --d_p_body_mobile: 35px;
+
+    --d_m_body_tablet: 35px;
+    --d_p_body_tablet: 35px;
+
+    --d_m_body_desktop: 8%;
+    --d_p_body_desktop: 8%;
 }

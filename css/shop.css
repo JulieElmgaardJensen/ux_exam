@@ -34,14 +34,14 @@ main {
     margin-top: 2rem;
 }
 
-.category-buttons {
+.category_buttons {
     display: grid;
     grid-template-columns: 1fr 1fr;
     margin: 1rem;
     margin-bottom: 3rem;
 }
 
-.category-buttons a { 
+.category_buttons a { 
     background-color: var(--color_btn_bg);
     color: var(--color_btn_font);
     border: none;
@@ -61,7 +61,7 @@ main {
     }
 }
 
-div.bg-img {
+div.bg_img {
     background-color: var(--img_bg_color);
     text-align: center;
     margin-bottom: 5px;

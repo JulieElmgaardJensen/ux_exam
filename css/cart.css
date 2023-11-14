@@ -11,7 +11,7 @@ body {
     background-color: var(--color_bg_main);
 }
 
-h2, h3, h4 {
+h2, h3 {
     font-family: var(--font_heading);
     color: var(--color_font);
 }
@@ -22,17 +22,17 @@ p, a, ul, li, span, i{
 }
 
 
-h2 {
+#cart h2 {
     font-size: 33px;
     text-align: center;
     padding-bottom: var(--d_p_body_mobile);
 }
 
-form {
+#cart form {
     font-family: var(--font_paragraph);
 }
 
-label {
+#cart label {
     font-weight: 400;
     display: block;
 }
@@ -54,7 +54,7 @@ input {
     padding: 5px 0;
 }
 
-i {
+#cart i {
     font-size: 12px;
 }
 
@@ -243,12 +243,12 @@ ul.breadcrumb {
         padding: 0;
     }
 
-    h2 {
+    #cart h2 {
         font-size: 50px;
         text-align: left;
     }
 
-    form {
+    #cart form {
         background-color: var(--color_bg_second);
         border-radius: var(--border_btn_radius);
         padding: 20px;
@@ -273,7 +273,7 @@ ul.breadcrumb {
         font-size: 18px;
     }
 
-    input {
+    #cart input {
         margin-bottom: 30px;
         font-size: 18px;
     }

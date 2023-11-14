@@ -12,6 +12,8 @@
     <script src="https://kit.fontawesome.com/2fdbd81b12.js" crossorigin="anonymous"></script>
     <!-- BURGER MENU SCRIPT -->
     <script src="/js/burger_menu.js"></script>
+    <!-- GET PRODUCTS SCRIPT -->
+    <script src="/js/api_get_products.js"></script>
 
     <title>Shop - Paloma</title>
 </head>
@@ -54,29 +56,33 @@
     <main>
         <h2>Shop</h2>
         <section>
-            <form class="category-buttons">
-                <a href="javascript:void(0);" onclick="">Women’s clothing</a>
-                <a href="javascript:void(0);" onclick="">Men’s clothing</a>
-                <a href="javascript:void(0);" onclick="">Jewerly</a>
-                <a href="javascript:void(0);" onclick="">Electronics</a>
+            <form class="category_buttons">
+                <a href="javascript:void(0);" class="btn_category" onclick="">Women’s clothing</a>
+                <a href="javascript:void(0);" class="btn_category" onclick="">Men’s clothing</a>
+                <a href="javascript:void(0);" class="btn_category" onclick="">Jewerly</a>
+                <a href="javascript:void(0);" class="btn_category" onclick="">Electronics</a>
             </form>
         </section>
         <section id="grid">
             <div class="card">
-                <div class="bg-img">
-                    <img src="" alt="">
+                <div class="bg_img">
+                    <img src="" alt="" class="product_img">
                 </div>
                 <div class="container">
-                    <i class="fa-solid fa-star"></i>
-                    <h4>Men’s clothing</h4>
-                    <h3>Mens Casual Premium Slim Fit T-Shirts</h3>
-                    <p>lorem ipsum lorem ipsum lorem lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum </p>
-                    <p id="price">2.4</p>
-                    <input value="Buy" type="submit" id="submit" class="btn_submit">
+                    <div>
+                        <i class="fa-solid fa-star"></i>
+                        <p class="product_rate">rate</p> 
+                        <p class="product_count">count</p>
+                    </div>
+                    <h4 class="product_category">Men’s clothing</h4>
+                    <h3 class="product_title">Mens Casual Premium Slim Fit T-Shirts</h3>
+                    <p class="product_description">lorem ipsum lorem ipsum lorem lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum </p>
+                    <p id="price" class="product_price">2.4</p>
+                    <input type="submit" id="submit" class="btn_submit">
                 </div>
             </div>
             <div class="card">
-                <div class="bg-img">
+                <div class="bg_img">
                     <img src="" alt="">
                 </div>
                 <div class="container">
@@ -89,7 +95,7 @@
                 </div>
             </div>
             <div class="card">
-                <div class="bg-img">
+                <div class="bg_img">
                     <img src="" alt="">
                 </div>
                 <div class="container">
@@ -102,7 +108,7 @@
                 </div>
             </div>
             <div class="card">
-                <div class="bg-img">
+                <div class="bg_img">
                     <img src="" alt="">
                 </div>
                 <div class="container">

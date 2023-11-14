@@ -1,0 +1,54 @@
+@import "/css/variables.css";
+
+h2, h3, h4 {
+    font-family: var(--font_heading);
+    color: var(--color_font);
+    margin: 2px;
+}
+
+p, input {
+    font-family: var(--font_paragraph);
+    color: var(--color_font);
+    margin: 2px;
+}
+
+body {
+    background-color: var(--color_bg_main);
+    margin: 35px;
+}
+
+h2 {
+    font-size: 30px;
+    text-align: center;
+}
+
+.card {
+    display: grid;
+    transition: 0.3s;
+    width: 20%;
+}
+
+div.bg-img {
+    background-color: var(--img_bg_color);
+    text-align: center;
+    margin-bottom: 5px;
+    img {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+}
+
+input {
+    font-family: var(--font_paragraph);
+    background-color: var(--color_btn_bg);
+    color: var(--color_btn_font);
+    border: none;
+    border-radius: calc(var(--border_btn_radius) / 2.5 );
+    width: 100%;
+    padding: 0.3rem;
+}
+
+@media screen and (min-width: 780px) {
+    
+}

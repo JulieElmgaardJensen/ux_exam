@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" type="image/x-icon" href="/img/favicon.png">
+    <!-- STYLESHEET -->
+    <!-- <link rel="stylesheet" href="/css/login_signup.css">     -->
+    <link rel="stylesheet" href="/css/confirmation.css">
+    <link rel="stylesheet" href="/css/header.css">
+    <link rel="stylesheet" href="/css/footer.css">
+    <!-- FONT AWESOME KIT -->
+    <script src="https://kit.fontawesome.com/2fdbd81b12.js" crossorigin="anonymous"></script>    
+    <!-- BURGER MENU SCRIPT -->
+    <script src="/js/burger_menu.js"></script>
+    
+    <title>Order confirmation - Paloma</title>
+</head>
+<body>
+    <header>
+        <div id="navbar">
+
+        <!-- Logo -->
+            <img id="navbar_logo" src="/img/logo_large.png" alt="Paloma Logo">
+            
+            <div class="navbar_links">
+                
+                <!-- Shop link -->
+                <h3 class="navbar_hide_phone"><a href="/html/shop.html">Shop</a></h3>
+                
+                <!-- Icons -->
+                <div class="navbar_hide_phone"><a href="#"><i class="fa-solid fa-2x fa-user"></i></a></div>
+                <div class="cart"><a href="/html/cart.html"><i class="fa-solid fa-2x fa-cart-shopping"></i></a></div>
+                <div class="navbar_hide_phone"><a href="#"><i class="fa-solid fa-2x fa-right-from-bracket"></i></a></div>
+                
+                <!-- Hamburger menu -->
+                <div class="navbar_hide_desktop">
+                    <a href="javascript:void(0);" onclick="burger_menu_dropdown()">
+                        <i class="fa-solid fa-2x fa-bars"></i>
+                    </a>
+                </div>
+            </div>
+        </div>
+
+        <!-- Hamburger menu contents -->
+        <div id="dropdown_menu">
+            <ul>
+                <li>Shop</li>
+                <li>Account</li>
+                <li>Log out</li>
+            </ul>
+        </div>
+    </header>
+    
+    <main>
+        <section id="cnfrm_box">
+            <div>
+                <h1 id="cnfrm_heading">Order confirmation</h1>
+                <p id="cnfrm_message">Congratulation! Your order has been placed, and will be with you shortly!</p>
+                <a href="shop.html"><button>Go back to shop</button></a>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <section id="footer">
+            <!-- Help & Information -->
+            <article class="footer_links">
+                <h3>Help & Information</h3>
+                <p>Help</p>
+                <p>Delivery</p>
+                <p>Returns</p>
+                <p>Payments</p>
+            </article>
+
+            <!-- About -->
+            <article class="footer_links">
+                <h3>About</h3>
+                <p>About us</p>
+                <p>Career</p>
+            </article>
+
+            <!-- Social icons -->
+            <article id="footer_icons">
+                <h3>Socials</h3>
+                <section>
+                    <a href="#"><i class="fa-brands fa-2x fa-square-facebook"></i></a>
+                    <a href="#"><i class="fa-brands fa-2x fa-instagram"></i></a>  
+                </section>
+            </article> 
+        </section>
+    </footer>
+</body>
+</html>

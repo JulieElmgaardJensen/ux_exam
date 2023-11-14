@@ -1,0 +1,75 @@
+/* IMPORT VARIABLES */
+@import "/css/variables.css";
+
+* {
+    margin: 0;
+    padding: 0;
+}
+
+body{
+    background-color: var(--color_bg_main);
+    font-family: var(--font_paragraph);    
+    text-align: center;
+}
+
+#cnfrm_box{
+    background-color: var(--color_bg_second);
+    margin: 50px 20px 300px 20px;
+    border-radius: calc(var(--border_btn_radius) / 2.5 );
+}
+
+#cnfrm_heading{
+    font-family: var(--font_heading);
+    font-size: var(--font_size_h3);
+    color: var(--color_font);
+    padding-top: 35px;
+}
+
+#cnfrm_message{
+    margin: 20px 30px 0 20px;
+}
+
+button{
+    background-color: var(--color_btn_bg);
+    font-family: var(--font_paragraph);
+    font-size: var(--font_size_p);
+    color: var(--color_btn_font);
+    border: none;
+    border-radius: calc(var(--border_btn_radius) / 2.5 );
+    width: 200px;
+    height: 35px;
+    margin: 35px;
+    cursor: pointer;
+}
+
+@media only screen and (min-width: 587px){
+    #cnfrm_box{
+        margin: 50px 70px 300px 70px;
+    }
+
+    #cnfrm_message{
+        margin: 20px 50px;
+    }
+
+    button{
+        margin: 20px 0 50px 0;
+    }
+}
+
+@media only screen and (min-width: 767px){
+    #cnfrm_box{
+        margin: 40px 100px 200px 100px;
+    }
+}
+
+@media only screen and (min-width: 1024px){
+    #cnfrm_box{
+        margin: 50px 300px 100px 300px;
+    }
+}
+
+@media only screen and (min-width: 1100px){
+    #cnfrm_box{
+        margin: 50px 400px 100px 400px;
+    }
+}

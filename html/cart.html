@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="icon" type="image/x-icon" href="/img/favicon.png">
     <link rel="stylesheet" href="/css/cart.css">
+    <script src="https://kit.fontawesome.com/2fdbd81b12.js" crossorigin="anonymous"></script>
     <title>Cart - Paloma</title>
 </head>
 <body>
@@ -18,45 +19,109 @@
             </ul>
         </section>
 
-        <section>
+        <div class="grid">
+
+        <section class="section_cart">
 
             <h2>Cart</h2>
 
+            <div class="cart_items grid">
+                <div class="cart_item">
+                    <div class="grid">
+                        <img class="img_cart" src="/img/favicon.png">
+                            <span class="cart_item_title">WD 2TB Elements Portable External Hard Drive - USB 3.0</span>
+                            <div class="cart_price_remove">
+                            <span class="cart_price">5.99 $</span>
+                            <button class="btn_remove fa-solid fa-trash-can fa-1x" type="button"></button>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="cart_item">
+                    <div class="grid">
+                        <img class="img_cart" src="/img/favicon.png">
+                        <span class="cart_item_title">White Gold Plated Princess</span>
+                        <div  class="cart_price_remove">
+                        <span class="cart_price">20.00 $</span>
+                        <button class="btn_remove fa-solid fa-trash-can fa-1x" type="button"></button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+           
         </section>
 
+        <section class="section_order_info">
+            <div class="order_info">
+                <h2 class="heading_order">Order information</h2>
+                <form action="" id="frm_order" method="">
+                    <label for="name">Name</label>
+                    <input type="text" id="name" name="name" required>
+    
+                    <label for="d_address">Delivery address</label>
+                    <input type="text" id="d_address" name="d_address" required>
+                    <div class="flex">
+                        <div class="div_p_code">
+                            <label for="p_code" id="lbl_p_code">Postal code</label>
+                            <input type="text" id="p_code" name="p_code" required>
+                        </div>
+                        <div class="div_city">
+                            <label for="city" id="lbl_city">City</label>
+                            <input type="text" id="city" name="city" required>
+                        </div>
+                    </div>
+    
+                    <label for="b_address">Billing address</label>
+                    <input type="text" id="b_address" name="b_address" required>
+    
+                    <div class="flex">
+                        <div class="div_p_code">
+                            <label for="p_code" id="lbl_p_code">Postal code</label>
+                            <input type="text" id="p_code" name="p_code" required>
+                        </div>
+                        <div class="div_city">
+                            <label for="city" id="lbl_city">City</label>
+                            <input type="text" id="city" name="city" required>
+                        </div>
+                    </div>
 
-        <section class="darker_background">
-            <h2>Order information</h2>
-            
-            <form action="" id="frm_order" method="">
-                <label for="name">Name</label>
-                <input type="text" id="name" name="name" required>
+                    <label for="credit_card">Credit card</label>
+                    <input type="number" id="credit_card" name="credit_card" required>
+                    
+                    <div class="flex">
+                        <div class="div_exp_date">
+                            <label for="exp_date" id="lbl_exp_date">Exp date</label>
+                            <input type="number" id="exp_date" name="exp_date" required>
+                        </div>
 
-                <label for="d_address">Delivery address</label>
-                <input type="text" id="d_address" name="d_address" required>
-
-                <label for="p_code">Postal code</label>
-                <input type="text" id="p_code" name="p_code" required>
-
-                <label for="city">City</label>
-                <input type="text" id="city" name="city" required>
-
-                <label for="b_address">Billing address</label>
-                <input type="text" id="b_address" name="b_address" required>
-
-                <label for="">Credit card</label>
-                <input type="number" id="credit_card" name="credit_card" required>
-
-                <label for="exp_date">Exp date</label>
-                <input type="number" id="exp_date" name="exp_date" required>
-
-                <label for="cvc">CVC</label>
-                <input type="number" id="cvc" name="cvc" required>
-
-                <input type="submit" id="submit" class="btn_submit">
-            </form>
+                        <div class="div_cvc">
+                            <label for="cvc" id="lbl_cvc">CVC</label>
+                            <input type="number" id="cvc" name="cvc" required>
+                        </div>
+                    </div>
+                </form>
+            </div>
         </section>
-
+        <section class="section_cart_total">
+            <div class="cart_total">
+                <div class="cart_row">
+                    <p>Subtotal</p>
+                    <span class="cart_total_price">25.99 $</span>
+                </div>
+                <div class="cart_row">
+                    <p>Delivery fee</p>
+                    <span class="cart_total_price">5.00 $</span>
+                </div>
+                <div class="cart_row">
+                    <p>Total</p>
+                    <span class="cart_total_price">30.99 $</span>
+                </div>
+                <i>*Tax of 20% included</i>
+            </div>
+                    <input type="button" id="btn_purchase" class="btn_purchase" value="Confirm purchase">
+            <a href="/html/shop.html" class="txt_center">Continue shopping?</a>
+        </section>
+    </div>
     </main>
     <footer></footer>
 </body>

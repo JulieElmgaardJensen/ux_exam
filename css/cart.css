@@ -21,9 +21,6 @@ p, a, ul, li, span, i{
     color: var(--color_font);
 }
 
-section {
-    margin-bottom: 15px;
-}
 
 h2 {
     font-size: 33px;

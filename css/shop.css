@@ -1,5 +1,10 @@
 @import "/css/variables.css";
 
+* {
+    margin: 0;
+    padding: 0;
+}
+
 h2, h3, h4 {
     font-family: var(--font_heading);
     color: var(--color_font);
@@ -14,7 +19,6 @@ p, input {
 
 body {
     background-color: var(--color_bg_main);
-    margin: 35px;
 }
 
 h2 {

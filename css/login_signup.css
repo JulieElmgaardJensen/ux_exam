@@ -1,0 +1,109 @@
+@import "/css/variables.css";
+
+/* IDÉER TIL FLERE VARIABLER TIL FORM INPUTS */
+/* --form_input_padding: 5px;
+--form_input_margin: 3px 0 10px 0;
+--form_input_width: 100%; */
+
+*{
+    margin: 0;
+    padding: 0;
+}
+
+body{
+    padding: 35px;
+    background-color: var(--color_bg_second);
+    font-family: var(--font_paragraph);
+    font-size: var(--font_size_p);
+    color: var(--color_font);
+}
+
+h1{
+    font-family: var(--font_heading);
+    font-size: var(--font_size_h3);
+    color: var(--color_font);
+    text-align: center;
+    margin-bottom: 35px;
+}
+
+/* Form */
+input{
+    border: none;
+    border-radius: calc(var(--border_btn_radius) / 2.5 );
+    width: 100%;
+    font-family: var(--font_paragraph);
+    font-size: var(--font_size_p);
+    color: var(--color_font);
+    padding: 5px 0;
+    margin: 3px 0 10px 0;
+}
+
+#email{
+    margin-bottom: 35px;
+}
+
+button{
+    background-color: var(--color_btn_bg);
+    font-family: var(--font_paragraph);
+    font-size: var(--font_size_p);
+    color: var(--color_btn_font);
+    border: none;
+    border-radius: calc(var(--border_btn_radius) / 2.5 );
+    width: 120px;
+    height: 35px;
+    margin-top: 35px;
+}
+
+.frm_btn{
+    text-align: center;
+}
+
+
+/* Forgot password link */
+a{
+    text-decoration: none;
+    color: var(--color_font);
+    font-size: 12px;
+}
+
+.forgot_password{
+    text-align: right;
+}
+
+
+
+/* Tablet */
+@media (min-width: 768px){
+    body{
+        padding: 50px 200px;
+        background-color: var(--color_bg_main);
+    }
+
+    main{
+        background-color: var(--color_bg_second);
+        padding: 50px;
+        border-radius: calc(var(--border_btn_radius) / 2.5 );
+    }
+
+    #email{
+        margin-bottom: 50px;
+    }
+}
+
+/* Screen bigger than 1024px */
+@media (min-width: 1024px){
+    body{
+        padding: 50px 300px;
+    }
+
+    main{
+        padding: 50px 70px;
+    }
+}
+
+/* Screen bigger than 1200px */
+@media (min-width: 1200px){
+    body{
+        padding: 50px 400px;
+    }
+}

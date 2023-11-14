@@ -5,7 +5,7 @@ git status - make sure you are in main <br/>
 git pull - make sure you have everything <br/>
 git checkout -b 'change to the name you want' - creating a branch <br/>
 <-- coding good shit --> <br/>
-git add . -  <br/>
+git add .  <br/>
 git commit -m "message" <br/>
 git push - pushing to main <br/>
 <-- now you have go back to main --> <br/>

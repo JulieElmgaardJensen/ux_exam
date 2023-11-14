@@ -11,14 +11,10 @@ h2, h3, h4 {
     margin: 2px;
 }
 
-p, input {
+p, input, a {
     font-family: var(--font_paragraph);
     color: var(--color_font);
     margin: 2px;
-}
-
-.container p#price {
-    margin-top: 2rem;
 }
 
 body {
@@ -34,9 +30,35 @@ main {
     margin: var(--d_m_body_tablet);
 }
 
+.container p#price {
+    margin-top: 2rem;
+}
+
+.category-buttons {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    margin: 1rem;
+    margin-bottom: 3rem;
+}
+
+.category-buttons a { 
+    background-color: var(--color_btn_bg);
+    color: var(--color_btn_font);
+    border: none;
+    border-radius: calc(var(--border_btn_radius) / 2.5 );
+    padding: 0.3rem;
+    text-decoration:none;
+    text-align: center;
+    margin: 5px;
+}
+
 .card {
     transition: 0.3s;
     width: 100%;
+    
+    .container input {
+        width: 100%;
+    }
 }
 
 div.bg-img {
@@ -55,7 +77,6 @@ input {
     color: var(--color_btn_font);
     border: none;
     border-radius: calc(var(--border_btn_radius) / 2.5 );
-    width: 100%;
     padding: 0.3rem;
 }
 
@@ -63,6 +84,13 @@ input {
 
     main {
         margin: 0 var(--d_m_body_desktop);
+    }
+
+    .category-buttons {
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr 1fr;
+        margin: 1rem;
+        padding: 1rem;
     }
 
     #grid {

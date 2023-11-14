@@ -1,0 +1,165 @@
+/* IMPORT VARIABLES */
+@import "/css/variables.css";
+
+/* MOBILE */
+@media only screen and (max-width: 767px) {
+    /* Navbar style + flexbox */
+    #navbar{
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        padding: 10px 0;
+    }
+
+    /* Icons style */
+    #navbar a{
+        margin: 10px;
+        color: var(--color_icons);
+        align-self: center;
+        color: inherit;
+    }
+
+    #navbar i{
+        color: var(--color_icons);
+    }
+
+    .navbar_links{
+        display: flex;
+        align-items: center;
+    }
+
+    /* Hide the icons on phone */
+    .navbar_hide_phone{
+        display: none;
+    }
+
+    /* Dropdown menu */
+
+    #dropdown_menu{
+        display: none;
+        font-size: var(--font_size_nav);
+        font-family: var(--font_links);
+    }
+
+    #dropdown_menu ul{
+        margin: 0;
+        padding: 0;
+        background-color: var(--color_bg_second);
+    }
+
+    #dropdown_menu li{
+        list-style-type: none;
+        border-top: 1px solid var(--color_bg_main);
+        padding: 20px;
+        display: flex;
+        justify-content: center;
+    }
+
+    /* Logo */
+    #navbar img{
+        width: 250px;
+        align-self: center;
+    }
+}
+
+/* TABLET */
+@media only screen and (min-width: 768px) and (max-width: 1023px) {
+    /* Navbar style */
+    #navbar{
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        padding: 10px 0;
+        border-bottom: 1px solid var(--color_bg_second);
+    }
+
+    /* Icon style */
+    #navbar a{
+        margin: 10px;
+        color: var(--color_icons);
+        align-self: center;
+        color: inherit;
+        padding-right: 10px;
+    }
+
+    .navbar_links{
+        display: flex;
+        align-items: center;
+    }
+
+    #navbar i{
+        color: var(--color_icons);
+    }
+
+    
+    #navbar h3 a{
+        font-size: var(--font_size_nav);
+        text-decoration: none;
+    }
+
+    /* Dropdown menu */
+    #dropdown_menu{
+        display: none;
+    }
+
+    /* Logo */
+    #navbar img{
+        width: 250px;
+        align-self: center;
+    }
+
+    /* Hide burger menu */
+    #navbar .navbar_hide_desktop{
+        display: none;
+    }
+
+}
+
+/* DESKTOP */
+@media only screen and (min-width: 1024px) {
+    /* Navbar style */
+    #navbar{
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        padding: 10px 0;
+        border-bottom: 1px solid var(--color_bg_second);
+    }
+
+    /* Icons style */
+    #navbar a{
+        margin: 10px;
+        color: var(--color_icons);
+        align-self: center;
+        color: inherit;
+        padding-right: 15px;
+    }
+
+    .navbar_links{
+        display: flex;
+        align-items: center;
+    }
+
+    #navbar h3 a{
+        font-size: var(--font_size_nav);
+        text-decoration: none;
+    }
+
+    #navbar i{
+        color: var(--color_icons);
+    }
+
+    /* Dropdown */
+    #dropdown_menu{
+        display: none;
+    }
+
+    /* Logo */
+    #navbar img{
+        width: 250px;
+    }
+
+    #navbar .navbar_hide_desktop{
+        display: none;
+    }
+}

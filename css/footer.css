@@ -1,0 +1,79 @@
+/* IMPORT VARIABLES */
+@import "/css/variables.css";
+
+/* Footer placement */
+#footer{
+    position: fixed;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+}
+
+/* MOBILE */
+@media only screen and (max-width: 767px) {
+
+    /* Flexbox */
+    #footer{
+        display: flex;
+        flex-wrap: wrap;
+        border-top: 1px solid var(--color_bg_second);
+        padding: 10px;
+    }
+
+    .footer_links{
+        width: 50%;
+    }
+
+    .footer_links p, .footer_links h3{
+        padding: 0 10%;
+    }
+
+    /* Icons */
+    #footer_icons{
+        width: 100%;
+        display: flex;
+        justify-content: center;
+    }
+
+    #footer_icons i{
+        color: var(--color_icons);
+        padding: 10px;
+    }
+
+    #footer_icons h3{
+        display: none;
+    }
+}
+
+/* TABLET + DESKTOP*/
+@media only screen and (min-width: 768px){
+    /* Flexbox */
+    #footer{
+        display: flex;
+        border-top: 1px solid var(--color_bg_second);
+    }
+
+    .footer_links p, .footer_links h3{
+        margin: 15px;
+    }
+
+    #footer article{
+        width: 33%;
+        padding: 30px 10%
+    }
+
+    /* Icons */
+    #footer_icons{
+        display: flex;
+        flex-direction: column;
+    }
+
+    #footer_icons section{
+        display: flex;
+    }
+
+    #footer_icons i{
+        color: var(--color_icons);
+        padding: 10px;
+    }
+}

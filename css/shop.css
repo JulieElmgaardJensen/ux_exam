@@ -54,10 +54,11 @@ main {
 
 .card {
     transition: 0.3s;
-    width: 100%;
-    
+    width: 220px;
+    margin-left: auto;
+    margin-right: auto;
     .container input {
-        width: 100%;
+        width: 98%;
     }
 }
 
@@ -72,6 +73,18 @@ div.bg_img {
     }
 }
 
+.bg_img {
+    height: 220px;
+    margin-left: auto;
+    margin-right: auto;
+
+}
+
+.product_img {
+    height: -webkit-fill-available;
+}
+
+
 input {
     background-color: var(--color_btn_bg);
     color: var(--color_btn_font);
@@ -80,6 +93,45 @@ input {
     padding: 0.3rem;
 }
 
+
+/* JULIE HAR INDSAT KODE HER - bare så det ikke så helt skørt ud når man åbnede - det må meget gerne fjernes/rettes til*/
+
+.bg_img {
+    width: 220px;
+    height: 220px;
+}
+.product_img {
+    max-width: 220px;
+    max-height: 220px;
+}
+
+.flex {
+    display: flex;
+}
+
+.product_rate {
+    padding-left: 10px;
+}
+
+.product_price_submit {
+    display: flex;
+    margin-top: auto;
+}
+
+/* JULIE SLUT HER */
+@media only screen and (min-width: 587px) {
+    
+
+    #grid {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        grid-column-gap: 25px;
+        grid-row-gap: 50px;
+    }
+
+}
+
+/*  DESKTOP */
 @media only screen and (min-width: 1024px) {
 
     main {
@@ -99,9 +151,10 @@ input {
     }
 
     .card {
+        
         transition: 0.3s;
-        width: auto;
-        margin: 1rem;
+        width: 220px;
+
     }
 }
 
@@ -119,6 +172,6 @@ input {
     .card {
         transition: 0.3s;
         width: auto;
-        margin: 1rem;
+
     }
 }

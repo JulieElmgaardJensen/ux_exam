@@ -1,9 +1,14 @@
 /* IMPORT VARIABLES */
 @import "/css/variables.css";
 
-div {
+#navbar div {
     margin-bottom: 15px;
 }
+
+h3, a {
+    font-family: var(--font_links);
+}
+
 
 /* MOBILE */
 @media only screen and (max-width: 767px) {
@@ -61,7 +66,7 @@ div {
 
     /* Logo */
     #navbar img{
-        width: 250px;
+        width: 150px;
         align-self: center;
     }
 }
@@ -99,7 +104,8 @@ div {
     #navbar h3 a{
         font-size: var(--font_size_nav);
         text-decoration: none;
-    }
+        
+    } 
 
     /* Dropdown menu */
     #dropdown_menu{
@@ -108,7 +114,7 @@ div {
 
     /* Logo */
     #navbar img{
-        width: 250px;
+        width: 200px;
         align-self: center;
     }
 

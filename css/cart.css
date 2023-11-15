@@ -1,4 +1,4 @@
-/* Er lidt i tvivl om man skal lave url på den her? ved ikke hvad han vil have*/
+/* IMPORT VARIABLES*/
 @import "/css/variables.css";
 
 * {
@@ -6,7 +6,6 @@
     padding: 0;
 }
 
-/*  FOR ALL ELEMENTS    */
 body {
     background-color: var(--color_bg_main);
 }
@@ -16,23 +15,22 @@ h2, h3 {
     color: var(--color_font);
 }
 
-p, a, ul, li, span, i{
+p, a, span, i{
     font-family: var(--font_paragraph);
     color: var(--color_font);
 }
 
-
-#cart h2 {
+h2 {
     font-size: 33px;
     text-align: center;
     padding-bottom: var(--d_p_body_mobile);
 }
 
-#cart form {
+form {
     font-family: var(--font_paragraph);
 }
 
-#cart label {
+label {
     font-weight: 400;
     display: block;
 }
@@ -54,9 +52,20 @@ input {
     padding: 5px 0;
 }
 
-#cart i {
+.txt_center {
+    justify-content: center;
+    display: flex;
+    margin-right: auto;
+    margin-left: auto;
+}
+
+/* ICONS */
+
+i {
     font-size: 12px;
 }
+
+
 
 /*  BREADCRUMB  */
 
@@ -68,8 +77,10 @@ ul.breadcrumb {
   ul.breadcrumb li {
     display: inline;
     font-size: calc(var(--font_size_p)/1.5);
+    font-family: var(--font_paragraph);
+    color: var(--color_font);
 }
-  /* tilføjer / før og efter*/
+  /* add / before and after*/
   ul.breadcrumb li+li:before {
     padding: 3px;
     color: var(--color_font);
@@ -81,7 +92,7 @@ ul.breadcrumb {
     text-decoration: none;
 }
 
-/*      */
+/* BUTTON CONFIRM PUCHASE */
 
 .btn_purchase {
     background-color: var(--color_btn_bg);
@@ -99,12 +110,12 @@ ul.breadcrumb {
     padding: 8px 0;
 }
 
-.txt_center {
-    justify-content: center;
-    display: flex;
-    margin-right: auto;
-    margin-left: auto;
+/* FORM */
+
+.section_cart {
+    margin-bottom: 35px;
 }
+
 
 .section_cart > .grid {
     display: grid; 
@@ -243,12 +254,12 @@ ul.breadcrumb {
         padding: 0;
     }
 
-    #cart h2 {
+    h2 {
         font-size: 50px;
         text-align: left;
     }
 
-    #cart form {
+    form {
         background-color: var(--color_bg_second);
         border-radius: var(--border_btn_radius);
         padding: 20px;
@@ -273,7 +284,7 @@ ul.breadcrumb {
         font-size: 18px;
     }
 
-    #cart input {
+    input {
         margin-bottom: 30px;
         font-size: 18px;
     }

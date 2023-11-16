@@ -44,21 +44,22 @@ document.addEventListener('DOMContentLoaded', (e) => {
                                     <div class="bg_img">
                                         <img src="${image}" alt="" class="product_img">
                                     </div>
-                                    <div class="container">
-                                        <div class="flex">
-                                            <i class="fa-solid fa-star"></i>
-                                            <p class="product_rate">${rate}</p> 
-                                            <p class="product_count">(${count})</p>
-                                        </div>
-                                        <h4 class="product_category">${category}</h4>
-                                        <h3 class="product_title">${title}</h3>
-                                        <p class="product_description">${description}</p
-                                        <div class="product_price_submit">
+                                    
+                                    <div class="flex">
+                                        <i class="fa-solid fa-star"></i>
+                                        <p class="product_rate">${rate}</p> 
+                                        <p class="product_count">(${count})</p>
+                                    </div>
+                                    <h4 class="product_category">${category}</h4>
+                                    <h3 class="product_title">${title}</h3>
+                                    <p id="text_id${id}" class="show_text">${description}</p>
+                                    <button id="show_more_description${id}" onclick="toggleText('${id}')" class="btn_show_description">Show More</button>
+                                    <div class="product_price_submit">
                                         <p id="price" class="product_price">${price} $</p>
                                         <!--ID'et skal passes i knappen tror jeg-->
                                         <input type="submit" id="submit" class="btn_submit" value="Add to cart"> 
-                                        </div>
                                     </div>
+                                    
                                 </div>
                                 `;
 
@@ -67,3 +68,24 @@ document.addEventListener('DOMContentLoaded', (e) => {
     }
     fetch_products('https://fakestoreapi.com/products')
 });
+
+function toggleText(productId) {
+    // Construct the id for the text element based on the productId
+    var textElement = document.getElementById(`text_id${productId}`);
+    
+    // Construct the id for the button element based on the productId
+    var buttonElement = document.getElementById(`show_more_description${productId}`);
+
+    // Check if the textElement has the 'show_text' class
+    if (textElement.classList.contains('show_text')) {
+        // If it has the class, remove it to hide the text
+        textElement.classList.remove('show_text');
+        // Change the button text to 'Show Less'
+        buttonElement.textContent = 'Show Less';
+    } else {
+        // If it doesn't have the class, add it to display the full text
+        textElement.classList.add('show_text');
+        // Change the button text to 'Show More'
+        buttonElement.textContent = 'Show More';
+    }
+}

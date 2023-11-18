@@ -17,14 +17,15 @@ const product_price = document.getElementsByClassName("product_price");
 document.addEventListener('DOMContentLoaded', (e) => {
     e.preventDefault();
     
-    let products = document.querySelector('.product')
+    let products = document.querySelector('.product');
 
     // FETCH PRODUCTS
     async function fetch_products(url) {
         let data = await fetch(url);
         let response = await data.json();
 
-        console.log(response)
+        // Clear existing products
+        products.innerHTML = '';
 
     // LOOP ELEMENTS IN
     for (let i = 0; i < response.length; i++) {
@@ -38,8 +39,7 @@ document.addEventListener('DOMContentLoaded', (e) => {
         const image = response[i].image;
         const rate = response[i].rating.rate;
         const count = response[i].rating.count;
-
-
+        
         products.innerHTML += ` <div class="card">
                                     <div class="bg_img">
                                         <img src="${image}" alt="" class="product_img">
@@ -66,7 +66,37 @@ document.addEventListener('DOMContentLoaded', (e) => {
         }
         
     }
-    fetch_products('https://fakestoreapi.com/products')
+
+            // Get the category from button
+            const womens = document.getElementById('btn_womens');
+            const jewelery = document.getElementById('btn_jewelery');
+            const mens = document.getElementById('btn_mens');
+            const electronics = document.getElementById('btn_electronics');
+
+            let fetch_url = 'https://fakestoreapi.com/products';
+
+            womens.addEventListener('click', function () {
+                fetch_url = "https://fakestoreapi.com/products/category/women's%20clothing";
+                fetch_products(fetch_url);
+            });
+
+            jewelery.addEventListener('click', function () {
+                fetch_url = 'https://fakestoreapi.com/products/category/jewelery';
+                fetch_products(fetch_url);
+            });
+
+            mens.addEventListener('click', function () {
+                fetch_url = "https://fakestoreapi.com/products/category/men's%20clothing";
+                fetch_products(fetch_url);
+            });
+
+            electronics.addEventListener('click', function () {
+                fetch_url = 'https://fakestoreapi.com/products/category/electronics';
+                fetch_products(fetch_url);
+            }); 
+
+            // Fetch all products
+            fetch_products(fetch_url);
 });
 
 function toggleText(productId) {

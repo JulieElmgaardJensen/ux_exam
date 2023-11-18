@@ -14,6 +14,8 @@
     <script src="/js/burger_menu.js"></script>
     <!-- GET PRODUCTS SCRIPT -->
     <script src="/js/get_products.js"></script>
+    <!-- Get category from button -->
+    <script src="/js/get_specific_category.js"></script>
 
     <title>Shop - Paloma</title>
 </head>
@@ -22,26 +24,26 @@
         <div id="navbar">
 
         <!-- Logo -->
-            <img id="navbar_logo" src="/img/logo_large.png" alt="Paloma Logo">
+        <a href="/html/shop.html"><img id="navbar_logo" src="/img/logo_large.png" alt="Paloma Logo"></a>
+        
+        <div class="navbar_links">
             
-            <div class="navbar_links">
-                
-                <!-- Shop link -->
-                <h3 class="navbar_hide_phone"><a href="/html/shop.html">Shop</a></h3>
-                
-                <!-- Icons -->
-                <div class="navbar_hide_phone"><a href="#"><i class="fa-solid fa-2x fa-user"></i></a></div>
-                <div class="cart"><a href="/html/cart.html"><i class="fa-solid fa-2x fa-cart-shopping"></i></a></div>
-                <div class="navbar_hide_phone"><a href="/html/login.html"><i class="fa-solid fa-2x fa-right-from-bracket"></i></a></div>
-                
-                <!-- Hamburger menu -->
-                <div class="navbar_hide_desktop">
-                    <a href="javascript:void(0);" onclick="burger_menu_dropdown()">
-                        <i class="fa-solid fa-2x fa-bars"></i>
-                    </a>
-                </div>
+            <!-- Shop link -->
+            <h3 class="navbar_hide_phone"><a href="/html/shop.html">Shop</a></h3>
+            
+            <!-- Icons -->
+            <div class="navbar_hide_phone"><a href="#"><i class="fa-solid fa-lg fa-user"></i></a></div>
+            <div class="cart"><a href="/html/cart.html"><i class="fa-solid fa-lg fa-cart-shopping"></i></a></div>
+            <div class="navbar_hide_phone"><a href="#"><i class="fa-solid fa-lg fa-right-from-bracket"></i></a></div>
+            
+            <!-- Hamburger menu -->
+            <div class="navbar_hide_desktop">
+                <a href="javascript:void(0);" onclick="burger_menu_dropdown()">
+                    <i class="fa-solid fa-lg fa-bars"></i>
+                </a>
             </div>
         </div>
+    </div>
 
         <!-- Hamburger menu contents -->
         <div id="dropdown_menu">
@@ -57,10 +59,10 @@
         <h2>Shop</h2>
         <section>
             <form class="category_buttons">
-                <a href="javascript:void(0);" class="btn_category" onclick="">Women’s clothing</a>
-                <a href="javascript:void(0);" class="btn_category" onclick="">Men’s clothing</a>
-                <a href="javascript:void(0);" class="btn_category" onclick="">Jewerly</a>
-                <a href="javascript:void(0);" class="btn_category" onclick="">Electronics</a>
+                <a href="javascript:void(0);" id="btn_womens" onclick="">Women’s clothing</a>
+                <a href="javascript:void(0);" id="btn_mens" onclick="">Men’s clothing</a>
+                <a href="javascript:void(0);" id="btn_jewelery" onclick="">Jewelery</a>
+                <a href="javascript:void(0);" id="btn_electronics" onclick="">Electronics</a>
             </form>
         </section>
         <section id="grid" class="product">

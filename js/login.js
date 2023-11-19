@@ -11,11 +11,11 @@ document.getElementById('frm_login').addEventListener('submit', async function(e
     const password_input = document.getElementById('password');
 
     // // TRIMMING EMAIL AND PASSWORD INPUT (KAN IKKE FÅ INPUT TIL AT VÆRE VALID MED MINDRE DEN TRIMMER???)
-    const email = email_input.value.trim();
-    const password = password_input.value.trim();
+    const email = email_input.value;
+    const password = password_input.value;
 
    // LOGGING EMAIL AND PASSWORD
-   console.log(email_input.value, password_input.value);
+   console.log(email, password);
 
     try {
         // ASYNC HTTP REQUEST FOR JSON SERVER

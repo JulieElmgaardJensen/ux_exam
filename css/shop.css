@@ -22,7 +22,7 @@ body {
 }
 
 h2 {
-    font-size: 30px;
+    font-size: 35px;
     text-align: center;
 }
 
@@ -81,17 +81,6 @@ div.bg_img {
     align-items: center;
 }
 
-.bg_img {
-    height: 220px;
-    margin-left: auto;
-    margin-right: auto;
-
-}
-
-.product_img {
-    height: -webkit-fill-available;
-}
-
 input {
     background-color: var(--color_btn_bg);
     color: var(--color_btn_font);
@@ -130,7 +119,7 @@ input {
     padding-bottom: 2rem;
 }
 
-/* JULIE SLUT HER */
+/* TABLET */
 @media only screen and (min-width: 587px) {
     
     #grid {
@@ -143,6 +132,10 @@ input {
 
 /*  DESKTOP */
 @media only screen and (min-width: 1024px) {
+
+    h2 {
+        font-size: 50px;
+    }
 
     main {
         margin: 0 var(--d_m_body_desktop);
@@ -170,6 +163,7 @@ input {
     }
 }
 
+/* LARGE DESKTOP */
 @media only screen and (min-width: 1200px) {
 
     main {

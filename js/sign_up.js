@@ -1,4 +1,5 @@
 //Install server: npm install -g json-server
+//Install server mac: npm i json-server / sudo npm install -g json-server
 //start server: json-server db.json
 //If the server wont start type: Set-ExecutionPolicy RemoteSigned -Scope CurrentUser
 
@@ -6,7 +7,7 @@
 'use strict';
 
 //Regex 
-const password_validator = /^(?=.*[a-z])(?=.*[A-Z])(?=.*\d)(?=.*[@$!%*?&])[A-Za-z\d@$!%*?&]{8,20}$/;
+const password_validator = /^(?=.*[a-z])(?=.*[A-Z])(?=.*\d)(?=.*[@$!%*?&.])[A-Za-z\d@$!%*?&.,/#+-_()=|;:{}]{8,20}$/;
 
 // Get the url for the json server
 const url = 'http://localhost:3000/users'; // Replace with your JSON server endpoint

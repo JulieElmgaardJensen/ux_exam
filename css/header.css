@@ -5,6 +5,10 @@ h3, a {
     font-family: var(--font_links);
 }
 
+header {
+    margin-bottom: 35px;
+}
+
 /* MOBILE */
 @media only screen and (max-width: 767px) {
     /* Navbar style + flexbox */

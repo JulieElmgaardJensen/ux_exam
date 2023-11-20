@@ -10,11 +10,11 @@ document.getElementById('frm_login').addEventListener('submit', async function(e
     const email_input = document.getElementById('email');
     const password_input = document.getElementById('password');
 
-    // // TRIMMING EMAIL AND PASSWORD INPUT (KAN IKKE FÅ INPUT TIL AT VÆRE VALID MED MINDRE DEN TRIMMER???)
+    // EMAIL AND PASSWORD INPUT
     const email = email_input.value;
     const password = password_input.value;
 
-   // LOGGING EMAIL AND PASSWORD
+   // LOGGING EMAIL AND PASSWORD IN CONSOLE
    console.log(email, password);
 
     try {

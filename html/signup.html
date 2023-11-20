@@ -8,26 +8,38 @@
     <title>Signup - Paloma</title>
 </head>
 <body>
+    <!-- Logo -->
+    <header class="header_logo_only">
+        <img class="logo" src="/img/logo_large.png" alt="Paloma logo">
+    </header>
+    
     <main>
         <section>
             <h1>Signup</h1>
         </section>
 
+        <!-- Signup form -->
         <section>  
             <form action="" id="frm_signup" method="">
+                <!-- Email -->
                 <label for="name">Email</label>
                 <input type="email" id="email" name="email" required>
 
+                <!-- Password -->
                 <label for="password">Password</label>
+                <div><p class="extra_info">Password must be at least 8 characters in length and contain at least 1 upper case, 3 numbers and 1 special character</p></div>
                 <input type="password" id="password" name="password" required>
 
+                <!-- Confirm password -->
                 <label for="confirm_password">Confirm password</label>
                 <input type="password" id="confirm_password" name="confirm_password" required>
 
                 <div class="frm_btn">
+                    <!-- Signup button -->
                     <button type="submit" form="frm_signup" value="Signup" id="submit_signup">Signup</button>
-                        
-                    <div><a href="login.html">Or login?</a></div>                    
+                    
+                    <!-- Link to login -->
+                    <div><a class="extra_info" href="login.html">Or login?</a></div>                    
                 </div>
             </form>
         </section>

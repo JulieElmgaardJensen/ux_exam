@@ -68,32 +68,57 @@ document.addEventListener('DOMContentLoaded', (e) => {
     }
 
             // Get the category from button
+            const remove_filter = document.getElementById('btn_remove_filter');
             const womens = document.getElementById('btn_womens');
-            const jewelery = document.getElementById('btn_jewelery');
+            const jewelry = document.getElementById('btn_jewelry');
             const mens = document.getElementById('btn_mens');
             const electronics = document.getElementById('btn_electronics');
 
             let fetch_url = 'https://fakestoreapi.com/products';
 
+            // Hide button btn_all_products
+            remove_filter.style.display = "none";
+
+            // Function to show remove_filter button
+            function hide_remove_filter_button() {
+                remove_filter.style.display = "none";
+            }
+            
+            // Function to hide remove_filter button
+            function show_remove_filter_button() {
+                remove_filter.style.display = "block";
+            }
+
             womens.addEventListener('click', function () {
                 fetch_url = "https://fakestoreapi.com/products/category/women's%20clothing";
                 fetch_products(fetch_url);
+                show_remove_filter_button();
             });
 
-            jewelery.addEventListener('click', function () {
+            jewelry.addEventListener('click', function () {
                 fetch_url = 'https://fakestoreapi.com/products/category/jewelery';
                 fetch_products(fetch_url);
+                show_remove_filter_button();
             });
 
             mens.addEventListener('click', function () {
                 fetch_url = "https://fakestoreapi.com/products/category/men's%20clothing";
                 fetch_products(fetch_url);
+                show_remove_filter_button();
             });
 
             electronics.addEventListener('click', function () {
                 fetch_url = 'https://fakestoreapi.com/products/category/electronics';
                 fetch_products(fetch_url);
+                show_remove_filter_button();
             }); 
+
+            // Event listener for remove_filter button
+            remove_filter.addEventListener('click', function () {
+                fetch_url = 'https://fakestoreapi.com/products';
+                fetch_products(fetch_url);
+                hide_remove_filter_button();
+            });
 
             // Fetch all products
             fetch_products(fetch_url);

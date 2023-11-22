@@ -21,6 +21,7 @@
 #footer a {
     text-decoration: none;
     font-weight: 600;
+    color: var(--color_font);
 }
 
 #text_copyright {
@@ -40,14 +41,19 @@
         flex-wrap: wrap;
         border-top: 1px solid var(--color_bg_second);
         padding: 10px 0;
+        text-align: center;
     }
 
     .footer_links{
-        width: 50%;
+        width: 100%;
     }
 
     .footer_links p, .footer_links h3{
         padding: 0 10%;
+    }
+
+    #footer li {
+        font-size: 13px;
     }
 }
 
@@ -57,10 +63,12 @@
     #footer{
         display: flex;
         border-top: 1px solid var(--color_bg_second);
+        
     }
 
     #footer article{
         width: 33%;
-        padding: 30px 10%
+        padding: 30px 10%;
+        text-align: left;
     }
 }

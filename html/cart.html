@@ -11,7 +11,9 @@
     <!-- FONT AWESOME KIT -->
     <script src="https://kit.fontawesome.com/2fdbd81b12.js" crossorigin="anonymous"></script>    
     <!-- BURGER MENU SCRIPT -->
-    <script src="/js/burger_menu.js"></script>
+    <script src="/js/burger_menu.js" defer></script>
+    <!-- GET PRODUCTS SCRIPT -->
+    <script src="/js/get_products.js" defer></script>
     
     <title>Cart - Paloma</title>
 </head>
@@ -68,28 +70,11 @@
 
             <h2>Cart</h2>
 
-            <div class="cart_items grid">
-                <div class="cart_item">
-                    <div class="grid">
-                        <img class="img_cart" src="/img/favicon.png">
-                            <span class="cart_item_title">WD 2TB Elements Portable External Hard Drive - USB 3.0</span>
-                            <div class="cart_price_remove">
-                            <span class="cart_price">5.99 $</span>
-                            <a href="#" class="btn_remove fa-solid fa-trash-can fa-1x" type="button""></a>
-                        </div>
-                    </div>
-                </div>
+            <div class="grid">
 
-                <div class="cart_item">
-                    <div class="grid">
-                        <img class="img_cart" src="/img/favicon.png">
-                        <span class="cart_item_title">White Gold Plated Princess</span>
-                        <div  class="cart_price_remove">
-                        <span class="cart_price">20.00 $</span>
-                        <a href="#" class="btn_remove fa-solid fa-trash-can fa-1x"></a>
-                        </div>
-                    </div>
-                </div>
+    <div class="cart_items"></div>
+
+
             </div>
         </section>
 
@@ -151,15 +136,15 @@
             <div class="cart_total">
                 <div class="cart_row">
                     <p>Subtotal</p>
-                    <span class="cart_total_price">25.99 $</span>
+                    <span class="cart_subtotal_price"></span>
                 </div>
                 <div class="cart_row">
                     <p>Delivery fee</p>
-                    <span class="cart_total_price">5.00 $</span>
+                    <span class="cart_fee_price">5.00 $</span>
                 </div>
                 <div class="cart_row">
                     <p>Total</p>
-                    <span class="cart_total_price">30.99 $</span>
+                    <span class="cart_total_price "></span>
                 </div>
                 <i>*Tax of 20% included</i>
             </div>

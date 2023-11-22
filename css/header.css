@@ -55,8 +55,9 @@ header {
         font-family: var(--font_links);
     }
 
-    #user_message span{
+    #user_logged_in{
         font-weight: bold;
+        font-size: var(--font_size_nav);
     }
 
     /* Hide the icons on phone */
@@ -102,7 +103,7 @@ header {
         display: flex;
         flex-direction: row;
         justify-content: space-between;
-        padding: 10px 0;
+        padding: 10px 15px;
         border-bottom: 1px solid var(--color_bg_second);
     }
 
@@ -139,8 +140,9 @@ header {
         font-family: var(--font_links);
     }
 
-    #user_message span{
+    #user_logged_in{
         font-weight: bold;
+        font-size: var(--font_size_nav);
     }
 
     /* Dropdown menu */

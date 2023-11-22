@@ -261,3 +261,44 @@ function toggleText(product_id) {
         buttonElement.textContent = 'Show More';
     }
 }
+
+// Checkout cart
+const order_purchase = document.getElementById('btn_purchase');
+
+// Event listener listens for click on button with id="btn_purchase"
+order_purchase.addEventListener('click', function (event) {
+    // Prevent default form submission
+    event.preventDefault();
+
+    // Check if there are items in the cart
+    const cart_items = document.querySelector('.cart_items');
+
+    // If there are no items in the cart send an alert with error message
+    if (cart_items.children.length === 0) {
+        alert('Your cart is empty. Add items before confirming the purchase.');
+    } else {
+        // Form inputs
+        const name = document.getElementById('name').value;
+        const d_address = document.getElementById('d_address').value;
+        const p_code = document.getElementById('p_code').value;
+        const city = document.getElementById('city').value;
+        const b_address = document.getElementById('b_address').value;
+        const b_code = document.getElementById('b_code').value;
+        const b_city = document.getElementById('b_city').value;
+        const credit_card = document.getElementById('credit_card').value;
+        const exp_date = document.getElementById('exp_date').value;
+        const cvc = document.getElementById('cvc').value;
+
+        // If form inputs are filled
+        if (name && d_address && p_code && city && b_address && b_code && b_city && credit_card && exp_date && cvc) {   
+            // Clear localStorage
+            localStorage.clear();
+        
+            // Redirect to confirmation message
+            window.location.href = 'confirmation.html';        
+        } else {
+            // Else alert an error message
+            alert('Please fill in all required fields');
+        }
+    }
+});

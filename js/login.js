@@ -1,4 +1,4 @@
-// JAVASCRIPT STRICT MODE
+// Only use declared variables
 'use strict';
 
 // GET LOGIN FORM AND RUN ASYNC FUNCTION WHEN SUBMITTED

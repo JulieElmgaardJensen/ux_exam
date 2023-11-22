@@ -9,6 +9,10 @@ header {
     margin-bottom: 35px;
 }
 
+#logout_button {
+    cursor: pointer;
+}
+
 /* MOBILE */
 @media only screen and (max-width: 767px) {
     /* Navbar style + flexbox */
@@ -40,6 +44,7 @@ header {
     /* Hide the icons on phone */
     .navbar_hide_phone{
         display: none;
+
     }
 
     /* Dropdown menu */

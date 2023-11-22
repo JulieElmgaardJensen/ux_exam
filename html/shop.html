@@ -11,9 +11,9 @@
     <!-- FONT AWESOME KIT -->
     <script src="https://kit.fontawesome.com/2fdbd81b12.js" crossorigin="anonymous"></script>
     <!-- BURGER MENU SCRIPT -->
-    <script src="/js/burger_menu.js"></script>
+    <script src="/js/burger_menu.js" defer></script>
     <!-- GET PRODUCTS SCRIPT -->
-    <script src="/js/get_products.js"></script>
+    <script src="/js/get_products.js" defer></script>
 
     <title>Shop - Paloma</title>
 </head>
@@ -52,7 +52,7 @@
             </ul>
         </div>
     </header>
-
+    
     <main>
         <h2>Shop</h2>
         <section>
@@ -66,6 +66,11 @@
         </section>
         <section id="grid" class="product">
         </section>
+
+        <!-- sat ind for ikke at få fejlen:Cannot set properties of NULL error -->
+        <div class="cart_items"></div>
+        <span class="cart_subtotal_price"></span>
+        <span class="cart_total_price"></span>
     </main>
     
     <footer>

@@ -167,18 +167,16 @@ function render_subtotal(){
     let total_price = 0;
     let total_items = 0;
     let total_cart = 0;
-    let delviery_fee = 5;
+    let delivery_fee = 5;
 
     cart.forEach((item) => {
         total_price += item.price * item.number_of_units;
         total_items += item.number_of_units;
-        //virker ikke ordenligt
-        total_cart += (item.price * item.number_of_units) + delviery_fee;
+        total_cart = total_price + delivery_fee;
     });
 
     //toFixed so we only have numbers with two decimals
     subtotalt_el.innerHTML = `${total_price.toFixed(2)} $`;
-    //Virker ikke ordenligt
     totalt_el.innerHTML = `${total_cart.toFixed(2)} $`;
 }
 

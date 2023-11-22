@@ -73,6 +73,7 @@ header {
         font-family: var(--font_links);
         position: absolute;
         width: 100%;
+        margin-top: -40px;
     }
 
     #dropdown_menu ul{
@@ -87,6 +88,10 @@ header {
         padding: 20px;
         display: flex;
         justify-content: center;
+    }
+
+    #navbar li a{
+        text-decoration: none;
     }
 
     /* Logo */

@@ -47,6 +47,11 @@ main {
     margin: 5px;
 }
 
+#btn_remove_filter{
+    text-align: right;
+    margin: 0rem 2rem 3rem 2rem;
+}
+
 /* for the show more btn */
 .show_text {
     overflow: hidden;
@@ -144,8 +149,13 @@ input {
     .category_buttons {
         display: grid;
         grid-template-columns: 1fr 1fr 1fr 1fr;
-        margin: 1rem;
+        margin: 1rem 1rem 0 1rem;
         padding: 1rem;
+    }
+
+    #btn_remove_filter{
+        text-align: right;
+        margin: 0rem 2rem 4rem 2rem;
     }
 
     #grid {

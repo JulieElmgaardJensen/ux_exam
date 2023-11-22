@@ -26,6 +26,13 @@ h1{
     margin-bottom: 35px;
 }
 
+/* Logo */
+.logo{
+    text-align: center;
+    width: 150px;
+    margin-top: 10px;
+}
+
 /* Form */
 input{
     border: none;
@@ -42,6 +49,7 @@ input{
     margin-bottom: 35px;
 }
 
+/* Signup/login button */
 button{
     background-color: var(--color_btn_bg);
     font-family: var(--font_paragraph);
@@ -58,27 +66,23 @@ button{
     text-align: center;
 }
 
-
-/* Forgot password link */
-a{
-    text-decoration: none;
+/* Link to signup/login and info about password requirements*/
+.extra_info{
     color: var(--color_font);
     font-size: 12px;
+    text-decoration: none;
 }
 
-.forgot_password{
-    text-align: right;
-}
-
-
-
-/* Tablet */
-@media (min-width: 768px){
+/* Screen minimum 587px */
+@media (min-width: 587px){
     body{
         padding: 50px 200px;
         background-color: var(--color_bg_main);
     }
 
+    .logo{ 
+        width: 200px;
+    }
     main{
         background-color: var(--color_bg_second);
         padding: 50px;
@@ -90,18 +94,22 @@ a{
     }
 }
 
-/* Screen bigger than 1024px */
+/* Screen minimum 1024px */
 @media (min-width: 1024px){
     body{
         padding: 50px 300px;
     }
 
+    .logo{
+        width: 250px;
+    }
+    
     main{
         padding: 50px 70px;
     }
 }
 
-/* Screen bigger than 1200px */
+/* Screen minimum 1200px */
 @media (min-width: 1200px){
     body{
         padding: 50px 400px;

@@ -12,6 +12,7 @@ body{
     text-align: center;
 }
 
+/* Order confirmation message box */
 #cnfrm_box{
     background-color: var(--color_bg_second);
     margin: 50px 20px 300px 20px;
@@ -29,6 +30,7 @@ body{
     margin: 20px 30px 0 20px;
 }
 
+/* Return to shop button */
 button{
     background-color: var(--color_btn_bg);
     font-family: var(--font_paragraph);
@@ -42,6 +44,7 @@ button{
     cursor: pointer;
 }
 
+/* Screen minimum 587px */
 @media only screen and (min-width: 587px){
     #cnfrm_box{
         margin: 50px 70px 300px 70px;
@@ -56,18 +59,21 @@ button{
     }
 }
 
+/* Screen minimum 767px */
 @media only screen and (min-width: 767px){
     #cnfrm_box{
         margin: 40px 100px 200px 100px;
     }
 }
 
+/* Screen minimum 1024px */
 @media only screen and (min-width: 1024px){
     #cnfrm_box{
         margin: 50px 300px 100px 300px;
     }
 }
 
+/* Screen minimum 1100px */
 @media only screen and (min-width: 1100px){
     #cnfrm_box{
         margin: 50px 400px 100px 400px;

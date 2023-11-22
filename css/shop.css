@@ -65,6 +65,7 @@ main {
     text-decoration: underline;
     text-align-last: left;
     background: none;
+    cursor: pointer;
 }
 
 .card {
@@ -95,8 +96,6 @@ input {
     width: 98%;
 }
 
-/* JULIE HAR INDSAT KODE HER - bare så det ikke så helt skørt ud når man åbnede - det må meget gerne fjernes/rettes til*/
-
 .bg_img {
     width: 220px;
     height: 220px;
@@ -122,6 +121,10 @@ input {
     margin-top: auto;
     padding-top: 2rem;
     padding-bottom: 2rem;
+}
+
+.btn_submit{
+    cursor: pointer;
 }
 
 /* TABLET */

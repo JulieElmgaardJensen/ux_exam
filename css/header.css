@@ -57,13 +57,11 @@ header {
 
     #user_logged_in{
         font-weight: bold;
-        font-size: var(--font_size_nav);
     }
 
     /* Hide the icons on phone */
     .navbar_hide_phone{
         display: none;
-
     }
 
     /* Dropdown menu */
@@ -90,7 +88,7 @@ header {
         justify-content: center;
     }
 
-    #navbar li a{
+    #navbar a{
         text-decoration: none;
     }
 

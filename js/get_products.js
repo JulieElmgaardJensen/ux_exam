@@ -149,6 +149,8 @@ function add_to_cart(id){
         });
     }
     update_cart();
+
+    alert('Item added to cart!');
 }
 
 // Update cart
@@ -224,7 +226,7 @@ function change_number_of_units(action,id){
 
         //find the item with the right id
         if(item.id === id){
-            if(action === "minus"){
+            if(action === "minus" && number_of_units > 1){
                 number_of_units--
             }else if(action === "plus"){
                 number_of_units++

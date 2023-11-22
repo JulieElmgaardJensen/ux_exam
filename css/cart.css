@@ -167,6 +167,7 @@ ul.breadcrumb {
     border: none;
     margin-left: auto;
     background-color: var(--color_bg_main);
+    cursor: pointer;
 }
 
 /* BUTTON CONFIRM PUCHASE */
@@ -185,6 +186,7 @@ ul.breadcrumb {
     margin-bottom: 5px;
     margin-top: 50px;
     padding: 8px 0;
+    cursor: pointer;
 }
 
 /*  CONTINUE SHOPPING */
@@ -205,12 +207,14 @@ ul.breadcrumb {
 .minus, .plus {
     font-size: 25px;
     margin-top: 5px;
+    cursor: pointer;
 }
 
 .cart_item {
     margin-bottom: 40px;
     padding-bottom: 10px;
 }
+
 
 /* TABLET */
 

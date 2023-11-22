@@ -14,6 +14,8 @@
     <script src="/js/burger_menu.js" defer></script>
     <!-- GET PRODUCTS SCRIPT -->
     <script src="/js/get_products.js" defer></script>
+    <!-- Script for getting email -->
+    <script src="/js/get_saved_data.js"></script>
 
     <title>Shop - Paloma</title>
 </head>
@@ -23,6 +25,7 @@
 
         <!-- Logo -->
         <a href="/html/shop.html"><img id="navbar_logo" src="/img/logo_large.png" alt="Paloma Logo"></a>
+        <div id="user_message"><p>Velkommen <span id="user_logged_in"></span></p></div>
         
         <div class="navbar_links">
             
@@ -30,7 +33,6 @@
             <h3 class="navbar_hide_phone"><a href="/html/shop.html">Shop</a></h3>
             
             <!-- Icons -->
-            <div class="navbar_hide_phone"><a href="#"><i class="fa-solid fa-lg fa-user"></i></a></div>
             <div class="cart"><a href="/html/cart.html"><i class="fa-solid fa-lg fa-cart-shopping"></i></a></div>
             <div class="navbar_hide_phone"><a href="#"><i class="fa-solid fa-lg fa-right-from-bracket"></i></a></div>
             
@@ -47,7 +49,6 @@
         <div id="dropdown_menu">
             <ul>
                 <li>Shop</li>
-                <li>Account</li>
                 <li>Log out</li>
             </ul>
         </div>

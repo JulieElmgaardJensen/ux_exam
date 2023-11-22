@@ -17,6 +17,7 @@ header {
         flex-direction: row;
         justify-content: space-between;
         padding: 10px 0;
+        flex-wrap: wrap;
     }
 
     /* Icons style */
@@ -35,6 +36,23 @@ header {
         display: flex;
         align-items: center;
         margin-right: 20px;
+    }
+
+    #user_message{
+        display: flex;
+        align-items: center;
+        order: 3;
+        width: 100%;
+        margin: 10px;
+        justify-content: center;
+    }
+
+    #user_message p{
+        font-family: var(--font_links);
+    }
+
+    #user_message span{
+        font-weight: bold;
     }
 
     /* Hide the icons on phone */
@@ -72,8 +90,8 @@ header {
     }
 }
 
-/* TABLET */
-@media only screen and (min-width: 768px) and (max-width: 1023px) {
+/* TABLET + DESKTOP */
+@media only screen and (min-width: 768px){
     /* Navbar style */
     #navbar{
         display: flex;
@@ -101,12 +119,24 @@ header {
         color: var(--color_icons);
     }
 
-    
     #navbar h3 a{
         font-size: var(--font_size_nav);
         text-decoration: none;
-        
     } 
+
+    #user_message{
+        display: flex;
+        align-items: center;
+    }
+
+    #user_message p{
+        font-size: var(--font_size_nav);
+        font-family: var(--font_links);
+    }
+
+    #user_message span{
+        font-weight: bold;
+    }
 
     /* Dropdown menu */
     #dropdown_menu{
@@ -120,56 +150,6 @@ header {
     }
 
     /* Hide burger menu */
-    #navbar .navbar_hide_desktop{
-        display: none;
-    }
-
-}
-
-/* DESKTOP */
-@media only screen and (min-width: 1024px) {
-    /* Navbar style */
-    #navbar{
-        display: flex;
-        flex-direction: row;
-        justify-content: space-between;
-        padding: 10px 0;
-        border-bottom: 1px solid var(--color_bg_second);
-    }
-
-    /* Icons style */
-    #navbar a{
-        margin: 10px;
-        color: var(--color_icons);
-        align-self: center;
-        color: inherit;
-        padding-right: 15px;
-    }
-
-    .navbar_links{
-        display: flex;
-        align-items: center;
-    }
-
-    #navbar h3 a{
-        font-size: var(--font_size_nav);
-        text-decoration: none;
-    }
-
-    #navbar i{
-        color: var(--color_icons);
-    }
-
-    /* Dropdown */
-    #dropdown_menu{
-        display: none;
-    }
-
-    /* Logo */
-    #navbar img{
-        width: 250px;
-    }
-
     #navbar .navbar_hide_desktop{
         display: none;
     }

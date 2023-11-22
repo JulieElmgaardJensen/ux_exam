@@ -19,7 +19,13 @@ document.getElementById("frm_signup").addEventListener('submit', async (e)=>{
     const password_input = document.getElementById("password");
     const confirm_password_input = document.getElementById("confirm_password");
     
-    console.log(password_input.value);
+    console.log(email_input.value.length);
+
+    // Validate the lenght of the email
+        if(email_input.value.length > 50){
+            alert('Email can maximum be 50 characters')
+            return false;
+        };
 
     // Validate the password input
         if(!password_input.value.match(password_validator)){

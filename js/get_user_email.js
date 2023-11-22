@@ -8,6 +8,7 @@ document.addEventListener('DOMContentLoaded', function () {
     // Check if the element exists before setting textContent
     if (user_email_paragraph) {
         user_email_paragraph.textContent = user_email;
+        
     } else {
         console.error("Element with ID 'user_logged_in' not found");
     }

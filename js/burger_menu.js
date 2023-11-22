@@ -1,6 +1,6 @@
 function burger_menu_dropdown() {
     // Find the div from ID
-    var dropdown_menu = document.getElementById("dropdown_menu");
+    const dropdown_menu = document.getElementById("dropdown_menu");
 
     // If the style of the div is block hide it
     if (dropdown_menu.style.display === "block") {

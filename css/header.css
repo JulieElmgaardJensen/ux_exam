@@ -10,8 +10,19 @@ header {
     margin-bottom: 35px;
 }
 
-#logout_phone, #logout_desktop {
+#logout_button {
     cursor: pointer;
+}
+
+.category_buttons {
+    text-align: center;
+    background-color: var(--color_bg_second);
+    padding: 1rem;
+}
+
+.category_buttons a{
+    text-decoration:none;
+    margin: 1rem;
 }
 
 /* MOBILE */
@@ -60,10 +71,7 @@ header {
         font-weight: bold;
     }
 
-    /* Hide the icons on phone */
-    .navbar_hide_phone{
-        display: none;
-    }
+    
 
     /* Dropdown menu */
     #dropdown_menu{
@@ -108,7 +116,6 @@ header {
         flex-direction: row;
         justify-content: space-between;
         padding: 10px 15px;
-        border-bottom: 1px solid var(--color_bg_second);
     }
 
     /* Icon style */
@@ -163,5 +170,13 @@ header {
     /* Hide burger menu */
     #navbar .navbar_hide_desktop{
         display: none;
+    }
+
+    .category_buttons {
+        text-align: center;
+    }
+
+    .category_buttons a {
+        margin: 2rem;
     }
 }

@@ -29,35 +29,28 @@
     <header>
         <div id="navbar">
 
-        <!-- Logo -->
-        <a href="/html/shop.html"><img id="navbar_logo" src="/img/logo_large.png" alt="Paloma Logo"></a>
-        <div id="user_message"><p>Velkommen&nbsp;</p><p id="user_logged_in"></p></div>
-        
-        <div class="navbar_links">
+            <!-- Logo -->
+            <a href="/html/shop.html"><img id="navbar_logo" src="/img/logo_large.png" alt="Paloma Logo"></a>
+            <div id="user_message"><p>Velkommen&nbsp;</p><p id="user_logged_in"></p></div>
             
-            <!-- Shop link -->
-            <h3 class="navbar_hide_phone"><a href="/html/shop.html">Shop</a></h3>
-            
-            <!-- Icons -->
-            <div class="cart"><a href="/html/cart.html"><i class="fa-solid fa-lg fa-cart-shopping"></i></a></div>
-            <div class="navbar_hide_phone" id="logout_desktop"><i class="fa-solid fa-lg fa-right-from-bracket"></i></div>
-            
-            <!-- Hamburger menu -->
-            <div class="navbar_hide_desktop">
-                <a href="javascript:void(0);" onclick="burger_menu_dropdown()">
-                    <i class="fa-solid fa-lg fa-bars"></i>
-                </a>
-            </div>
+            <div class="navbar_links">
+                                
+                <!-- Icons -->
+                <div class="cart"><a href="/html/cart.html"><i class="fa-solid fa-lg fa-cart-shopping"></i></a></div>
+                <div id="logout_button"><i class="fa-solid fa-lg fa-right-from-bracket"></i></div>
             </div>
         </div>
 
-        <!-- Hamburger menu contents -->
-        <div id="dropdown_menu">
-            <ul>
-                <li><a href="/html/shop.html">Shop</a></li>
-                <li id="logout_phone">Log out</li>
-            </ul>
-        </div>
+        <section>
+            <form class="category_buttons">
+                <a href="/html/shop.html">All products</a>
+                <a href="javascript:void(0);" id="btn_womens" onclick="">Women’s clothing</a>
+                <a href="javascript:void(0);" id="btn_mens" onclick="">Men’s clothing</a>
+                <a href="javascript:void(0);" id="btn_jewelry" onclick="">Jewelry</a>
+                <a href="javascript:void(0);" id="btn_electronics" onclick="">Electronics</a>
+            </form>
+            <a href="javascript:void(0);" id="btn_remove_filter" onclick="">Remove filter</a>
+        </section>
     </header>
     
     <main>

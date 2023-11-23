@@ -3,7 +3,7 @@ document.addEventListener('DOMContentLoaded', function () {
     const user_email = sessionStorage.getItem('user_email');
 
     // COMMENTED OUT SO WE DON'T HAVE TO BE LOGGED IN WHEN WE TEST
-    // // Check if the user is logged in or not
+    // Check if the user is logged in or not
     // if (!user_email) {
     //     // If email is not set, redirect to login page
     //     window.location.href = 'index.html';

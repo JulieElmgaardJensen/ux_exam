@@ -12,6 +12,10 @@ body{
     text-align: center;
 }
 
+a{
+    color: var(--color_font);
+}
+
 /* Order confirmation message box */
 #cnfrm_box{
     background-color: var(--color_bg_second);

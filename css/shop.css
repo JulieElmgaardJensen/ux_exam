@@ -24,16 +24,31 @@ body {
 h2 {
     font-size: 35px;
     text-align: center;
+
 }
 
 main {
     margin: var(--d_m_body_tablet);
 }
 
+input {
+    background-color: var(--color_btn_bg);
+    color: var(--color_btn_font);
+    border: none;
+    border-radius: calc(var(--border_btn_radius) / 2.5 );
+    padding: 0.3rem;
+    width: 98%;
+}
+
 #btn_remove_filter{
     text-align: right;
     margin: 0rem 2rem 3rem 2rem;
 }
+
+#heading_shop {
+    padding-bottom: 35px;
+}
+
 
 /* for the show more btn */
 .show_text {
@@ -69,17 +84,6 @@ div.bg_img {
     align-items: center;
 }
 
-input {
-    background-color: var(--color_btn_bg);
-    color: var(--color_btn_font);
-    border: none;
-    border-radius: calc(var(--border_btn_radius) / 2.5 );
-    padding: 0.3rem;
-    width: 98%;
-}
-
-/* JULIE HAR INDSAT KODE HER - bare så det ikke så helt skørt ud når man åbnede - det må meget gerne fjernes/rettes til*/
-
 .bg_img {
     width: 220px;
     height: 220px;
@@ -103,9 +107,13 @@ input {
 
 .product_price_submit {
     margin-top: auto;
-    padding-top: 2rem;
-    padding-bottom: 2rem;
+    padding-top: 1rem;
 }
+
+.card {
+    margin-bottom: 4rem;
+}
+
 
 /* TABLET */
 @media only screen and (min-width: 587px) {
@@ -114,8 +122,8 @@ input {
         display: grid;
         grid-template-columns: 1fr 1fr;
         grid-column-gap: 25px;
-        /* grid-row-gap: 50px; */
     }
+
 }
 
 /*  DESKTOP */
@@ -142,10 +150,6 @@ input {
     .card {
         transition: 0.3s;
         width: 220px;
-    }
-
-    .product_price_submit { 
-        padding-bottom: 4rem;
     }
 }
 

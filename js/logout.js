@@ -3,29 +3,21 @@
 
 // Wrap your code in a window load event listener
 window.onload = function () {
-    const button_one = document.getElementById('logout_desktop');
-    const button_two = document.getElementById('logout_phone');
+    var button = document.getElementById('logout_button');
 
-    // Check if the buttons are found
-    if (button_one && button_two) {
-        // Attach click event handler for button1
-        button_one.addEventListener('click', function () {
-            logout();
-        });
-
-        // Attach click event handler for button2
-        button_two.addEventListener('click', function () {
-            logout();
-        });
-
-        function logout() {
+    // Check if the button is found
+    if (button) {
+        // Attach onclick event handler
+        button.onclick = function logout() {
             localStorage.clear();
             sessionStorage.clear();
 
+            console.log(localStorage); // This will be an empty object after clearing
+
             // Redirect to the login page
-            window.location.href = 'login.html';
-        }
+            window.location.href = 'index.html';
+        };
     } else {
-        console.error("Buttons not found with specified IDs");
+        console.error("Button not found with id 'logout_button'");
     }
 };

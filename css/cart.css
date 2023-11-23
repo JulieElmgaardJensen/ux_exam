@@ -53,6 +53,7 @@ input {
 ul.breadcrumb {
     list-style: none;
     margin-left: 35px;
+    margin-bottom: 10px;
 }
   
   ul.breadcrumb li {
@@ -248,7 +249,6 @@ div.bg_img {
 
     form {
         background-color: var(--color_bg_second);
-        border-radius: var(--border_btn_radius);
         padding: 20px;
     }
 

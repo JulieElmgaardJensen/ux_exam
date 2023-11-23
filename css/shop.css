@@ -30,23 +30,6 @@ main {
     margin: var(--d_m_body_tablet);
 }
 
-.category_buttons {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    margin: 1rem;
-}
-
-.category_buttons a { 
-    background-color: var(--color_btn_bg);
-    color: var(--color_btn_font);
-    border: none;
-    border-radius: calc(var(--border_btn_radius) / 2.5 );
-    padding: 0.3rem;
-    text-decoration:none;
-    text-align: center;
-    margin: 5px;
-}
-
 #btn_remove_filter{
     text-align: right;
     margin: 0rem 2rem 3rem 2rem;
@@ -65,7 +48,6 @@ main {
     text-decoration: underline;
     text-align-last: left;
     background: none;
-    cursor: pointer;
 }
 
 .card {
@@ -96,6 +78,8 @@ input {
     width: 98%;
 }
 
+/* JULIE HAR INDSAT KODE HER - bare så det ikke så helt skørt ud når man åbnede - det må meget gerne fjernes/rettes til*/
+
 .bg_img {
     width: 220px;
     height: 220px;
@@ -123,10 +107,6 @@ input {
     padding-bottom: 2rem;
 }
 
-.btn_submit{
-    cursor: pointer;
-}
-
 /* TABLET */
 @media only screen and (min-width: 587px) {
     
@@ -147,13 +127,6 @@ input {
 
     main {
         margin: 0 var(--d_m_body_desktop);
-    }
-
-    .category_buttons {
-        display: grid;
-        grid-template-columns: 1fr 1fr 1fr 1fr;
-        margin: 1rem 1rem 0 1rem;
-        padding: 1rem;
     }
 
     #btn_remove_filter{

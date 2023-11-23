@@ -3,6 +3,7 @@
 
 h3, a {
     font-family: var(--font_links);
+    text-decoration: none;
 }
 
 header {

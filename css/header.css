@@ -9,7 +9,7 @@ header {
     margin-bottom: 35px;
 }
 
-#logout_button {
+#logout_phone, #logout_desktop {
     cursor: pointer;
 }
 

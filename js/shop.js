@@ -1,17 +1,27 @@
-let cart = JSON.parse(localStorage.getItem("CART")) || [];
-// Waiting for the DOM content to be fully loaded before executing the code
-document.addEventListener('DOMContentLoaded', (e) => {
-    e.preventDefault();
-    
-    let products = document.querySelector('.product');
+// let cart = JSON.parse(localStorage.getItem("CART")) || [];
+function redirect_to_shop() {
+    if ( window.location.href != `html/shop.html`) {
+        window.location.href = `shop.html`
+    }
+} 
+
+// Get the category from button
+const womens = document.getElementById('btn_womens');
+const jewelery = document.getElementById('btn_jewelry');
+const mens = document.getElementById('btn_mens');
+const electronics = document.getElementById('btn_electronics');
+
+let fetch_url = 'https://fakestoreapi.com/products';
 
     // FETCH PRODUCTS
-    async function fetch_products(url) {
-        let data = await fetch(url);
-        response = await data.json();
+async function fetch_products(url) {
+    let data = await fetch(url);
+    let products = document.querySelector('.product');
+    response = await data.json();
+    console.log("x");
 
-        // Clear existing products
-        products.innerHTML = '';
+    // Clear existing products
+    products.innerHTML = '';
 
     // LOOP ELEMENTS IN
     for (let i = 0; i < response.length; i++) {
@@ -48,66 +58,45 @@ document.addEventListener('DOMContentLoaded', (e) => {
                                     </div>        
                                 </div>
                                 `;
-        }
+    }
+}
+
+// Waiting for the DOM content to be fully loaded before executing the code
+document.addEventListener('DOMContentLoaded', (e) => {
+    e.preventDefault();
+    console.log(location.href);
+    console.log(location.pathname);
+
+    if ( window.location.pathname == `/html/shop.html`) {
+        fetch_products(fetch_url);
+        return console.log("a");
     }
 
-            // Get the category from button
-            const remove_filter = document.getElementById('btn_remove_filter');
-            const womens = document.getElementById('btn_womens');
-            const jewelry = document.getElementById('btn_jewelry');
-            const mens = document.getElementById('btn_mens');
-            const electronics = document.getElementById('btn_electronics');
-
-            let fetch_url = 'https://fakestoreapi.com/products';
-
-            // Hide button btn_all_products
-            remove_filter.style.display = "none";
-
-            // Function to show remove_filter button
-            function hide_remove_filter_button() {
-                remove_filter.style.display = "none";
-            }
-            
-            // Function to hide remove_filter button
-            function show_remove_filter_button() {
-                remove_filter.style.display = "block";
-            }
-
-            womens.addEventListener('click', function () {
-                fetch_url = "https://fakestoreapi.com/products/category/women's%20clothing";
-                fetch_products(fetch_url);
-                show_remove_filter_button();
-            });
-
-            jewelry.addEventListener('click', function () {
-                fetch_url = 'https://fakestoreapi.com/products/category/jewelery';
-                fetch_products(fetch_url);
-                show_remove_filter_button();
-            });
-
-            mens.addEventListener('click', function () {
-                fetch_url = "https://fakestoreapi.com/products/category/men's%20clothing";
-                fetch_products(fetch_url);
-                show_remove_filter_button();
-            });
-
-            electronics.addEventListener('click', function () {
-                fetch_url = 'https://fakestoreapi.com/products/category/electronics';
-                fetch_products(fetch_url);
-                show_remove_filter_button();
-            }); 
-
-            // Event listener for remove_filter button
-            remove_filter.addEventListener('click', function () {
-                fetch_url = 'https://fakestoreapi.com/products';
-                fetch_products(fetch_url);
-                hide_remove_filter_button();
-            });
-
-            // Fetch all products
-            fetch_products(fetch_url);
-            
+    console.log("x");
+    // Fetch all products
+    
 });
+
+womens.addEventListener('click', function () {
+    fetch_url = "https://fakestoreapi.com/products/category/women's%20clothing";
+    fetch_products(fetch_url);
+});
+
+mens.addEventListener('click', function () {
+    fetch_url = "https://fakestoreapi.com/products/category/men's%20clothing";
+    fetch_products(fetch_url);
+});
+
+jewelery.addEventListener('click', function () {
+        fetch_url = 'https://fakestoreapi.com/products/category/jewelery';
+        fetch_products(fetch_url);
+});
+
+electronics.addEventListener('click', function () {
+    fetch_url = 'https://fakestoreapi.com/products/category/electronics';
+    fetch_products(fetch_url);
+}); 
+
 
 function toggleText(product_id) {
     // Construct the id for the text element based on the productId

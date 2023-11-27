@@ -3,7 +3,7 @@
 
 // Wrap your code in a window load event listener
 window.onload = function () {
-    var button = document.getElementById('logout_button');
+    const button = document.getElementById('logout_button');
 
     // Check if the button is found
     if (button) {

@@ -1,3 +1,5 @@
+let cart = JSON.parse(localStorage.getItem("CART")) || [];
+
 // Get the category from button
 const category_buttons = document.querySelectorAll('.category_buttons a')
 
@@ -123,7 +125,6 @@ function toggle_text(product_id) {
 
 // Add to cart
 function add_to_cart(id){
-    let cart = JSON.parse(localStorage.getItem("CART")) || [];
     //check if product already exist in cart
     if(cart.some((item) => item.id === id)){
         change_number_of_units("plus", id);

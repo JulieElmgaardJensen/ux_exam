@@ -1,6 +1,4 @@
 
-// Empty cart array from start - localstorage for saving elements
-let cart = JSON.parse(localStorage.getItem("CART")) || [];
 //render cart items and subtotal
 update_cart();
 

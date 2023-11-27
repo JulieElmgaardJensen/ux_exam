@@ -36,7 +36,7 @@ document.getElementById('frm_login').addEventListener('submit', async function(e
                 // SAVING EMAIL IN THE SESSION
                 sessionStorage.setItem('user_email', email);
                 // REDIRECT TO THE SHOP IF USER LOGIN IS VALID AND EXISTS IN JSON DATABASE
-                window.location.href = 'shop.html';
+                window.location.href = "shop.html?category=btn_all";
             } else {
                 console.log('Incorrect password');
                 alert('Incorrect password');

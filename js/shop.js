@@ -1,4 +1,3 @@
-let cart = JSON.parse(localStorage.getItem("CART")) || [];
 // Waiting for the DOM content to be fully loaded before executing the code
 document.addEventListener('DOMContentLoaded', (e) => {
     e.preventDefault();
@@ -146,5 +145,28 @@ function add_to_cart(id){
     localStorage.setItem("CART", JSON.stringify(cart));
 
     alert('Item added to cart!');
+}
+
+// Change number of units in cart
+function change_number_of_units(action,id){
+    //uses map method will run this function on every element in the cart and return a new updated array
+    cart = cart.map((item) => {
+
+        let number_of_units = item.number_of_units
+
+        //find the item with the right id
+        if(item.id === id){
+            if(action === "minus" && number_of_units > 1){
+                number_of_units--
+            }else if(action === "plus"){
+                number_of_units++
+            }
+        }
+        return {
+            ...item,
+            number_of_units,
+        };
+    });
+    localStorage.setItem("CART", JSON.stringify(cart));
 }
 

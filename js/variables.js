@@ -18,3 +18,6 @@ let response;
 const cart_items_el = document.querySelector('.cart_items');
 const subtotalt_el = document.querySelector('.cart_subtotal_price');
 const totalt_el = document.querySelector('.cart_total_price');
+
+// Empty cart array from start - localstorage for saving elements
+let cart = JSON.parse(localStorage.getItem("CART")) || [];

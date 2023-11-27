@@ -6,20 +6,20 @@
     --color_bg_second: rgb(198, 180, 156);
 
 
-    /*  FONT STYLING    */
+    /*  FONT STYLING */
     --font_heading: 'Belleza', sans-serif;
-    --font_size_h1: 96px;
-    --font_size_h2: 60px;
-    --font_size_h3: 30px;
+    --font_size_h1: 6rem;
+    --font_size_h2: 2rem;
+    --font_size_h3: 1.8rem;
     --font_paragraph: 'Montserrat', sans-serif;
-    --font_size_p: 17px;
+    --font_size_p: 1rem;
     --color_font: rgb(30, 30, 30);
 
 
     /*  BUTTON STYLING  */
     --color_btn_bg: rgb(82, 82, 82);
     --color_btn_font: white;
-    --border_btn_radius: 0.5rem;
+    --border_btn_radius: 0.2rem;
     --btn_width: 215px;    /* RETTET*/
     --btn_height: 45px;    /* RETTET*/
     
@@ -30,8 +30,6 @@
     
 
     /*  IMG STYLING */
-    --img_hw_grid: 282px;
-    --img_hw_cart: 148px;
     --img_bg_color: white;
 
 
@@ -41,11 +39,11 @@
     --font_size_nav: 20px;
 
     /*  DEFAULT MARGIN*/
-    --d_m_body_mobile: 35px;
-    --d_p_body_mobile: 35px;
+    --d_m_body_mobile: 1.5rem;
+    --d_p_body_mobile: 1.5rem;
 
-    --d_m_body_tablet: 35px;
-    --d_p_body_tablet: 35px;
+    --d_m_body_tablet: 2rem;
+    --d_p_body_tablet: 2rem;
 
     --d_m_body_desktop: 8%;
     --d_p_body_desktop: 8%;

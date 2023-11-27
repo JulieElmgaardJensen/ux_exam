@@ -4,22 +4,21 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="icon" type="image/x-icon" href="/img/favicon.png">
-    <!-- STYLESHEET -->
+    <!-- STYLESHEETS -->
     <link rel="stylesheet" href="/css/cart.css">  
     <link rel="stylesheet" href="/css/header.css">
     <link rel="stylesheet" href="/css/footer.css">  
     <!-- FONT AWESOME KIT -->
     <script src="https://kit.fontawesome.com/2fdbd81b12.js" crossorigin="anonymous"></script>    
-    <!-- BURGER MENU SCRIPT -->
-    <script src="/js/burger_menu.js" defer></script>
     <!-- GET PRODUCTS SCRIPT -->
     <script src="/js/get_products.js" defer></script>
     <!-- GET EMAIL SCRIPT -->
     <script src="/js/get_user_email.js" defer></script>
     <!-- LOGOUT SCRIPT -->
     <script src="/js/logout.js" defer></script>
-    <!-- VARIABLER & CART SCRIPT -->
+    <!-- VARIABLER SCRIPT -->
     <script src="/js/variables.js" defer></script>
+    <!-- CART SCRIPT -->
     <script src="/js/cart.js" defer></script>
     <!-- EMPTY CART MESSAGE -->
     <script src="/js/empty_cart.js" defer></script>
@@ -62,19 +61,14 @@
                 <li>Cart</li>
             </ul>
         </section>
-
-        <!-- Grid -->
         <div class="grid">
         
         <!-- Cart -->
         <section class="section_cart">
 
             <h2>Cart</h2>
-
-            <h3 id="cart_message">The cart is empty</h3>
-
+            <p id="cart_message">The cart is empty</p>
             <div class="grid">
-
             <div class="cart_items"></div>
 
             </div>
@@ -92,7 +86,7 @@
                     <input type="text" id="d_address" name="d_address" required>
                     <div class="flex">
                         <div class="div_p_code">
-                            <label for="p_code" id="lbl_p_code">Postal code</label>
+                            <label for="p_code" id="lbl_p_code">ZIP code</label>
                             <input type="number" id="p_code" name="p_code" min="4" max="4" required>
                         </div>
                         <div class="div_city">
@@ -106,7 +100,7 @@
     
                     <div class="flex">
                         <div class="div_p_code">
-                            <label for="b_code" id="lbl_b_code">Postal code</label>
+                            <label for="b_code" id="lbl_b_code">ZIP code</label>
                             <input type="number" id="b_code" name="b_code" min="4" max="4" required>
                         </div>
                         <div class="div_city">

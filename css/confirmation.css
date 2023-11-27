@@ -20,7 +20,7 @@ a{
 #cnfrm_box{
     background-color: var(--color_bg_second);
     margin: 50px 20px 300px 20px;
-    border-radius: calc(var(--border_btn_radius) / 2.5 );
+    border-radius: var(--border_btn_radius);
 }
 
 #cnfrm_heading{
@@ -41,7 +41,7 @@ button{
     font-size: var(--font_size_p);
     color: var(--color_btn_font);
     border: none;
-    border-radius: calc(var(--border_btn_radius) / 2.5 );
+    border-radius: var(--border_btn_radius);
     width: 200px;
     height: 35px;
     margin: 35px;

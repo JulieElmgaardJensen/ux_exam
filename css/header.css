@@ -25,87 +25,58 @@ header {
     margin: 1rem;
 }
 
-/* MOBILE */
-@media only screen and (max-width: 767px) {
-    /* Navbar style + flexbox */
-    #navbar{
-        display: flex;
-        flex-direction: row;
-        justify-content: space-between;
-        padding: 10px 0;
-        flex-wrap: wrap;
-    }
+/* Navbar style + flexbox */
+#navbar{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    padding: 10px 0;
+    flex-wrap: wrap;
+}
 
-    /* Icons style */
-    #navbar a{
-        margin: 10px;
-        color: var(--color_icons);
-        align-self: center;
-        color: inherit;
-    }
+/* Icons style */
+ #navbar a{
+    margin: 10px;
+    color: var(--color_icons);
+    align-self: center;
+    color: inherit;
+}
 
-    #navbar i{
-        color: var(--color_icons);
-    }
+#navbar i{
+    color: var(--color_icons);
+}
 
-    .navbar_links{
-        display: flex;
-        align-items: center;
-        margin-right: 20px;
-    }
+.navbar_links{
+    display: flex;
+    align-items: center;
+    margin-right: 20px;
+}
 
-    #user_message{
-        display: flex;
-        align-items: center;
-        order: 3;
-        width: 100%;
-        margin: 10px;
-        justify-content: center;
-    }
+#user_message{
+    display: flex;
+    align-items: center;
+    order: 3;
+    width: 100%;
+    margin: 10px;
+    justify-content: center;
+}
 
-    #user_message p{
-        font-family: var(--font_links);
-    }
+#user_message p{
+    font-family: var(--font_links);
+}
 
-    #user_logged_in{
-        font-weight: bold;
-    }
+#user_logged_in{
+    font-weight: bold;
+}
 
-    
+#navbar a{
+    text-decoration: none;
+}
 
-    /* Dropdown menu */
-    #dropdown_menu{
-        display: none;
-        font-size: var(--font_size_nav);
-        font-family: var(--font_links);
-        position: absolute;
-        width: 100%;
-        margin-top: -40px;
-    }
-
-    #dropdown_menu ul{
-        margin: 0;
-        padding: 0;
-        background-color: var(--color_bg_second);
-    }
-
-    #dropdown_menu li{
-        list-style-type: none;
-        border-top: 1px solid var(--color_bg_main);
-        padding: 20px;
-        display: flex;
-        justify-content: center;
-    }
-
-    #navbar a{
-        text-decoration: none;
-    }
-
-    /* Logo */
-    #navbar img{
-        width: 150px;
-        align-self: center;
-    }
+/* Logo */
+#navbar img{
+    width: 150px;
+    align-self: center;
 }
 
 /* TABLET + DESKTOP */
@@ -156,20 +127,10 @@ header {
         font-size: var(--font_size_nav);
     }
 
-    /* Dropdown menu */
-    #dropdown_menu{
-        display: none;
-    }
-
     /* Logo */
     #navbar img{
         width: 150px;
         align-self: center;
-    }
-
-    /* Hide burger menu */
-    #navbar .navbar_hide_desktop{
-        display: none;
     }
 
     .category_buttons {

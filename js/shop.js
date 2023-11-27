@@ -41,7 +41,7 @@ document.addEventListener('DOMContentLoaded', (e) => {
                                     <p id="text_id${id}" class="show_text">${description}</p>
                                     <button id="show_more_description${id}" onclick="toggleText('${id}')" class="btn_show_description">Show More</button>
                                     <div class="product_price_submit">
-                                        <p id="price ${id}" class="product_price">${price} $</p>
+                                        <p class="product_price">${price} $</p>
                                         <div onclick="add_to_cart(${id})">
                                             <input type="submit" id="submit" class="btn_submit" value="Add to cart"> 
                                         </div>
@@ -111,10 +111,10 @@ document.addEventListener('DOMContentLoaded', (e) => {
 
 function toggleText(product_id) {
     // Construct the id for the text element based on the productId
-    var textElement = document.getElementById(`text_id${product_id}`);
+    const textElement = document.getElementById(`text_id${product_id}`);
     
     // Construct the id for the button element based on the productId
-    var buttonElement = document.getElementById(`show_more_description${product_id}`);
+    const buttonElement = document.getElementById(`show_more_description${product_id}`);
 
     // Check if the textElement has the 'show_text' class
     if (textElement.classList.contains('show_text')) {

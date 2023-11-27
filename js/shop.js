@@ -1,6 +1,3 @@
-// Get the category from button
-const category_buttons = document.querySelectorAll('.category_buttons a')
-
 // Fetch products
 async function fetch_products(input) {
     // Check for category parameter in the URL
@@ -14,8 +11,19 @@ async function fetch_products(input) {
 
     // Default URL
     let url = 'https://fakestoreapi.com/products/'
+    
+    // Check if the element with the specified ID exists
+    let selected_button = document.getElementById(input);
+    
+    if (selected_button) {
+        // Add 'bold' class to the selected button
+        selected_button.classList.add('bold');
+    }
 
     switch (input) {
+        case "btn_all":
+            url = "https://fakestoreapi.com/products/";
+            break;
         case "btn_womens":
             url = "https://fakestoreapi.com/products/category/women's%20clothing";
             break;
@@ -28,12 +36,8 @@ async function fetch_products(input) {
         case "btn_electronics":
             url = "https://fakestoreapi.com/products/category/electronics"; 
             break;
-        case "btn_all":
-            url = "https://fakestoreapi.com/products/";
-            break;
+        
     }
-    
-    document.getElementById(input).classList.add('bold');
 
     // Fetch data from the API
     let data = await fetch(url);
@@ -92,13 +96,6 @@ document.addEventListener('DOMContentLoaded', (e) => {
         fetch_products();
     }        
 });
-
-// Add click event listeners to category buttons
-category_buttons.forEach(button => {
-    button.addEventListener('click', function () {
-        fetch_products(this.id); // Fetch and render products for the selected category
-    })
-})
 
 // show more and show less
 function toggle_text(product_id) {

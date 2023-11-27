@@ -103,22 +103,22 @@ category_buttons.forEach(button => {
 // show more and show less
 function toggle_text(product_id) {
     // Construct the id for the text element based on the productId
-    const textElement = document.getElementById(`text_id${product_id}`);
+    const text_element = document.getElementById(`text_id${product_id}`);
     
     // Construct the id for the button element based on the productId
-    const buttonElement = document.getElementById(`show_more_description${product_id}`);
+    const button_element = document.getElementById(`show_more_description${product_id}`);
 
     // Check if the textElement has the 'show_text' class
-    if (textElement.classList.contains('show_text')) {
+    if (text_element.classList.contains('show_text')) {
         // If it has the class, remove it to hide the text
-        textElement.classList.remove('show_text');
+        text_element.classList.remove('show_text');
         // Change the button text to 'Show Less'
-        buttonElement.textContent = 'Show Less';
+        button_element.textContent = 'Show Less';
     } else {
         // If it doesn't have the class, add it to display the full text
-        textElement.classList.add('show_text');
+        text_element.classList.add('show_text');
         // Change the button text to 'Show More'
-        buttonElement.textContent = 'Show More';
+        button_element.textContent = 'Show More';
     }
 }
 

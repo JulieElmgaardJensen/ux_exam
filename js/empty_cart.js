@@ -2,9 +2,9 @@ function empty_cart_message() {
     const cart_message = document.getElementById('cart_message');
     const cart_items = document.getElementsByClassName('cart_items')[0];
 
-    const cartArray = JSON.parse(localStorage.getItem('CART')) || [];
+    const cart_array = JSON.parse(localStorage.getItem('CART')) || [];
 
-    if (cartArray.length === 0) {
+    if (cart_array.length === 0) {
         cart_message.style.display = 'block';
         cart_items.style.display = 'none';
     } else {

@@ -68,6 +68,8 @@ function remove_item_from_cart(id){
     cart = cart.filter( (item) => item.id !== id)
 
     update_cart();
+
+    location.reload();
 }
 
 // Change number of units in cart

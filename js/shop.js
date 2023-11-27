@@ -17,7 +17,7 @@ async function fetch_products(input) {
 
     switch (input) {
         case "btn_womens":
-            url = "https://fakestoreapi.com/products/category/women's%20clothing"; 
+            url = "https://fakestoreapi.com/products/category/women's%20clothing";
             break;
         case "btn_mens":
             url = "https://fakestoreapi.com/products/category/men's%20clothing"; 
@@ -33,6 +33,8 @@ async function fetch_products(input) {
             break;
     }
     
+    document.getElementById(input).classList.add('bold');
+
     // Fetch data from the API
     let data = await fetch(url);
     let products = document.querySelector('.product');

@@ -41,6 +41,10 @@ input {
     cursor: pointer;
 }
 
+.bold {
+    font-weight: bold;
+}
+
 /* BUTTONS */
 
 #btn_remove_filter{

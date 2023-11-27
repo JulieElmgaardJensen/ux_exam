@@ -14,12 +14,16 @@ header{
 .category_buttons{
     text-align: center;
     background-color: var(--color_bg_second);
-    padding: 1rem;
+    overflow: auto;
+    white-space: nowrap;
+    padding-left: 2rem;
 }
 
 .category_buttons a{
-    text-decoration:none;
+    text-decoration: none;
     margin: 1rem;
+    display: inline-block;
+
 }
 
 /* NAVBAR STYLE */
@@ -131,10 +135,6 @@ header{
     }
 
     .category_buttons{
-        text-align: center;
-    }
-
-    .category_buttons a{
-        margin: 2rem;
+        padding-left:0;
     }
 }

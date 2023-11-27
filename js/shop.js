@@ -1,8 +1,3 @@
-
-// Waiting for the DOM content to be fully loaded before executing the code
-document.addEventListener('DOMContentLoaded', (e) => {
-    e.preventDefault();
-
 // Get the category from button
 const category_buttons = document.querySelectorAll('.category_buttons a')
 
@@ -44,7 +39,6 @@ async function fetch_products(input) {
 
     // Parse JSON response
     response = await data.json();
-    console.log("in fetch products", response);
 
     // Clear existing products
     products.innerHTML = '';

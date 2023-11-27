@@ -8,7 +8,7 @@ document.addEventListener('DOMContentLoaded', function () {
     //     // If email is not set, redirect to login page
     //     window.location.href = 'index.html';
     // } else {
-        // Else continue loading content and inserting email into a paragraph with id 'userEmailParagraph'
+        // Else continue loading content and inserting email into a paragraph with id 'user_email_paragraph'
         const user_email_paragraph = document.getElementById('user_logged_in');
 
         // Check if the element exists before setting textContent

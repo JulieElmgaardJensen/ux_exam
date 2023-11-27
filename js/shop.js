@@ -17,7 +17,7 @@ async function fetch_products(input) {
 
     switch (input) {
         case "btn_womens":
-            url = "https://fakestoreapi.com/products/category/women's%20clothing"; 
+            url = "https://fakestoreapi.com/products/category/women's%20clothing";
             break;
         case "btn_mens":
             url = "https://fakestoreapi.com/products/category/men's%20clothing"; 
@@ -33,6 +33,8 @@ async function fetch_products(input) {
             break;
     }
     
+    document.getElementById(input).classList.add('bold');
+
     // Fetch data from the API
     let data = await fetch(url);
     let products = document.querySelector('.product');
@@ -73,7 +75,7 @@ async function fetch_products(input) {
                                     <div class="product_price_submit">
                                         <p class="product_price">${price} $</p>
                                         <div onclick="add_to_cart(${id})">
-                                            <input type="submit" id="submit" class="btn_submit" value="Add to cart"> 
+                                            <button type="submit" id="submit" class="btn_submit" value="Add to cart">Add to cart</button>
                                         </div>
                                     </div>        
                                 </div>
@@ -101,22 +103,22 @@ category_buttons.forEach(button => {
 // show more and show less
 function toggle_text(product_id) {
     // Construct the id for the text element based on the productId
-    const textElement = document.getElementById(`text_id${product_id}`);
+    const text_element = document.getElementById(`text_id${product_id}`);
     
     // Construct the id for the button element based on the productId
-    const buttonElement = document.getElementById(`show_more_description${product_id}`);
+    const button_element = document.getElementById(`show_more_description${product_id}`);
 
     // Check if the textElement has the 'show_text' class
-    if (textElement.classList.contains('show_text')) {
+    if (text_element.classList.contains('show_text')) {
         // If it has the class, remove it to hide the text
-        textElement.classList.remove('show_text');
+        text_element.classList.remove('show_text');
         // Change the button text to 'Show Less'
-        buttonElement.textContent = 'Show Less';
+        button_element.textContent = 'Show Less';
     } else {
         // If it doesn't have the class, add it to display the full text
-        textElement.classList.add('show_text');
+        text_element.classList.add('show_text');
         // Change the button text to 'Show More'
-        buttonElement.textContent = 'Show More';
+        button_element.textContent = 'Show More';
     }
 }
 

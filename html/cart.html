@@ -3,44 +3,47 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="icon" type="image/x-icon" href="/img/favicon.png">
-    <!-- STYLESHEETS -->
-    <link rel="stylesheet" href="/css/cart.css">  
-    <link rel="stylesheet" href="/css/header.css">
-    <link rel="stylesheet" href="/css/footer.css">  
+
     <!-- FONT AWESOME KIT -->
-    <script src="https://kit.fontawesome.com/2fdbd81b12.js" crossorigin="anonymous"></script>    
-    <!-- GET PRODUCTS SCRIPT -->
+    <script src="https://kit.fontawesome.com/2fdbd81b12.js" crossorigin="anonymous"></script>   
+
+    <!-- FAVICON -->
+    <link rel="icon" type="image/x-icon" href="/img/favicon.png">
+
+    <!-- STYLESHEET -->
+    <link rel="stylesheet" href="/css/cart.css">   
+
+    <!-- JAVASCRIPT FILES -->
     <script src="/js/get_products.js" defer></script>
-    <!-- GET EMAIL SCRIPT -->
     <script src="/js/get_user_email.js" defer></script>
-    <!-- LOGOUT SCRIPT -->
     <script src="/js/logout.js" defer></script>
-    <!-- VARIABLER SCRIPT -->
     <script src="/js/variables.js" defer></script>
-    <!-- CART SCRIPT -->
     <script src="/js/cart.js" defer></script>
-    <!-- EMPTY CART MESSAGE -->
     <script src="/js/empty_cart.js" defer></script>
+    <script src="/js/shop.js" defer></script>
     
     <title>Cart - Paloma</title>
 </head>
-<body>
-    <header>
-        <div id="navbar">
 
+<body>
+
+    <!-- HEADER -->
+    <header>
+
+        <!-- Main navbar -->
+        <section id="navbar">
             <!-- Logo -->
             <a href="/html/shop.html"><img id="navbar_logo" src="/img/logo_large.png" alt="Paloma Logo"></a>
+            <!-- User logged in -->
             <div id="user_message"><p>Velkommen&nbsp;</p><p id="user_logged_in"></p></div>
-            
-            <div class="navbar_links">
-                                
-                <!-- Icons -->
+            <!-- Navbar icons -->
+            <nav class="navbar_links">
                 <div class="cart"><a href="/html/cart.html"><i class="fa-solid fa-lg fa-cart-shopping"></i></a></div>
                 <div id="logout_button"><i class="fa-solid fa-lg fa-right-from-bracket"></i></div>
-            </div>
-        </div>
+            </nav>
+        </section>
 
+        <!-- Secondary navbar -->
         <section>
             <form class="category_buttons">
                 <a href="shop.html?category=btn_all"btn_all_products>All products</a>
@@ -52,111 +55,107 @@
         </section>
     </header>
     
+    <!-- MAIN -->
     <main>
-        <!-- Breadcrumb -->
+
+        <!-- Breadcrumbs -->
         <section>
             <ul class="breadcrumb">
                 <li><a href="/html/shop.html">Shop</a></li>
                 <li>Cart</li>
             </ul>
         </section>
+
+        <!-- Shopping cart -->
         <div class="grid">
-        
-        <!-- Cart -->
-        <section class="section_cart">
 
-            <h2>Cart</h2>
-            <p id="cart_message">The cart is empty</p>
-            <div class="grid">
-
-                <div class="cart_items"></div>
-
-            <div class="cart_items"></div>
-
-
-            </div>
-        </section>
-
-        <!-- Order information -->
-        <section class="section_order_info">
-            <div class="order_info">
-                <h2 class="heading_order">Order information</h2>
-                <form action="" id="frm_order" method="">
-                    <label for="name">Name</label>
-                    <input type="text" id="name" name="name" required>
-    
-                    <label for="d_address">Delivery address</label>
-                    <input type="text" id="d_address" name="d_address" required>
-                    <div class="flex">
-                        <div class="div_p_code">
-                            <label for="p_code" id="lbl_p_code">ZIP code</label>
-                            <input type="number" id="p_code" name="p_code" min="4" max="4" required>
-                        </div>
-                        <div class="div_city">
-                            <label for="city" id="lbl_city">City</label>
-                            <input type="text" id="city" name="city" required>
-                        </div>
-                    </div>
-    
-                    <label for="b_address">Billing address</label>
-                    <input type="text" id="b_address" name="b_address" required>
-    
-                    <div class="flex">
-                        <div class="div_p_code">
-                            <label for="b_code" id="lbl_b_code">ZIP code</label>
-                            <input type="number" id="b_code" name="b_code" min="4" max="4" required>
-                        </div>
-                        <div class="div_city">
-                            <label for="b_city" id="lbl_b_city">City</label>
-                            <input type="text" id="b_city" name="b-city" required>
-                        </div>
-                    </div>
-
-                    <label for="credit_card">Credit card</label>
-                    <input type="number" id="credit_card" name="credit_card"  min="16" max="16" required>
-                    
-                    <div class="flex">
-                        <div class="div_exp_date">
-                            <label for="exp_date" id="lbl_exp_date">Exp date</label>
-                            <input type="month" id="exp_date" name="exp_date" min="2023-12" required>
-                        </div>
-
-                        <div class="div_cvc">
-                            <label for="cvc" id="lbl_cvc">CVC</label>
-                            <input type="number" id="cvc" name="cvc" min="3" max="3" required>
-                        </div>
-                    </div>
-                    <div>
-                        <input type="submit" id="btn_purchase" class="btn_purchase" value="Confirm purchase" form="frm_order">
-                        <a href="/html/shop.html" class="txt_center">Continue shopping?</a>
-                    </div>
-                </form>
-            </div>
-        </section>
-
-        <!-- Cart total -->
-        <section class="section_cart_total">
-            <div class="cart_total">
-                <div class="cart_row">
-                    <p>Subtotal</p>
-                    <span class="cart_subtotal_price"></span>
+            <!-- Cart -->
+            <section class="section_cart">
+                <h2>Cart</h2>
+                <p id="cart_message">The cart is empty</p>
+                <div class="grid">
+                    <div class="cart_items"></div>
                 </div>
-                <div class="cart_row">
-                    <p>Delivery fee</p>
-                    <span class="cart_fee_price">5.00 $</span>
+            </section>
+
+            <!-- Payment form -->
+            <section class="section_order_info">
+                <div class="order_info">
+                    <h2 class="heading_order">Order information</h2>
+                    <form action="" id="frm_order" method="">
+                        <label for="name">Name</label>
+                        <input type="text" id="name" name="name" required>
+                        <label for="d_address">Delivery address</label>
+                        <input type="text" id="d_address" name="d_address" required>
+                            <div class="flex">
+                                <div class="div_p_code">
+                                    <label for="p_code" id="lbl_p_code">ZIP code</label>
+                                    <input type="number" id="p_code" name="p_code" min="4" max="4" required>
+                                </div>
+                                <div class="div_city">
+                                    <label for="city" id="lbl_city">City</label>
+                                    <input type="text" id="city" name="city" required>
+                                </div>
+                            </div>
+                        <label for="b_address">Billing address</label>
+                        <input type="text" id="b_address" name="b_address" required>
+                            <div class="flex">
+                                <div class="div_p_code">
+                                    <label for="b_code" id="lbl_b_code">ZIP code</label>
+                                    <input type="number" id="b_code" name="b_code" min="4" max="4" required>
+                                </div>
+                                <div class="div_city">
+                                    <label for="b_city" id="lbl_b_city">City</label>
+                                    <input type="text" id="b_city" name="b-city" required>
+                                </div>
+                            </div>
+                        <label for="credit_card">Credit card</label>
+                        <input type="number" id="credit_card" name="credit_card"  min="16" max="16" required>
+                            <div class="flex">
+                                <div class="div_exp_date">
+                                    <label for="exp_date" id="lbl_exp_date">Exp date</label>
+                                    <input type="month" id="exp_date" name="exp_date" min="2023-12" required>
+                                </div>
+
+                                <div class="div_cvc">
+                                    <label for="cvc" id="lbl_cvc">CVC</label>
+                                    <input type="number" id="cvc" name="cvc" min="3" max="3" required>
+                                </div>
+                            </div>
+                            <div>
+                                <input type="submit" id="btn_purchase" class="btn_purchase" value="Confirm purchase" form="frm_order">
+                                <a href="/html/shop.html" class="txt_center">Continue shopping?</a>
+                            </div>
+                    </form>
                 </div>
-                <div class="cart_row">
-                    <p>Total</p>
-                    <span class="cart_total_price "></span>
+            </section>
+
+            <!-- Cart total -->
+            <section class="section_cart_total">
+                <div class="cart_total">
+                    <div class="cart_row">
+                        <p>Subtotal</p>
+                        <span class="cart_subtotal_price"></span>
+                    </div>
+                    <div class="cart_row">
+                        <p>Delivery fee</p>
+                        <span class="cart_fee_price">5.00 $</span>
+                    </div>
+                    <div class="cart_row">
+                        <p>Total</p>
+                        <span class="cart_total_price "></span>
+                    </div>
+                    <i>*Tax of 20% included</i>
                 </div>
-                <i>*Tax of 20% included</i>
-            </div>
-        </section>
+            </section>
+
         </div>
     </main>
 
+    <!-- FOOTER -->
     <footer>
         <section id="footer">
+
             <!-- Credits -->
             <article class="footer_links">
                 <h3>Credits</h3>
@@ -167,10 +166,13 @@
                 </ul>    
             </article>
         </section>
+
         <section>
             <!-- Copyrights -->
             <p id="text_copyright">&copy; 2023 UX Exam</p>
         </section>
+
     </footer>
+    
 </body>
 </html>

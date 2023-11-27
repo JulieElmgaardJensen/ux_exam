@@ -1,47 +1,31 @@
-<!-- HEADER CSS -->
-<link rel="stylesheet" href="/css/header.css">
-
-<!-- BURGER MENU SCRIPT -->
-<script src="/js/burger_menu.js"></script>
-
-<!-- Script for getting email -->
-<script src="/js/get_user_email.js"></script>
-
-<!-- FONT AWESOME KIT -->
-<script src="https://kit.fontawesome.com/2fdbd81b12.js" crossorigin="anonymous"></script>
-
 <!-- HEADER -->
 <header>
-    <div id="navbar">
 
-    <!-- Logo -->
+    <!-- Main navbar -->
+    <section id="navbar">
+
+        <!-- Logo -->
         <a href="/html/shop.html"><img id="navbar_logo" src="/img/logo_large.png" alt="Paloma Logo"></a>
+
+        <!-- User logged in -->
         <div id="user_message"><p>Velkommen&nbsp;</p><p id="user_logged_in"></p></div>
         
-        <div class="navbar_links">
-            
-            <!-- Shop link -->
-            <h3 class="navbar_hide_phone"><a href="/html/shop.html">Shop</a></h3>
-            
-            <!-- Icons -->
+        <!-- Navbar icons -->
+        <nav class="navbar_links">
             <div class="cart"><a href="/html/cart.html"><i class="fa-solid fa-lg fa-cart-shopping"></i></a></div>
-            <div class="navbar_hide_phone"><a href="#"><i class="fa-solid fa-lg fa-right-from-bracket"></i></a></div>
-            
-            <!-- Hamburger menu -->
-            <div class="navbar_hide_desktop">
-                <a href="javascript:void(0);" onclick="burger_menu_dropdown()">
-                    <i class="fa-solid fa-lg fa-bars"></i>
-                </a>
-            </div>
-        </div>
-    </div>
+            <div id="logout_button"><i class="fa-solid fa-lg fa-right-from-bracket"></i></div>
+        </nav>
 
-    <!-- Hamburger menu contents -->
-    <div id="dropdown_menu">
-        <ul>
-            <a href="/html/shop.html"><li>Shop</li></a>
-            <li>Log out</li>
-        </ul>
-    </div>
+    </section>
 
+    <!-- Secondary navbar -->
+    <section>
+        <form class="category_buttons">
+            <a href="shop.html?category=btn_all"btn_all_products>All products</a>
+            <a href="shop.html?category=btn_womens" id="btn_womens">Women’s clothing</a>
+            <a href="shop.html?category=btn_mens" id="btn_mens">Men’s clothing</a>
+            <a href="shop.html?category=btn_jewelry" id="btn_jewelry">Jewelry</a>
+            <a href="shop.html?category=btn_electronics" id="btn_electronics">Electronics</a>
+        </form>
+    </section>
 </header>

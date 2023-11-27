@@ -1,24 +1,45 @@
-// let cart = JSON.parse(localStorage.getItem("CART")) || [];
-function redirect_to_shop() {
-    if ( window.location.href != `html/shop.html`) {
-        window.location.href = `shop.html`
-    }
-} 
-
 // Get the category from button
-const womens = document.getElementById('btn_womens');
-const jewelery = document.getElementById('btn_jewelry');
-const mens = document.getElementById('btn_mens');
-const electronics = document.getElementById('btn_electronics');
+const category_buttons = document.querySelectorAll('.category_buttons a')
 
-let fetch_url = 'https://fakestoreapi.com/products';
+// Fetch products
+async function fetch_products(input) {
+    // Check for category parameter in the URL
+    let params = new URLSearchParams(document.location.search);
+    // If category parameter exists, set input to its value
+    if (params.get('category')) {
+        input = params.get('category')
+        // Remove the category parameter from the URL to avoid confusion
+        window.history.replaceState({}, document.title, "/" + "html/shop.html");
+    }
 
-    // FETCH PRODUCTS
-async function fetch_products(url) {
+    // Default URL
+    let url = 'https://fakestoreapi.com/products/'
+
+    switch (input) {
+        case "btn_womens":
+            url = "https://fakestoreapi.com/products/category/women's%20clothing"; 
+            break;
+        case "btn_mens":
+            url = "https://fakestoreapi.com/products/category/men's%20clothing"; 
+            break;
+        case "btn_jewelry":
+            url = "https://fakestoreapi.com/products/category/jewelery"; 
+            break;
+        case "btn_electronics":
+            url = "https://fakestoreapi.com/products/category/electronics"; 
+            break;
+        case "btn_all":
+            url = "https://fakestoreapi.com/products/";
+            break;
+    }
+    
+    // Fetch data from the API
     let data = await fetch(url);
     let products = document.querySelector('.product');
+
+    // Parse JSON response
     response = await data.json();
-    console.log("x");
+    console.log("in fetch products", response);
 
     // Clear existing products
     products.innerHTML = '';
@@ -49,7 +70,7 @@ async function fetch_products(url) {
                                     <h4 class="product_category">${category}</h4>
                                     <h3 class="product_title">${title}</h3>
                                     <p id="text_id${id}" class="show_text">${description}</p>
-                                    <button id="show_more_description${id}" onclick="toggleText('${id}')" class="btn_show_description">Show More</button>
+                                    <button id="show_more_description${id}" onclick="toggle_text('${id}')" class="btn_show_description">Show More</button>
                                     <div class="product_price_submit">
                                         <p id="price ${id}" class="product_price">${price} $</p>
                                         <div onclick="add_to_cart(${id})">
@@ -64,41 +85,22 @@ async function fetch_products(url) {
 // Waiting for the DOM content to be fully loaded before executing the code
 document.addEventListener('DOMContentLoaded', (e) => {
     e.preventDefault();
-    console.log(location.href);
-    console.log(location.pathname);
 
+    // If the current page is shop.html, fetch and render products
     if ( window.location.pathname == `/html/shop.html`) {
-        fetch_products(fetch_url);
-        return console.log("a");
-    }
-
-    console.log("x");
-    // Fetch all products
-    
+        fetch_products();
+    }        
 });
 
-womens.addEventListener('click', function () {
-    fetch_url = "https://fakestoreapi.com/products/category/women's%20clothing";
-    fetch_products(fetch_url);
-});
+// Add click event listeners to category buttons
+category_buttons.forEach(button => {
+    button.addEventListener('click', function () {
+        fetch_products(this.id); // Fetch and render products for the selected category
+    })
+})
 
-mens.addEventListener('click', function () {
-    fetch_url = "https://fakestoreapi.com/products/category/men's%20clothing";
-    fetch_products(fetch_url);
-});
-
-jewelery.addEventListener('click', function () {
-        fetch_url = 'https://fakestoreapi.com/products/category/jewelery';
-        fetch_products(fetch_url);
-});
-
-electronics.addEventListener('click', function () {
-    fetch_url = 'https://fakestoreapi.com/products/category/electronics';
-    fetch_products(fetch_url);
-}); 
-
-
-function toggleText(product_id) {
+// show more and show less
+function toggle_text(product_id) {
     // Construct the id for the text element based on the productId
     var textElement = document.getElementById(`text_id${product_id}`);
     
@@ -121,6 +123,7 @@ function toggleText(product_id) {
 
 // Add to cart
 function add_to_cart(id){
+    let cart = JSON.parse(localStorage.getItem("CART")) || [];
     //check if product already exist in cart
     if(cart.some((item) => item.id === id)){
         change_number_of_units("plus", id);
@@ -136,4 +139,3 @@ function add_to_cart(id){
 
     alert('Item added to cart!');
 }
-

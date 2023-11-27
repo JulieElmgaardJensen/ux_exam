@@ -38,15 +38,18 @@ a{
 /* Return to shop button */
 button{
     background-color: var(--color_btn_bg);
-    font-family: var(--font_paragraph);
-    font-size: var(--font_size_p);
-    color: var(--color_btn_font);
     border: none;
     border-radius: var(--border_btn_radius);
     width: 200px;
     height: 35px;
     margin: 35px;
     cursor: pointer;
+}
+
+button > a{
+    color: var(--color_btn_font);
+    font-family: var(--font_paragraph);
+    font-size: var(--font_size_p);
 }
 
 /* Screen minimum 587px */

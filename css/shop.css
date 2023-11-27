@@ -26,12 +26,12 @@ h2 {
     padding-bottom: 2.2rem;
 }
 
-p, input, a {
+p, input, a, .btn_submit {
     font-family: var(--font_paragraph);
     color: var(--color_font);
 }
 
-input {
+input, .btn_submit {
     background-color: var(--color_btn_bg);
     color: var(--color_btn_font);
     border: none;
@@ -46,7 +46,6 @@ input {
 }
 
 /* BUTTONS */
-
 #btn_remove_filter{
     text-align: right;
     margin: 0rem 2rem 3rem 2rem;

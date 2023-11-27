@@ -1,26 +1,22 @@
+/* IMPORTS */
 @import "variables.css";
 @import "header.css";
 @import "footer.css";
 
-* {
-    margin: 0;
-    padding: 0;
-}
-
-body {
+body{
     background-color: var(--color_bg_main);
 }
 
-main {
+main{
     margin: var(--d_m_body_mobile);
 }
 
-h2, h3, h4 {
+h2, h3, h4{
     font-family: var(--font_heading);
     color: var(--color_font);
 }
 
-h2 {
+h2{
     font-size: var(--font_size_h2);
     text-align: center;
     padding-bottom: 2.2rem;
@@ -51,13 +47,13 @@ input, .btn_submit {
     margin: 0rem 2rem 3rem 2rem;
 }
 
-.show_text {
+.show_text{
     overflow: hidden;
     white-space: nowrap;
     text-overflow: ellipsis;
 }
 
-.btn_show_description {
+.btn_show_description{
     border: none;
     text-decoration: underline;
     text-align-last: left;
@@ -68,7 +64,7 @@ input, .btn_submit {
 
 /* ITEMS */
 
-.card {
+.card{
     width: 14rem;
     margin-left: auto;
     margin-right: auto;
@@ -77,11 +73,11 @@ input, .btn_submit {
     margin-bottom: 4rem;
 }
 
-.card > h3, h4, .product_price, .flex {
+.card > h3, h4, .product_price, .flex{
     margin-bottom: 0.35rem;
 }
 
-div.bg_img {
+div.bg_img{
     background-color: var(--img_bg_color);
     text-align: center;
     margin-bottom: 0.3rem;
@@ -90,29 +86,29 @@ div.bg_img {
     align-items: center;
 }
 
-.bg_img {
+.bg_img{
     width: 14rem;
     height: 14rem;
 }
 
-.product_img {
+.product_img{
     max-width: 12.5rem;
     max-height: 12.5rem;
 }
 
-.flex {
+.flex{
     display: flex;
 }
 
-.fa-solid {
+.fa-solid{
     align-self: center;
 }
 
-.product_rate {
+.product_rate{
     padding-left: 0.625rem;
 }
 
-.product_price_submit {
+.product_price_submit{
     margin-top: auto;
     padding-top: 1rem;
     font-weight: 500;
@@ -124,26 +120,26 @@ div.bg_img {
 
 
 /* TABLET */
-@media only screen and (min-width: 587px) {
+@media only screen and (min-width: 587px){
 
-    main {
+    main{
         margin: var(--d_m_body_tablet);
     }
     
-    #grid {
+    #grid{
         display: grid;
         grid-template-columns: 1fr 1fr;
         grid-column-gap: 1.5rem;
     }
 
-    h2 {
+    h2{
         font-size: 2.5rem;
         font-size: calc(var(--font_size_h2) + 0.5rem);
     }
 }
 
 /* SMALL DESKTOP */
-@media only screen and (min-width: 863px) {
+@media only screen and (min-width: 863px){
 
     main {
         margin: 0 var(--d_m_body_desktop);
@@ -160,13 +156,13 @@ div.bg_img {
 }
 
 /*  DESKTOP */
-@media only screen and (min-width: 1137px) {
+@media only screen and (min-width: 1137px){
 
-    h2 {
+    h2{
         font-size: calc(var(--font_size_h2) + 1rem);
     }
 
-    #grid {
+    #grid{
         grid-template-columns: 1fr 1fr 1fr 1fr;
     }
 

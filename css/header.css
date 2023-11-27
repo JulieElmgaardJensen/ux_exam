@@ -1,18 +1,17 @@
-
-h3, a {
+h3, a{
     font-family: var(--font_links);
     text-decoration: none;
 }
 
-header {
-    margin-bottom: 35px;
+header{
+    margin-bottom: 2rem;
 }
 
-#logout_button {
+#logout_button{
     cursor: pointer;
 }
 
-.category_buttons {
+.category_buttons{
     text-align: center;
     background-color: var(--color_bg_second);
     padding: 1rem;
@@ -23,18 +22,18 @@ header {
     margin: 1rem;
 }
 
-/* Navbar style + flexbox */
+/* NAVBAR STYLE */
 #navbar{
     display: flex;
     flex-direction: row;
     justify-content: space-between;
-    padding: 10px 0;
+    padding: 0.625rem 0;
     flex-wrap: wrap;
 }
 
-/* Icons style */
+/* ICON STYLE */
  #navbar a{
-    margin: 10px;
+    margin: 0.625rem;
     color: var(--color_icons);
     align-self: center;
     color: inherit;
@@ -47,7 +46,7 @@ header {
 .navbar_links{
     display: flex;
     align-items: center;
-    margin-right: 20px;
+    margin-right: 1.25rem;
 }
 
 #user_message{
@@ -55,7 +54,7 @@ header {
     align-items: center;
     order: 3;
     width: 100%;
-    margin: 10px;
+    margin: 0.625rem;
     justify-content: center;
 }
 
@@ -71,9 +70,9 @@ header {
     text-decoration: none;
 }
 
-/* Logo */
+/* LOGO */
 #navbar img{
-    width: 150px;
+    width: 9rem;
     align-self: center;
 }
 
@@ -84,12 +83,12 @@ header {
         display: flex;
         flex-direction: row;
         justify-content: space-between;
-        padding: 10px 15px;
+        padding: 0.625rem 1rem;
     }
 
     /* Icon style */
     #navbar a{
-        margin: 10px;
+        margin: 0.625rem;
         color: var(--color_icons);
         align-self: center;
         color: inherit;
@@ -127,15 +126,15 @@ header {
 
     /* Logo */
     #navbar img{
-        width: 150px;
+        width: 9.3rem;
         align-self: center;
     }
 
-    .category_buttons {
+    .category_buttons{
         text-align: center;
     }
 
-    .category_buttons a {
+    .category_buttons a{
         margin: 2rem;
     }
 }

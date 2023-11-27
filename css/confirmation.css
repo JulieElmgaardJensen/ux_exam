@@ -1,11 +1,7 @@
+/* IMPORTS */
 @import "variables.css";
 @import "header.css";
 @import "footer.css";
-
-* {
-    margin: 0;
-    padding: 0;
-}
 
 body{
     background-color: var(--color_bg_main);
@@ -17,10 +13,10 @@ a{
     color: var(--color_font);
 }
 
-/* Order confirmation message box */
+/* CONFIRMATION BOX */
 #cnfrm_box{
     background-color: var(--color_bg_second);
-    margin: 50px 20px 300px 20px;
+    margin: 3rem 1.25rem 19rem 1.5rem;
     border-radius: var(--border_btn_radius);
 }
 
@@ -28,25 +24,25 @@ a{
     font-family: var(--font_heading);
     font-size: var(--font_size_h3);
     color: var(--color_font);
-    padding-top: 35px;
+    padding-top: 2rem;
 }
 
 #cnfrm_message{
-    margin: 20px 30px 0 20px;
+    margin: 1.25rem 1.9rem 0 1.25rem;
 }
 
-/* Return to shop button */
+/* RETURN TO SHOP BTN */
 button{
     background-color: var(--color_btn_bg);
     border: none;
     border-radius: var(--border_btn_radius);
-    width: 200px;
-    height: 35px;
-    margin: 35px;
+    width: 12.5rem;
+    height: 2rem;
+    margin: 2rem;
     cursor: pointer;
 }
 
-button > a{
+button a{
     color: var(--color_btn_font);
     font-family: var(--font_paragraph);
     font-size: var(--font_size_p);
@@ -55,35 +51,35 @@ button > a{
 /* Screen minimum 587px */
 @media only screen and (min-width: 587px){
     #cnfrm_box{
-        margin: 50px 70px 300px 70px;
+        margin: 3rem 4.5rem 19rem 4.5rem;
     }
 
     #cnfrm_message{
-        margin: 20px 50px;
+        margin: 1.25rem 3rem;
     }
 
     button{
-        margin: 20px 0 50px 0;
+        margin: 1.25rem 0 3rem 0;
     }
 }
 
 /* Screen minimum 767px */
 @media only screen and (min-width: 767px){
     #cnfrm_box{
-        margin: 40px 100px 200px 100px;
+        margin: 2.5rem 6.25rem 12.5rem 6.25rem;
     }
 }
 
 /* Screen minimum 1024px */
 @media only screen and (min-width: 1024px){
     #cnfrm_box{
-        margin: 50px 300px 100px 300px;
+        margin: 3rem 19rem 6.25rem 19rem;
     }
 }
 
 /* Screen minimum 1100px */
 @media only screen and (min-width: 1100px){
     #cnfrm_box{
-        margin: 50px 400px 100px 400px;
+        margin: 3rem 25rem 6.25rem 25rem;
     }
 }

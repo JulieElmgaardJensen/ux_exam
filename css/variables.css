@@ -1,6 +1,11 @@
 @import url('https://fonts.googleapis.com/css2?family=Belleza&family=Montserrat:wght@300;400;500;600;700&display=swap');
 
-:root {
+*{
+    margin: 0;
+    padding: 0;
+}
+
+:root{
     /*  BACKGROUND COLORS   */
     --color_bg_main: rgb(242, 242, 238);
     --color_bg_second: rgb(198, 180, 156);
@@ -20,13 +25,13 @@
     --color_btn_bg: rgb(82, 82, 82);
     --color_btn_font: white;
     --border_btn_radius: 0.2rem;
-    --btn_width: 215px;    /* RETTET*/
-    --btn_height: 45px;    /* RETTET*/
+    --btn_width: 13rem; 
+    --btn_height: 2.8rem; 
     
 
     /*  ICONS STYLING   */
     --color_icons: rgb(30, 30, 30);
-    --width_icons: 27px;
+    --width_icons: 1.6rem;
     
 
     /*  IMG STYLING */
@@ -36,9 +41,9 @@
     /*  NAV STYLING */
     --color_links: rgb(30, 30, 30);
     --font_links: 'Belleza', sans-serif;
-    --font_size_nav: 20px;
+    --font_size_nav: 1.25rem;
 
-    /*  DEFAULT MARGIN*/
+    /*  DEFAULT MARGIN + PADDING*/
     --d_m_body_mobile: 1.5rem;
     --d_p_body_mobile: 1.5rem;
 

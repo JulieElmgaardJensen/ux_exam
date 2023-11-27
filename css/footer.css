@@ -1,57 +1,34 @@
-
 #footer{
     margin-top: 3rem;
     left: 0;
     bottom: 0;
     width: 100%;
+    display: flex;
+    justify-content: center;
+    border-top: 0.06rem solid var(--color_bg_second);
+    padding: 0.625rem 0;
+    text-align: center;
 }
 
-#footer li {
+#footer li{
     list-style:none;
     font-family: var(--font_paragraph);
+    font-size: 0.8rem;
 }
 
-#footer h3 {
-    margin-bottom: 15px;
+#footer h3{
+    margin-bottom: 1rem;
 }
 
-#footer a {
+#footer a{
     text-decoration: none;
     font-weight: 600;
     color: var(--color_font);
 }
 
-#text_copyright {
+#text_copyright{
     text-align: center;
-    font-size: 12px;
-}
-#footer i {
-    margin-right: 5px;
-}
-
-/* MOBILE */
-@media only screen and (max-width: 767px) {
-
-    /* Flexbox */
-    #footer{
-        display: flex;
-        flex-wrap: wrap;
-        border-top: 1px solid var(--color_bg_second);
-        padding: 10px 0;
-        text-align: center;
-    }
-
-    .footer_links{
-        width: 100%;
-    }
-
-    .footer_links p, .footer_links h3{
-        padding: 0 10%;
-    }
-
-    #footer li {
-        font-size: 13px;
-    }
+    font-size: 0.75rem;
 }
 
 /* TABLET + DESKTOP*/
@@ -59,13 +36,13 @@
     /* Flexbox */
     #footer{
         display: flex;
-        border-top: 1px solid var(--color_bg_second);
-        
+        border-top: 1px solid var(--color_bg_second); 
+        justify-content: left;
     }
 
     #footer article{
         width: 33%;
-        padding: 30px 10%;
+        padding: 1.8rem 10%;
         text-align: left;
     }
 }

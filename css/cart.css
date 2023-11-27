@@ -32,7 +32,7 @@ label{
     display: block;
 }
 
-input, button {
+input{
     border: none;
     border-radius: var(--border_btn_radius);
     width: 100%;
@@ -193,6 +193,8 @@ div.bg_img {
 
 /* BUTTON CONFIRM PUCHASE */
 .btn_purchase {
+    border: none;
+    border-radius: var(--border_btn_radius);
     background-color: var(--color_btn_bg);
     color: var(--color_btn_font);
     width: 90%;
@@ -212,6 +214,7 @@ div.bg_img {
 /* CONTINUE SHOPPING */
 .txt_center {
     font-family: var(--font_paragraph);
+    font-size: 0.75rem;
     text-decoration: none;
     justify-content: center;
     display: flex;

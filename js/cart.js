@@ -1,4 +1,3 @@
-
 //render cart items and subtotal
 update_cart();
 

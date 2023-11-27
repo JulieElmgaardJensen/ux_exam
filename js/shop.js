@@ -1,16 +1,53 @@
+
 // Waiting for the DOM content to be fully loaded before executing the code
 document.addEventListener('DOMContentLoaded', (e) => {
     e.preventDefault();
+
+// Get the category from button
+const category_buttons = document.querySelectorAll('.category_buttons a')
+
+// Fetch products
+async function fetch_products(input) {
+    // Check for category parameter in the URL
+    let params = new URLSearchParams(document.location.search);
+    // If category parameter exists, set input to its value
+    if (params.get('category')) {
+        input = params.get('category')
+        // Remove the category parameter from the URL to avoid confusion
+        window.history.replaceState({}, document.title, "/" + "html/shop.html");
+    }
+
+    // Default URL
+    let url = 'https://fakestoreapi.com/products/'
+
+    switch (input) {
+        case "btn_womens":
+            url = "https://fakestoreapi.com/products/category/women's%20clothing"; 
+            break;
+        case "btn_mens":
+            url = "https://fakestoreapi.com/products/category/men's%20clothing"; 
+            break;
+        case "btn_jewelry":
+            url = "https://fakestoreapi.com/products/category/jewelery"; 
+            break;
+        case "btn_electronics":
+            url = "https://fakestoreapi.com/products/category/electronics"; 
+            break;
+        case "btn_all":
+            url = "https://fakestoreapi.com/products/";
+            break;
+    }
     
+    // Fetch data from the API
+    let data = await fetch(url);
     let products = document.querySelector('.product');
 
-    // FETCH PRODUCTS
-    async function fetch_products(url) {
-        let data = await fetch(url);
-        response = await data.json();
+    // Parse JSON response
+    response = await data.json();
+    console.log("in fetch products", response);
 
-        // Clear existing products
-        products.innerHTML = '';
+    // Clear existing products
+    products.innerHTML = '';
 
     // LOOP ELEMENTS IN
     for (let i = 0; i < response.length; i++) {
@@ -38,7 +75,7 @@ document.addEventListener('DOMContentLoaded', (e) => {
                                     <h4 class="product_category">${category}</h4>
                                     <h3 class="product_title">${title}</h3>
                                     <p id="text_id${id}" class="show_text">${description}</p>
-                                    <button id="show_more_description${id}" onclick="toggleText('${id}')" class="btn_show_description">Show More</button>
+                                    <button id="show_more_description${id}" onclick="toggle_text('${id}')" class="btn_show_description">Show More</button>
                                     <div class="product_price_submit">
                                         <p class="product_price">${price} $</p>
                                         <div onclick="add_to_cart(${id})">
@@ -47,68 +84,28 @@ document.addEventListener('DOMContentLoaded', (e) => {
                                     </div>        
                                 </div>
                                 `;
-        }
     }
+}
 
-            // Get the category from button
-            const remove_filter = document.getElementById('btn_remove_filter');
-            const womens = document.getElementById('btn_womens');
-            const jewelry = document.getElementById('btn_jewelry');
-            const mens = document.getElementById('btn_mens');
-            const electronics = document.getElementById('btn_electronics');
+// Waiting for the DOM content to be fully loaded before executing the code
+document.addEventListener('DOMContentLoaded', (e) => {
+    e.preventDefault();
 
-            let fetch_url = 'https://fakestoreapi.com/products';
-
-            // Hide button btn_all_products
-            remove_filter.style.display = "none";
-
-            // Function to show remove_filter button
-            function hide_remove_filter_button() {
-                remove_filter.style.display = "none";
-            }
-            
-            // Function to hide remove_filter button
-            function show_remove_filter_button() {
-                remove_filter.style.display = "block";
-            }
-
-            womens.addEventListener('click', function () {
-                fetch_url = "https://fakestoreapi.com/products/category/women's%20clothing";
-                fetch_products(fetch_url);
-                show_remove_filter_button();
-            });
-
-            jewelry.addEventListener('click', function () {
-                fetch_url = 'https://fakestoreapi.com/products/category/jewelery';
-                fetch_products(fetch_url);
-                show_remove_filter_button();
-            });
-
-            mens.addEventListener('click', function () {
-                fetch_url = "https://fakestoreapi.com/products/category/men's%20clothing";
-                fetch_products(fetch_url);
-                show_remove_filter_button();
-            });
-
-            electronics.addEventListener('click', function () {
-                fetch_url = 'https://fakestoreapi.com/products/category/electronics';
-                fetch_products(fetch_url);
-                show_remove_filter_button();
-            }); 
-
-            // Event listener for remove_filter button
-            remove_filter.addEventListener('click', function () {
-                fetch_url = 'https://fakestoreapi.com/products';
-                fetch_products(fetch_url);
-                hide_remove_filter_button();
-            });
-
-            // Fetch all products
-            fetch_products(fetch_url);
-            
+    // If the current page is shop.html, fetch and render products
+    if ( window.location.pathname == `/html/shop.html`) {
+        fetch_products();
+    }        
 });
 
-function toggleText(product_id) {
+// Add click event listeners to category buttons
+category_buttons.forEach(button => {
+    button.addEventListener('click', function () {
+        fetch_products(this.id); // Fetch and render products for the selected category
+    })
+})
+
+// show more and show less
+function toggle_text(product_id) {
     // Construct the id for the text element based on the productId
     const textElement = document.getElementById(`text_id${product_id}`);
     
@@ -169,4 +166,3 @@ function change_number_of_units(action,id){
     });
     localStorage.setItem("CART", JSON.stringify(cart));
 }
-

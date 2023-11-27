@@ -13,7 +13,11 @@
     <!-- GET EMAIL SCRIPT -->
     <script src="/js/get_user_email.js" defer></script>
     <!-- LOGOUT SCRIPT -->
+    <script src="/js/logout.js"></script>
+    <!-- SHOP SCRIPT -->
+    <script src="/js/shop.js" defer></script>
     <script src="/js/logout.js" defer></script>
+
     
     <title>Order confirmation - Paloma</title>
 </head>
@@ -35,13 +39,12 @@
 
         <section>
             <form class="category_buttons">
-                <a href="/html/shop.html">All products</a>
-                <a href="javascript:void(0);" id="btn_womens" onclick="">Women’s clothing</a>
-                <a href="javascript:void(0);" id="btn_mens" onclick="">Men’s clothing</a>
-                <a href="javascript:void(0);" id="btn_jewelry" onclick="">Jewelry</a>
-                <a href="javascript:void(0);" id="btn_electronics" onclick="">Electronics</a>
+                <a href="shop.html?category=btn_all"btn_all_products>All products</a>
+                <a href="shop.html?category=btn_womens" id="btn_womens">Women’s clothing</a>
+                <a href="shop.html?category=btn_mens" id="btn_mens">Men’s clothing</a>
+                <a href="shop.html?category=btn_jewelry" id="btn_jewelry">Jewelry</a>
+                <a href="shop.html?category=btn_electronics" id="btn_electronics">Electronics</a>
             </form>
-            <a href="javascript:void(0);" id="btn_remove_filter" onclick="">Remove filter</a>
         </section>
     </header>
     

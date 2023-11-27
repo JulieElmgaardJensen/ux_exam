@@ -47,7 +47,7 @@ function render_subtotal(){
     let total_price = 0;
     let total_items = 0;
     let total_cart = 0;
-    let delivery_fee = 5;
+    const delivery_fee = 5;
 
     cart.forEach((item) => {
         total_price += item.price * item.number_of_units;

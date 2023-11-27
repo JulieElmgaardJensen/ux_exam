@@ -73,7 +73,7 @@ async function fetch_products(input) {
                                     <div class="product_price_submit">
                                         <p class="product_price">${price} $</p>
                                         <div onclick="add_to_cart(${id})">
-                                            <input type="submit" id="submit" class="btn_submit" value="Add to cart"> 
+                                            <button type="submit" id="submit" class="btn_submit" value="Add to cart">Add to cart</button>
                                         </div>
                                     </div>        
                                 </div>

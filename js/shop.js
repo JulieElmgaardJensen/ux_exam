@@ -6,7 +6,8 @@ async function fetch_products(input) {
     if (params.get('category')) {
         input = params.get('category')
         // Remove the category parameter from the URL to avoid confusion
-        window.history.replaceState({}, document.title, "/" + "html/shop.html");
+        window.history.replaceState({}, document.title, "/" + "html/shop.html?category=" + input);
+        // window.history.replaceState({}, document.title, "/" + "html/shop.html?category=btn_all");
     }
 
     // Default URL
@@ -79,7 +80,7 @@ async function fetch_products(input) {
                                     <div class="product_price_submit">
                                         <p class="product_price">${price} $</p>
                                         <div onclick="add_to_cart(${id})">
-                                            <button type="submit" id="submit" class="btn_submit" value="Add to cart">Add to cart</button>
+                                            <input type="submit" id="submit" class="btn_submit" value="Add to cart"> 
                                         </div>
                                     </div>        
                                 </div>

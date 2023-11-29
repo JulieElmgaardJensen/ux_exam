@@ -71,11 +71,10 @@ button{
 }
 
 .extra_info{
-    display: block;
     color: var(--color_font);
     font-size: 0.75rem;
     text-decoration: none;
-    padding-top: 0.9rem;
+    padding: 0.9rem;
     display: block;
 }
 

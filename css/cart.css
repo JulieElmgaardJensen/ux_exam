@@ -112,6 +112,7 @@ ul.breadcrumb{
     text-decoration: none;
     padding: 0.9rem;
     display: block;
+    margin-top: 1rem;
 }
 
 .submit_box{
@@ -263,6 +264,7 @@ div.bg_img {
 }
 
 .minus, .plus {
+    background-color: var(--color_bg_main);
     font-size: 1.5rem;
     margin-top: 0.3rem;
     cursor: pointer;

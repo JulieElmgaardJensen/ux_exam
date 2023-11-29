@@ -17,6 +17,6 @@ window.onload = function () {
             window.location.href = 'index.html';
         };
     } else {
-        console.error("Button not found with id 'user_logout'");
+        console.error('Button not found with id "user_logout"');
     }
 };

@@ -32,7 +32,7 @@ document.getElementById('frm_login').addEventListener('submit', async function(e
                 // Saving user email in session
                 sessionStorage.setItem('user_email', email);
                 // Redirect to shop.html
-                window.location.href = "shop.html?category=all";
+                window.location.href = 'shop.html?category=all';
             } else {
                 alert('Invalid password');
             }

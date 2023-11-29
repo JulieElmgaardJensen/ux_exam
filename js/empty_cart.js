@@ -3,7 +3,7 @@ function empty_cart_message() {
     const cart_message = document.getElementById('cart_message');
     const cart_items = document.getElementsByClassName('cart_items')[0];
 
-    const cart_array = JSON.parse(localStorage.getItem('CART')) || [];
+    const cart_array = JSON.parse(localStorage.getItem('cart')) || [];
 
     if (cart_array.length === 0) {
         cart_message.style.display = 'block';
@@ -19,8 +19,8 @@ document.addEventListener('DOMContentLoaded', empty_cart_message);
 
 // Listen for changes in the localStorage
 window.addEventListener('storage', function (event) {
-    // Check if the CART key is modified
-    if (event.key === 'CART') {
+    // Check if the cart key is modified
+    if (event.key === 'cart') {
         empty_cart_message();
     }
 });

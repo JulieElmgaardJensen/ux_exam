@@ -5,7 +5,7 @@ document.addEventListener('DOMContentLoaded', function () {
     // COMMENTED OUT SO WE DON'T HAVE TO BE LOGGED IN WHEN WE TEST
     // Redirect to index.html if user is not logged in
     if (!user_email) {
-        window.location.href = './index.html';
+        window.location.href = '../index.html'; 
     } else {
         // Else continue loading content and inserting email into a paragraph with id 'user_email_paragraph'
         const user_email_paragraph = document.getElementById('user_logged_in');

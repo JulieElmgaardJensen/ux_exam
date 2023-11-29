@@ -31,9 +31,9 @@ function render_cart_items(){
                                     <button class="plus" onclick="change_number_of_units('plus', ${item.id})">&plus;</button>
                                 </div>
                             </div>
-                            <div class="cart_price_remove">
+                            <div class="cart_price_remove" tabindex="0">
                                 <span class="cart_price">${item.price} $</span>
-                                <button class="btn_remove fa-solid fa-trash-can fa-lg" onclick="remove_item_from_cart(${item.id})"></button>
+                                <button class="btn_remove fa-solid fa-trash-can fa-lg" onclick="remove_item_from_cart(${item.id})" aria-label="Remove item from cart"></button>
                             </div>
                     </div>
                 </div>

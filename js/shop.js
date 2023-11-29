@@ -11,7 +11,7 @@ async function fetch_products(input) {
     }
 
     // Default URL
-    let url = 'https://arturomora.com/fsa/products'
+    let url = 'https://fakestoreapi.com/products/'
     
     // Check if the element with the specified ID exists
     let selected_button = document.getElementById(input);
@@ -23,19 +23,19 @@ async function fetch_products(input) {
 
     switch (input) {
         case "btn_all":
-            url = 'https://arturomora.com/fsa/products';
+            url = "https://fakestoreapi.com/products/";
             break;
         case "btn_womens":
-            url = "https://arturomora.com/fsa/products/category/women's%20clothing";
+            url = "https://fakestoreapi.com/products/category/women's%20clothing";
             break;
         case "btn_mens":
-            url = "https://arturomora.com/fsa/products/category/men's%20clothing"; 
+            url = "https://fakestoreapi.com/products/category/men's%20clothing"; 
             break;
         case "btn_jewelry":
-            url = 'https://arturomora.com/fsa/products/category/jewelery'; 
+            url = "https://fakestoreapi.com/products/category/jewelery"; 
             break;
         case "btn_electronics":
-            url = 'https://arturomora.com/fsa/products/category/electronics'; 
+            url = "https://fakestoreapi.com/products/category/electronics"; 
             break;
         
     }

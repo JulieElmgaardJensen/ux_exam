@@ -26,29 +26,28 @@
 
     <!-- HEADER -->
     <header>
-
-        <!-- Main navbar -->
-        <section id="navbar">
+        <!-- Utility navbar -->
+        <section id="navbar" aria-label="Utility navigation">
             <!-- Logo -->
             <a href="shop.html?category=btn_all"><img id="navbar_logo" src="/img/logo_large.png" alt="Paloma Logo"></a>
             <!-- User logged in -->
-            <div id="user_message"><p>Velkommen&nbsp;</p><p id="user_logged_in"></p></div>
+            <div id="user_message"><p>Velkommen&nbsp;</p><p id="user_logged_in" aria-hidden="true"></p></div>
             <!-- Navbar icons -->
             <nav class="navbar_links">
-                <div class="cart"><a href="/html/cart.html"><i class="fa-solid fa-lg fa-cart-shopping"></i></a></div>
-                <div id="logout_button"><i class="fa-solid fa-lg fa-right-from-bracket"></i></div>
+                <div class="cart" aria-label="Cart"><a href="/html/cart.html"><i class="fa-solid fa-lg fa-cart-shopping" aria-hidden="true"></i></a></div>
+                <div id="logout_button" aria-label="Logout"><i class="fa-solid fa-lg fa-right-from-bracket" aria-hidden="true"></i></div>
             </nav>
         </section>
 
-        <!-- Secondary navbar -->
-        <section>
-            <form class="category_buttons">
-                <a href="shop.html">All products</a>
+        <!-- Main navbar -->
+        <section aria-label="Main navigation">
+            <nav class="category_buttons">
+                <a href="shop.html?category=btn_all" id="btn_all">All products</a>
                 <a href="shop.html?category=btn_womens" id="btn_womens">Women’s clothing</a>
                 <a href="shop.html?category=btn_mens" id="btn_mens">Men’s clothing</a>
                 <a href="shop.html?category=btn_jewelry" id="btn_jewelry">Jewelry</a>
                 <a href="shop.html?category=btn_electronics" id="btn_electronics">Electronics</a>
-            </form>
+            </nav>
         </section>
     </header>
     
@@ -60,7 +59,7 @@
             <div>
                 <h1 id="cnfrm_heading">Order confirmation</h1>
                 <p id="cnfrm_message">Congratulation! Your order has been placed, and will be with you shortly!</p>
-                <button><a href="shop.html">Go back to shop</a></button>
+                <button aria-label="Back to shop button"><a href="shop.html">Go back to shop</a></button>
             </div>
         </section>
 
@@ -68,10 +67,9 @@
 
     <footer>
         <section id="footer">
-            
             <!-- Credits -->
-            <article class="footer_links">
-                <h3>Credits</h3>
+            <article aria-labelledby="credits">
+                <h3 id="credits">Credits</h3>
                 <ul>
                     <li>Fake Store Api | <a href="https://fakestoreapi.com/">fakestoreapi.com</a></li>
                     <li>npm JSON server | <a href="https://www.npmjs.com/package/json-server">npmjs.com</a></li>
@@ -79,12 +77,10 @@
                 </ul>    
             </article>
         </section>
-
         <section>
             <!-- Copyrights -->
-            <p id="text_copyright">&copy; 2023 UX Exam</p>
+            <p id="text_copyright" aria-label="Copyright">&copy; 2023 UX Exam</p>
         </section>
-
     </footer>
 
 </body>

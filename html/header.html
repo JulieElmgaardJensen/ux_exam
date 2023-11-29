@@ -1,31 +1,31 @@
 <!-- HEADER -->
 <header>
 
-    <!-- Main navbar -->
-    <section id="navbar">
+    <!-- Utility navbar -->
+    <section id="navbar" aria-label="Utility navigation">
 
         <!-- Logo -->
         <a href="/html/shop.html"><img id="navbar_logo" src="/img/logo_large.png" alt="Paloma Logo"></a>
 
         <!-- User logged in -->
-        <div id="user_message"><p>Velkommen&nbsp;</p><p id="user_logged_in"></p></div>
+        <div id="user_message"><p>Velkommen&nbsp;</p><p id="user_logged_in" aria-hidden="true"></p></div>
         
         <!-- Navbar icons -->
         <nav class="navbar_links">
-            <div class="cart"><a href="/html/cart.html"><i class="fa-solid fa-lg fa-cart-shopping"></i></a></div>
-            <div id="logout_button"><i class="fa-solid fa-lg fa-right-from-bracket"></i></div>
+            <div class="cart" aria-label="Cart"><a href="/html/cart.html"><i class="fa-solid fa-lg fa-cart-shopping" aria-hidden="true"></i></a></div>
+            <div id="logout_button" aria-label="Logout"><i class="fa-solid fa-lg fa-right-from-bracket" aria-hidden="true"></i></div>
         </nav>
 
     </section>
 
-    <!-- Secondary navbar -->
-    <section>
-        <form class="category_buttons">
+    <!-- Main navbar -->
+    <section aria-label="Main navigation">
+        <nav class="category_buttons">
             <a href="shop.html?category=btn_all" id="btn_all">All products</a>
             <a href="shop.html?category=btn_womens" id="btn_womens">Women’s clothing</a>
             <a href="shop.html?category=btn_mens" id="btn_mens">Men’s clothing</a>
             <a href="shop.html?category=btn_jewelry" id="btn_jewelry">Jewelry</a>
             <a href="shop.html?category=btn_electronics" id="btn_electronics">Electronics</a>
-        </form>
+        </nav>
     </section>
 </header>

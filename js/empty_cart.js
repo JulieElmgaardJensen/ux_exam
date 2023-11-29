@@ -1,3 +1,4 @@
+// If the cart is empty display the cart message, else display none
 function empty_cart_message() {
     const cart_message = document.getElementById('cart_message');
     const cart_items = document.getElementsByClassName('cart_items')[0];

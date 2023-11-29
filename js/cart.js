@@ -1,4 +1,4 @@
-//render cart items and subtotal
+// Render cart items and subtotal
 update_cart();
 
 // Update cart
@@ -13,7 +13,7 @@ function update_cart(){
 // Show products in cart
 function render_cart_items(){
 
-    //clear cart element
+    // Clear cart element
     cart_items_el.innerHTML = "";
 
     cart.forEach((item) => {
@@ -54,14 +54,14 @@ function render_subtotal(){
         total_cart = total_price + delivery_fee;
     });
 
-    //toFixed so we only have numbers with two decimals
+    // toFixed so we only have numbers with two decimals
     subtotalt_el.innerHTML = `${total_price.toFixed(2)} $`;
     totalt_el.innerHTML = `${total_cart.toFixed(2)} $`;
 }
 
 // Remove item from cart
 function remove_item_from_cart(id){
-    //filter all elements in cart where item id is not the 
+    // Filter all elements in cart where item id is not the 
     cart = cart.filter( (item) => item.id !== id)
 
     update_cart();
@@ -71,7 +71,7 @@ function remove_item_from_cart(id){
 
 // Change number of units in cart
 function change_number_of_units(action,id){
-    //uses map method will run this function on every element in the cart and return a new updated array
+    // Uses map method will run this function on every element in the cart and return a new updated array
     cart = cart.map((item) => {
 
         let number_of_units = item.number_of_units

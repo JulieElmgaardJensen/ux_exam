@@ -7,7 +7,7 @@ async function fetch_products(input) {
         input = params.get('category')
         // Remove the category parameter from the URL to avoid confusion
         window.history.replaceState({}, document.title, "/" + "html/shop.html?category=" + input);
-        // window.history.replaceState({}, document.title, "/" + "html/shop.html?category=btn_all");
+        // window.history.replaceState({}, document.title, "/" + "html/shop.html?category=all");
     }
 
     // Default URL
@@ -22,19 +22,19 @@ async function fetch_products(input) {
     }
 
     switch (input) {
-        case "btn_all":
+        case "all":
             url = 'https://arturomora.com/fsa/products';
             break;
-        case "btn_womens":
+        case "womens":
             url = "https://arturomora.com/fsa/products/category/women's%20clothing";
             break;
-        case "btn_mens":
+        case "mens":
             url = "https://arturomora.com/fsa/products/category/men's%20clothing"; 
             break;
-        case "btn_jewelry":
+        case "jewelry":
             url = 'https://arturomora.com/fsa/products/category/jewelery'; 
             break;
-        case "btn_electronics":
+        case "electronics":
             url = 'https://arturomora.com/fsa/products/category/electronics'; 
             break;
         
@@ -50,10 +50,10 @@ async function fetch_products(input) {
     // Clear existing products
     products.innerHTML = '';
 
-    // LOOP ELEMENTS IN
+    // Loop elements in
     for (let i = 0; i < response.length; i++) {
 
-        // INDIVIDUAL ATTRIBUTES FOR EACH PRODUCT
+        // Individual attributes for each product
         const id = response[i].id;
         const title = response[i].title;
         const price = response[i].price;
@@ -73,8 +73,8 @@ async function fetch_products(input) {
                                         <p class="product_rate">${rate}</p> 
                                         <p class="product_count">(${count})</p>
                                     </div>
-                                    <h4 class="product_category">${category}</h4>
-                                    <h3 class="product_title">${title}</h3>
+                                    <p class="product_category">${category}</p>
+                                    <h2 class="product_title">${title}</h2>
                                     <p id="text_id${id}" class="show_text">${description}</p>
                                     <button id="show_more_description${id}" onclick="toggle_text('${id}')" class="btn_show_description">Show More</button>
                                     <div class="product_price_submit">
@@ -98,7 +98,7 @@ document.addEventListener('DOMContentLoaded', (e) => {
     }        
 });
 
-// show more and show less
+// Show more and show less
 function toggle_text(product_id) {
     // Construct the id for the text element based on the productId
     const text_element = document.getElementById(`text_id${product_id}`);
@@ -122,12 +122,12 @@ function toggle_text(product_id) {
 
 // Add to cart
 function add_to_cart(id){
-    //check if product already exist in cart
+    // Check if product already exist in cart
     if(cart.some((item) => item.id === id)){
         change_number_of_units("plus", id);
     }else{
         const item = response.find((product) => product.id === id);
-        //tilføjer en ekstra attribut til hvert produkt
+        // Add extra attribute to a product
         cart.push({
             ...item,
             number_of_units : 1
@@ -140,12 +140,12 @@ function add_to_cart(id){
 
 // Change number of units in cart
 function change_number_of_units(action,id){
-    //uses map method will run this function on every element in the cart and return a new updated array
+    // Uses map method will run this function on every element in the cart and return a new updated array
     cart = cart.map((item) => {
 
         let number_of_units = item.number_of_units
 
-        //find the item with the right id
+        // Find the item with the right id
         if(item.id === id){
             if(action === "minus" && number_of_units > 1){
                 number_of_units--

@@ -8,12 +8,9 @@ body{
     background-color: var(--color_bg_main);
 }
 
-h2, h3{
+h1, h2{
     font-family: var(--font_heading);
     color: var(--color_font);
-}
-
-h2{
     font-size: var(--font_size_h2);
     text-align: center;
     padding-bottom: var(--d_p_body_mobile);
@@ -219,6 +216,40 @@ div.bg_img {
     margin-left: auto;
     background-color: var(--color_bg_main);
     cursor: pointer;
+    padding: 1.4rem;
+}
+
+/* BUTTON CONFIRM PUCHASE */
+.btn_purchase {
+    border: none;
+    border-radius: var(--border_btn_radius);
+    background-color: var(--color_btn_bg);
+    color: var(--color_btn_font);
+    width: 90%;
+    display: block;
+    justify-content: center;
+    margin-right: auto;
+    margin-left: auto;
+    font-family: var(--font_paragraph);
+    font-weight: 300;
+    font-size: var(--font_size_p);
+    margin-bottom: 0.3rem;
+    margin-top: 3.125rem;
+    padding: 0.5rem 0;
+    cursor: pointer;
+    height: 2.75rem;
+    
+}
+
+/* CONTINUE SHOPPING */
+.txt_center {
+    font-family: var(--font_paragraph);
+    font-size: 0.75rem;
+    text-decoration: none;
+    justify-content: center;
+    display: flex;
+    margin-right: auto;
+    margin-left: auto;
 }
 
 /* ADJUST UNITS BOTTONS */
@@ -240,6 +271,11 @@ div.bg_img {
 
 label.b_address{
     margin-top: 1.5rem;
+  
+/* Price aligned in center */
+span.cart_price{
+    display: flex;
+    align-items: center;
 }
 
 /* TABLET */
@@ -249,7 +285,7 @@ label.b_address{
         margin: var(--d_m_body_tablet);
     }
 
-    h2{
+    h1, h2{
         font-size: calc(var(--font_size_h2) * 1.25);
         text-align: left;
     }
@@ -364,6 +400,8 @@ label.b_address{
     #cart_message{
         text-align: left;
     }
+    
+
 }
 
 /* DESKTOP */

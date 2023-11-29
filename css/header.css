@@ -21,7 +21,7 @@ header{
 
 .category_buttons a{
     text-decoration: none;
-    margin: 1rem;
+    padding: 1rem;
     display: inline-block;
 }
 
@@ -36,7 +36,6 @@ header{
 
 /* ICON STYLE */
  #navbar a{
-    margin: 0.625rem;
     color: var(--color_icons);
     align-self: center;
     color: inherit;
@@ -44,12 +43,22 @@ header{
 
 #navbar i{
     color: var(--color_icons);
+    padding: 0.5rem;
+    width: 2rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 2rem;
+    margin: 0 0.5rem;
 }
 
 .navbar_links{
+    width: auto;
     display: flex;
+    justify-content: center;
     align-items: center;
-    margin-right: 1.25rem;
+    align-self: center;
+    text-align: center;
 }
 
 #user_message{
@@ -62,13 +71,14 @@ header{
 }
 
 #user_logged_in{
-    font-weight: bold;
+    font-weight: 600;
 }
 
 /* LOGO */
 #navbar img{
     width: 9rem;
     align-self: center;
+    padding: 0.6rem;
 }
 
 /* TABLET + DESKTOP */
@@ -79,8 +89,31 @@ header{
     }
 
     /* Icon style */
+    #cart, #logout_button{
+        display: flex;
+        justify-content: center;
+    }
+
+    .navbar_links{
+        width: auto;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        align-self: center;
+        text-align: center;
+    }
+
     #navbar a{
-        padding-right: 0.625rem;
+        margin: 0;
+    }
+
+    #navbar i{
+        padding: 1rem;
+        width: 2.75rem;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        height: 2rem;
     }
 
     #navbar h3 a, #user_message p, #user_logged_in{
@@ -89,7 +122,8 @@ header{
 
     /* Logo */
     #navbar img{
-        width: 9.3rem;
+        width: auto;
+        height: 2.75rem;
     }
 
     .category_buttons{

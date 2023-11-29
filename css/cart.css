@@ -107,13 +107,17 @@ ul.breadcrumb{
 
 /* CONTINUE SHOPPING */
 .txt_center {
-    font-family: var(--font_paragraph);
+    color: var(--color_font);
     font-size: 0.75rem;
     text-decoration: none;
-    justify-content: center;
+    padding: 0.9rem;
+    display: block;
+}
+
+.submit_box{
     display: flex;
-    margin-right: auto;
-    margin-left: auto;
+    flex-direction: column;
+    align-items: center;
 }
 
 /* CART SECTION */

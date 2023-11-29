@@ -62,7 +62,7 @@ async function fetch_products(input) {
         const rate = response[i].rating.rate;
         const count = response[i].rating.count;
         
-        products.innerHTML += ` <div class="card">
+        products.innerHTML += ` <div class="card" tabindex="0">
                                     <div class="bg_img">
                                         <img src="${image}" alt="${title}" class="product_img">
                                     </div>

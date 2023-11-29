@@ -18,8 +18,6 @@ document.getElementById('frm_signup').addEventListener('submit', async (e)=>{
     const email_input = document.getElementById('email'); 
     const password_input = document.getElementById('password');
     const confirm_password_input = document.getElementById('confirm_password');
-    
-    console.log(email_input.value.length);
 
     // Validate the lenght of the email
         if(email_input.value.length > 50){
@@ -67,7 +65,7 @@ document.getElementById('frm_signup').addEventListener('submit', async (e)=>{
         if (response.ok) {
 
             // If the user is added, redirect to the login page after closing the alert
-            window.location.href = 'index.html';  
+            window.location.href = './index.html';  
 
             alert('Sucessfully signed up! You will now be redirected to the login page!');
 

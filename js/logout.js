@@ -11,10 +11,8 @@ window.onload = function () {
         button.onclick = function logout() {
             localStorage.clear();
             sessionStorage.clear();       
-            // This will be an empty object after clearing
-            console.log(localStorage); 
             // Redirect to the login page
-            window.location.href = 'index.html';
+            window.location.href = './index.html';
         };
     } else {
         console.error('Button not found with id "user_logout"');

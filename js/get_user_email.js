@@ -15,7 +15,7 @@ document.addEventListener('DOMContentLoaded', function () {
             user_email_paragraph.textContent = user_email;
         
         } else {
-            console.error("Element with ID 'user_logged_in' not found");
+            console.error('Element with ID "user_logged_in" not found');
         }
     }
 });

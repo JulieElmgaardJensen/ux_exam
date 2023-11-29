@@ -6,8 +6,7 @@ async function fetch_products(input) {
     if (params.get('category')) {
         input = params.get('category')
         // Remove the category parameter from the URL to avoid confusion
-        window.history.replaceState({}, document.title, "/" + "html/shop.html?category=" + input);
-        // window.history.replaceState({}, document.title, "/" + "html/shop.html?category=all");
+        window.history.replaceState({}, document.title, '/' + 'html/shop.html?category=' + input);
     }
 
     // Default URL
@@ -22,19 +21,19 @@ async function fetch_products(input) {
     }
 
     switch (input) {
-        case "all":
+        case 'all':
             url = 'https://arturomora.com/fsa/products';
             break;
-        case "womens":
+        case 'womens':
             url = "https://arturomora.com/fsa/products/category/women's%20clothing";
             break;
-        case "mens":
+        case 'mens':
             url = "https://arturomora.com/fsa/products/category/men's%20clothing"; 
             break;
-        case "jewelry":
+        case 'jewelry':
             url = 'https://arturomora.com/fsa/products/category/jewelery'; 
             break;
-        case "electronics":
+        case 'electronics':
             url = 'https://arturomora.com/fsa/products/category/electronics'; 
             break;
         
@@ -123,9 +122,9 @@ function toggle_text(product_id) {
 // Add to cart
 function add_to_cart(id){
     // Check if product already exist in cart
-    if(cart.some((item) => item.id === id)){
-        change_number_of_units("plus", id);
-    }else{
+    if (cart.some((item) => item.id === id)){
+        change_number_of_units('plus', id);
+    } else {
         const item = response.find((product) => product.id === id);
         // Add extra attribute to a product
         cart.push({
@@ -133,7 +132,7 @@ function add_to_cart(id){
             number_of_units : 1
         });
     }
-    localStorage.setItem("CART", JSON.stringify(cart));
+    localStorage.setItem('cart', JSON.stringify(cart));
 
     alert('Item added to cart!');
 }
@@ -147,9 +146,9 @@ function change_number_of_units(action,id){
 
         // Find the item with the right id
         if(item.id === id){
-            if(action === "minus" && number_of_units > 1){
+            if(action === 'minus' && number_of_units > 1){
                 number_of_units--
-            }else if(action === "plus"){
+            }else if(action === 'plus'){
                 number_of_units++
             }
         }
@@ -158,5 +157,5 @@ function change_number_of_units(action,id){
             number_of_units,
         };
     });
-    localStorage.setItem("CART", JSON.stringify(cart));
+    localStorage.setItem('cart', JSON.stringify(cart));
 }

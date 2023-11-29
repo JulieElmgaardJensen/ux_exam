@@ -12,12 +12,12 @@ const password_validator = /^(?=.*[a-z])(?=.*[A-Z])(?=.*\d)(?=.*[@$!%*?&.])[A-Za
 // Get the url for the json server
 const url = 'http://localhost:3000/users'; // Replace with your JSON server endpoint
 
-document.getElementById("frm_signup").addEventListener('submit', async (e)=>{
+document.getElementById('frm_signup').addEventListener('submit', async (e)=>{
     e.preventDefault();
 
-    const email_input = document.getElementById("email"); 
-    const password_input = document.getElementById("password");
-    const confirm_password_input = document.getElementById("confirm_password");
+    const email_input = document.getElementById('email'); 
+    const password_input = document.getElementById('password');
+    const confirm_password_input = document.getElementById('confirm_password');
     
     console.log(email_input.value.length);
 

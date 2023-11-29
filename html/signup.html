@@ -25,26 +25,24 @@
     
     <!-- MAIN -->
     <main>
-
         <!-- Signup form -->
         <section class="signup_login_form">
-            <h1>Signup</h1>
-            <form action="" id="frm_signup" method="">
+            <h1 id="signup_heading">Signup</h1>
+            <form action="" id="frm_signup" method="" aria-labelledby="signup_heading">
                 <label for="email">Email</label>
                 <input type="email" id="email" name="email" required>
                 <label for="password">Password</label>
-                <div><p class="extra_info">Password must be at least 8 characters in length and contain at least 1 upper case, 3 numbers and 1 special character</p></div>
-                <input type="password" id="password" name="password" required>
+                <div id="extra_password_info"><p class="extra_info">Password must be at least 8 characters in length and contain at least 1 upper case, 3 numbers and 1 special character</p></div>
+                <input type="password" id="password" name="password" aria-describedby="extra_password_info" required>
                 <label for="confirm_password">Confirm password</label>
                 <input type="password" id="confirm_password" name="confirm_password" required>
                 <!-- Submit button -->
                     <div class="frm_btn">
-                        <button type="submit" form="frm_signup" value="Signup" id="submit_signup">Signup</button>
-                        <div><a class="extra_info" href="index.html">Or login?</a></div>                    
+                        <button type="submit" form="frm_signup" value="Signup" id="submit_signup" aria-label="Signup button">Signup</button>
+                        <a class="extra_info" aria-label="Link to login" href="index.html">Or login?</a>                   
                     </div>
             </form>
         </section>
-
     </main>
     
 </body>

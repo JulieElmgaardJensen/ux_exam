@@ -66,7 +66,7 @@ document.getElementById("frm_signup").addEventListener('submit', async (e)=>{
 
         if (response.ok) {
 
-            //If the user is added, redirect to the login page after closing the alert
+            // If the user is added, redirect to the login page after closing the alert
             window.location.href = 'index.html';  
 
             alert('Sucessfully signed up! You will now be redirected to the login page!');

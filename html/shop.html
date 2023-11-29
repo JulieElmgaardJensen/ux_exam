@@ -23,23 +23,22 @@
 </head>
 
 <body>
-    <!-- HEADER -->
-    <header>
-
-        <!-- Main navbar -->
+  <!-- HEADER -->
+  <header>
+        <!-- Utility navbar -->
         <nav id="navbar">
             <!-- Logo -->
             <a href="shop.html?category=btn_all"><img id="navbar_logo" src="/img/logo_large.png" alt="Paloma Logo"></a>
             <!-- User logged in -->
-            <div id="user_message"><p>Welcome&nbsp;</p><p id="user_logged_in"></p></div>
+            <div id="user_message"><p>Welcome&nbsp;</p><p id="user_logged_in" aria-hidden="true"></p></div>
             <!-- Navbar icons -->
             <div class="navbar_links">
-                <div id="cart"><a href="/html/cart.html"><i class="fa-solid fa-2xl fa-cart-shopping"></i></a></div>
-                <div id="logout_button"><i class="fa-solid fa-2xl fa-right-from-bracket"></i></div>
+                <div class="cart" aria-label="Cart"><a href="/html/cart.html"><i class="fa-solid fa-2xl fa-cart-shopping" aria-hidden="true"></i></a></div>
+                <div id="logout_button" aria-label="Logout"><i class="fa-solid fa-2xl fa-right-from-bracket" aria-hidden="true"></i></div>
             </div>
         </nav>
 
-        <!-- Secondary navbar -->
+        <!-- Main navbar -->
         <section>
             <nav class="category_buttons scrollbar">
                 <a href="shop.html?category=btn_all" id="btn_all">All products</a>
@@ -56,14 +55,14 @@
         <h2>Shop</h2>
         
         <!-- Products -->
-        <section id="grid" class="product"></section>
+        <section id="grid" class="product" aria-live="polite"></section>
     </main>
     
     <footer>
         <section id="footer">
             <!-- Credits -->
-            <article class="footer_links">
-                <h3>Credits</h3>
+            <article aria-labelledby="credits">
+                <h3 id="credits">Credits</h3>
                 <ul>
                     <li>Fake Store Api | <a href="https://fakestoreapi.com/">fakestoreapi.com</a></li>
                     <li>npm JSON server | <a href="https://www.npmjs.com/package/json-server">npmjs.com</a></li>
@@ -73,7 +72,7 @@
         </section>
         <section>
             <!-- Copyrights -->
-            <p id="text_copyright">&copy; 2023 UX Exam</p>
+            <p id="text_copyright" aria-label="Copyright">&copy; 2023 UX Exam</p>
         </section>
     </footer>
 </body>

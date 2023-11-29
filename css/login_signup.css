@@ -55,6 +55,7 @@ button{
     width: 7.5rem;
     height: 2.75rem;
     margin-top: 2rem;
+    cursor: pointer;
 }
 
 .frm_btn{
@@ -65,6 +66,7 @@ button{
 
 /* INFO LINK*/
 .extra_info{
+    display: block;
     color: var(--color_font);
     font-size: 0.75rem;
     text-decoration: none;
@@ -115,5 +117,16 @@ button{
 @media (min-width: 1100px){
     main{
         margin: 0 15.5rem;
+    }
+
+    .signup_login_form{
+        margin: 0 5rem;
+    }
+}
+
+/* Screen minimum 1250px */
+@media (min-width: 1250px){
+    .signup_login_form{
+        margin: 0 8rem;
     }
 }

@@ -11,7 +11,7 @@ async function fetch_products(input) {
     }
 
     // Default URL
-    let url = 'https://fakestoreapi.com/products/'
+    let url = 'https://arturomora.com/fsa/products'
     
     // Check if the element with the specified ID exists
     let selected_button = document.getElementById(input);
@@ -23,19 +23,19 @@ async function fetch_products(input) {
 
     switch (input) {
         case "btn_all":
-            url = "https://fakestoreapi.com/products/";
+            url = 'https://arturomora.com/fsa/products';
             break;
         case "btn_womens":
-            url = "https://fakestoreapi.com/products/category/women's%20clothing";
+            url = "https://arturomora.com/fsa/products/category/women's%20clothing";
             break;
         case "btn_mens":
-            url = "https://fakestoreapi.com/products/category/men's%20clothing"; 
+            url = "https://arturomora.com/fsa/products/category/men's%20clothing"; 
             break;
         case "btn_jewelry":
-            url = "https://fakestoreapi.com/products/category/jewelery"; 
+            url = 'https://arturomora.com/fsa/products/category/jewelery'; 
             break;
         case "btn_electronics":
-            url = "https://fakestoreapi.com/products/category/electronics"; 
+            url = 'https://arturomora.com/fsa/products/category/electronics'; 
             break;
         
     }
@@ -50,10 +50,10 @@ async function fetch_products(input) {
     // Clear existing products
     products.innerHTML = '';
 
-    // LOOP ELEMENTS IN
+    // Loop elements in
     for (let i = 0; i < response.length; i++) {
 
-        // INDIVIDUAL ATTRIBUTES FOR EACH PRODUCT
+        // Individual attributes for each product
         const id = response[i].id;
         const title = response[i].title;
         const price = response[i].price;
@@ -98,7 +98,7 @@ document.addEventListener('DOMContentLoaded', (e) => {
     }        
 });
 
-// show more and show less
+// Show more and show less
 function toggle_text(product_id) {
     // Construct the id for the text element based on the productId
     const text_element = document.getElementById(`text_id${product_id}`);
@@ -122,12 +122,12 @@ function toggle_text(product_id) {
 
 // Add to cart
 function add_to_cart(id){
-    //check if product already exist in cart
+    // Check if product already exist in cart
     if(cart.some((item) => item.id === id)){
         change_number_of_units("plus", id);
     }else{
         const item = response.find((product) => product.id === id);
-        //tilføjer en ekstra attribut til hvert produkt
+        // Add extra attribute to a product
         cart.push({
             ...item,
             number_of_units : 1
@@ -140,12 +140,12 @@ function add_to_cart(id){
 
 // Change number of units in cart
 function change_number_of_units(action,id){
-    //uses map method will run this function on every element in the cart and return a new updated array
+    // Uses map method will run this function on every element in the cart and return a new updated array
     cart = cart.map((item) => {
 
         let number_of_units = item.number_of_units
 
-        //find the item with the right id
+        // Find the item with the right id
         if(item.id === id){
             if(action === "minus" && number_of_units > 1){
                 number_of_units--

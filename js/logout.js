@@ -12,7 +12,7 @@ window.onload = function () {
             localStorage.clear();
             sessionStorage.clear();       
             // Redirect to the login page
-            window.location.href = './index.html';
+            window.location.href = '../index.html';
         };
     } else {
         console.error('Button not found with id "user_logout"');

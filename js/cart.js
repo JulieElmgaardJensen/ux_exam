@@ -110,25 +110,84 @@ order_purchase.addEventListener('click', function (event) {
         // Form inputs
         const name = document.getElementById('name').value;
         const d_address = document.getElementById('d_address').value;
-        const p_code = document.getElementById('p_code').value;
-        const city = document.getElementById('city').value;
+        const d_zip = document.getElementById('d_zip').value;
+        const d_city = document.getElementById('d_city').value;
+        const d_country = document.getElementById('d_country').value;
         const b_address = document.getElementById('b_address').value;
-        const b_code = document.getElementById('b_code').value;
+        const b_zip = document.getElementById('b_zip').value;
         const b_city = document.getElementById('b_city').value;
+        const b_country = document.getElementById('b_country').value;
         const credit_card = document.getElementById('credit_card').value;
         const exp_date = document.getElementById('exp_date').value;
         const cvc = document.getElementById('cvc').value;
 
+        const reg_text_input = /^[a-zA-Z\s]+$/;
+            const reg_zip_input = /^\d{4}$/;
+            const reg_credit_card = /^\d{16}$/;
+            const reg_cvc = /^\d{3}$/;
+
+            if (!name.match(reg_text_input)) {
+                alert("Please enter a valid name with only letters and spaces.");
+                return false;
+            }
+
+            if (d_address.length < 1) {
+                alert("Please enter a valid delivery address.");
+                return true;
+            }
+            
+            if (!d_zip.match(reg_zip_input)) {
+                alert("Please enter a zipcode with 4 digits for your delivery address.");
+                return false;
+            }
+            
+            if (!d_city.match(reg_text_input)) {
+                alert("Please enter a delivery city with letters.");
+                return false;
+            }
+
+            if (!d_country.match(reg_text_input)) {
+                alert("Please enter a delivery country with letters.");
+                return false;
+            }
+
+            if (b_address.length < 1) {
+                alert("Please enter a billing address.");
+                return false;
+            }
+
+            if (!b_zip.match(reg_zip_input)) {
+                alert("Please enter a zipcode with 4 digits for your billing address.");
+                return false;
+            }
+
+            if (!b_city.match(reg_text_input)) {
+                alert("Please enter a billing city with letters.");
+                return false;
+            }
+
+            if (!b_country.match(reg_text_input)) {
+                alert("Please enter a delivery country with letters.");
+                return false;
+            }
+
+            if (!credit_card.match(reg_credit_card)) {
+                alert("Please enter a valid creditcard number with 16 numbers.");
+                return false;
+            }
+
+            if (!cvc.match(reg_cvc)) {
+                alert("Please enter a valid cvc with 3 numbers.");
+                return false;
+            } 
+        
+        
         // If form inputs are filled
-        if (name && d_address && p_code && city && b_address && b_code && b_city && credit_card && exp_date && cvc) {   
+        if (name && d_address && d_zip && d_city && b_address && b_zip && b_city && credit_card && exp_date && cvc) {   
             // Clear localStorage
             localStorage.clear();
         
             // Redirect to confirmation message
             window.location.href = 'confirmation.html';        
-        } else {
-            // Else alert an error message
-            alert('Please fill in all required fields');
-        }
-    }
+        } }
 });

@@ -82,54 +82,58 @@
             <section class="section_order_info">
                 <div class="order_info">
                     <h2 class="heading_order">Order information</h2>
-                    <form action="" id="frm_order" method="">
-                        <label for="name">Name</label>
+                    <form action="" id="frm_order" method="" onsubmit="return validate_form()">
+                        <label for="name">Full name</label>
                         <input type="text" id="name" name="name" required>
+                        
+                        <!-- Delivery -->
                         <label for="d_address">Delivery address</label>
                         <input type="text" id="d_address" name="d_address" required>
-                            <div class="flex">
-                                <div class="div_p_code">
-                                    <label for="p_code" id="lbl_p_code">ZIP code</label>
-                                    <input type="number" id="p_code" name="p_code" required>
-                                </div>
-                                <div class="div_city">
-                                    <label for="city" id="lbl_city">City</label>
-                                    <input type="text" id="city" name="city" required>
-                                </div>
+                        <div class="flex">
+                            <div class="zip_city">
+                                <label for="d_zip" id="lbl_d_zip">ZIP code</label>
+                                <input type="number" id="d_zip" name="d_zip" required>
                             </div>
+                            <div class="div_city">
+                                <label for="d_city" id="lbl_d_city">City</label>
+                                <input type="text" id="d_city" name="d_city" required>
+                            </div>
+                        </div>
                         <label for="d_country">Country</label>
                         <input type="text" id="d_country" name="d_country" required>
-                        <label for="b_address">Billing address</label>
+
+                        <!-- Billing -->
+                        <label for="b_address" class="b_address">Billing address</label>
                         <input type="text" id="b_address" name="b_address" required>
-                            <div class="flex">
-                                <div class="div_p_code">
-                                    <label for="b_code" id="lbl_b_code">ZIP code</label>
-                                    <input type="number" id="b_code" name="b_code" required>
-                                </div>
-                                <div class="div_city">
-                                    <label for="b_city" id="lbl_b_city">City</label>
-                                    <input type="text" id="b_city" name="b-city" required>
-                                </div>
+                        <div class="flex">
+                            <div class="zip_city">
+                                <label for="b_zip" id="lbl_b_zip">ZIP code</label>
+                                <input type="number" id="b_zip" name="b_zip" required>
                             </div>
+                            <div class="div_city">
+                                <label for="b_city" id="lbl_b_city">City</label>
+                                <input type="text" id="b_city" name="b_city" required>
+                            </div>
+                        </div>
                         <label for="b_country">Country</label>
                         <input type="text" id="b_country" name="b_country" required>
-                        <label for="credit_card">Credit card</label>
-                        <input type="number" id="credit_card" name="credit_card" required>
-                            <div class="flex">
-                                <div class="div_exp_date">
-                                    <label for="exp_date" id="lbl_exp_date">Exp date</label>
-                                    <input type="month" id="exp_date" name="exp_date" min="2023-12" required>
-                                </div>
 
-                                <div class="div_cvc">
-                                    <label for="cvc" id="lbl_cvc">CVC</label>
-                                    <input type="number" id="cvc" name="cvc" required>
-                                </div>
+                        <label for="credit_card">Credit card</label>
+                        <input type="number" id="credit_card" name="credit_card" placeholder="xxxxxxxxxxxxxxxx" required>
+                        <div class="flex">
+                            <div class="div_exp_date">
+                                <label for="exp_date" id="lbl_exp_date">Exp date</label>
+                                <input type="month" id="exp_date" name="exp_date" min="2023-12" required>
                             </div>
-                            <div>
-                                <button type="submit" form="frm_order" id="btn_purchase" class="btn_purchase" value="Confirm purchase">Confirm purchase</button>
-                                <a href="shop.html?category=btn_all" class="txt_center">Continue shopping?</a>
+                            <div class="div_cvc">
+                                <label for="cvc" id="lbl_cvc">CVC</label>
+                                <input type="number" id="cvc" name="cvc" required>
                             </div>
+                        </div>
+                        <div>
+                            <button type="submit" form="frm_order" id="btn_purchase" class="btn_purchase" value="Confirm purchase">Confirm purchase</button>
+                            <a href="shop.html?category=btn_all" class="txt_center">Continue shopping?</a>
+                        </div>
                     </form>
                 </div>
             </section>

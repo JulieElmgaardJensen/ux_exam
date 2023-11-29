@@ -79,7 +79,7 @@ ul.breadcrumb{
     padding: 2.2rem;
 }
 
-.div_exp_date, .div_p_code{
+.div_exp_date, .zip_city{
     margin-right: 0.9rem;
 }
 
@@ -236,6 +236,10 @@ div.bg_img {
 /* Cart is empty*/
 #cart_message {
     text-align: center;
+}
+
+label.b_address{
+    margin-top: 1.5rem;
 }
 
 /* TABLET */

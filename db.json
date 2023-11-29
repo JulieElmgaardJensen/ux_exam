@@ -4,6 +4,11 @@
       "id": 0,
       "email": "admin@admin.com",
       "password": "admin"
+    },
+    {
+      "email": "emilie.lenschau@gmail.com",
+      "password": "Aa12345!",
+      "id": 1
     }
   ]
 }

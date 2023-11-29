@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Belleza&family=Montserrat:wght@300;400;500;600;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Belleza&family=Montserrat:wght@400;500;600&display=swap');
 
 *{
     margin: 0;
@@ -13,7 +13,7 @@
 
     /*  FONT STYLING */
     --font_heading: 'Belleza', sans-serif;
-    --font_size_h1: 6rem;
+    --font_size_h1: 2rem;
     --font_size_h2: 2rem;
     --font_size_h3: 1.8rem;
     --font_paragraph: 'Montserrat', sans-serif;

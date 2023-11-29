@@ -7,7 +7,7 @@ async function fetch_products(input) {
         input = params.get('category')
         // Remove the category parameter from the URL to avoid confusion
         window.history.replaceState({}, document.title, "/" + "html/shop.html?category=" + input);
-        // window.history.replaceState({}, document.title, "/" + "html/shop.html?category=btn_all");
+        // window.history.replaceState({}, document.title, "/" + "html/shop.html?category=all");
     }
 
     // Default URL
@@ -22,19 +22,19 @@ async function fetch_products(input) {
     }
 
     switch (input) {
-        case "btn_all":
+        case "all":
             url = 'https://arturomora.com/fsa/products';
             break;
-        case "btn_womens":
+        case "womens":
             url = "https://arturomora.com/fsa/products/category/women's%20clothing";
             break;
-        case "btn_mens":
+        case "mens":
             url = "https://arturomora.com/fsa/products/category/men's%20clothing"; 
             break;
-        case "btn_jewelry":
+        case "jewelry":
             url = 'https://arturomora.com/fsa/products/category/jewelery'; 
             break;
-        case "btn_electronics":
+        case "electronics":
             url = 'https://arturomora.com/fsa/products/category/electronics'; 
             break;
         
@@ -73,8 +73,8 @@ async function fetch_products(input) {
                                         <p class="product_rate">${rate}</p> 
                                         <p class="product_count">(${count})</p>
                                     </div>
-                                    <h4 class="product_category">${category}</h4>
-                                    <h3 class="product_title">${title}</h3>
+                                    <p class="product_category">${category}</p>
+                                    <h2 class="product_title">${title}</h2>
                                     <p id="text_id${id}" class="show_text">${description}</p>
                                     <button id="show_more_description${id}" onclick="toggle_text('${id}')" class="btn_show_description">Show More</button>
                                     <div class="product_price_submit">

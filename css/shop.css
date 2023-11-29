@@ -11,20 +11,21 @@ main{
     margin: 0 var(--d_m_body_mobile);
 }
 
-h2, h3, h4{
+h1 {
     font-family: var(--font_heading);
     color: var(--color_font);
-}
-
-h2{
-    font-size: var(--font_size_h2);
+    font-size: var(--font_size_h1);
     text-align: center;
     padding-bottom: 2.2rem;
 }
 
-p, input, a, .btn_submit {
+p, input, a, .btn_submit, h2 {
     font-family: var(--font_paragraph);
     color: var(--color_font);
+}
+
+h2 {
+    font-size: calc(var(--font_size_h2) / 2);
 }
 
 input, .btn_submit {
@@ -40,7 +41,7 @@ input, .btn_submit {
 }
 
 .bold {
-    font-weight: bold;
+    font-weight: 600;
 }
 
 /* BUTTONS */
@@ -75,7 +76,7 @@ input, .btn_submit {
     margin-bottom: 4rem;
 }
 
-.card > h3, h4, .product_price, .flex{
+.card > p, h2, .product_price, .flex{
     margin-bottom: 0.35rem;
 }
 
@@ -134,8 +135,8 @@ div.bg_img{
         grid-column-gap: 1.5rem;
     }
 
-    h2{
-        font-size: calc(var(--font_size_h2) + 0.5rem);
+    h1{
+        font-size: calc(var(--font_size_h1) + 0.5rem);
     }
 }
 
@@ -154,8 +155,8 @@ div.bg_img{
 /*  DESKTOP */
 @media only screen and (min-width: 1137px){
 
-    h2{
-        font-size: calc(var(--font_size_h2) + 1rem);
+    h1{
+        font-size: calc(var(--font_size_h1) + 1rem);
     }
 
     #grid{

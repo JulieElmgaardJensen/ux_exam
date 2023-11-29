@@ -8,12 +8,9 @@ body{
     background-color: var(--color_bg_main);
 }
 
-h2, h3{
+h1, h2{
     font-family: var(--font_heading);
     color: var(--color_font);
-}
-
-h2{
     font-size: var(--font_size_h2);
     text-align: center;
     padding-bottom: var(--d_p_body_mobile);
@@ -245,7 +242,7 @@ div.bg_img {
         margin: var(--d_m_body_tablet);
     }
 
-    h2{
+    h1, h2{
         font-size: calc(var(--font_size_h2) * 1.25);
         text-align: left;
     }

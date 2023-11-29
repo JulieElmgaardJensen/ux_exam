@@ -11,13 +11,14 @@
 }
 
 #footer li{
-    list-style:none;
+    list-style: none;
     font-family: var(--font_paragraph);
     font-size: 0.8rem;
 }
 
 #footer h3{
     margin-bottom: 1rem;
+    font-family: var(--font_heading);
 }
 
 #footer a{

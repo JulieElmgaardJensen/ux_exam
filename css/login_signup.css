@@ -1,5 +1,5 @@
 /* IMPORTS */
-@import "variables.css";
+@import "./variables.css";
 
 body{
     margin: 1.25rem;

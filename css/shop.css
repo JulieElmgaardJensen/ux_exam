@@ -1,7 +1,7 @@
 /* IMPORTS */
-@import "variables.css";
-@import "header.css";
-@import "footer.css";
+@import "./variables.css";
+@import "./header.css";
+@import "./footer.css";
 
 body{
     background-color: var(--color_bg_main);

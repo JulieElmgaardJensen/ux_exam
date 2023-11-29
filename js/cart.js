@@ -188,6 +188,6 @@ order_purchase.addEventListener('click', function (event) {
             localStorage.clear();
         
             // Redirect to confirmation message
-            window.location.href = 'confirmation.html';        
+            window.location.href = './confirmation.html';        
         } }
 });

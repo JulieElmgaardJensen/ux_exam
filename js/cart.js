@@ -26,9 +26,9 @@ function render_cart_items(){
                             <div>
                                 <span class="cart_item_title">${item.title}</span>
                                 <div class="units flex">
-                                    <div class="minus" onclick="change_number_of_units('minus', ${item.id})">-</div>
+                                    <button class="minus" onclick="change_number_of_units('minus', ${item.id})">-</button>
                                     <span class="cart_number">${item.number_of_units}</span>
-                                    <div class="plus" onclick="change_number_of_units('plus', ${item.id})">+</div>
+                                    <button class="plus" onclick="change_number_of_units('plus', ${item.id})">+</button>
                                 </div>
                             </div>
                             <div class="cart_price_remove">

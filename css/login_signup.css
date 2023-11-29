@@ -64,13 +64,18 @@ button{
     align-items: center;
 }
 
-/* INFO LINK*/
+/* Info regarding text about password and link */
+#password_info{
+    color: var(--color_font);
+    font-size: 0.75rem;  
+}
+
 .extra_info{
     display: block;
     color: var(--color_font);
     font-size: 0.75rem;
     text-decoration: none;
-    padding: 0.9rem;
+    padding-top: 0.9rem;
     display: block;
 }
 

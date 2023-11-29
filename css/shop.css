@@ -45,11 +45,6 @@ input, .btn_submit {
 }
 
 /* BUTTONS */
-#btn_remove_filter{
-    text-align: right;
-    margin: 0rem 2rem 3rem 2rem;
-}
-
 .show_text{
     overflow: hidden;
     white-space: nowrap;
@@ -161,9 +156,5 @@ div.bg_img{
 
     #grid{
         grid-template-columns: 1fr 1fr 1fr 1fr;
-    }
-
-    #btn_remove_filter{
-        margin: 0rem 2rem 4rem 2rem;
     }
 }

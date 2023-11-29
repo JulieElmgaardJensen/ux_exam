@@ -3,7 +3,7 @@
 
 // Wrap code in a window load event listener
 window.onload = function () {
-    const button = document.getElementById('logout_button');
+    const button = document.getElementById('user_logout');
 
     // Check if the button is found
     if (button) {
@@ -17,6 +17,6 @@ window.onload = function () {
             window.location.href = 'index.html';
         };
     } else {
-        console.error("Button not found with id 'logout_button'");
+        console.error("Button not found with id 'user_logout'");
     }
 };

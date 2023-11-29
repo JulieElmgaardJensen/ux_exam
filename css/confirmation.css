@@ -14,39 +14,36 @@ a{
     font-family: var(--font_links);
 }
 
-/* RETURN TO SHOP BTN */
-button{
-    background-color: var(--color_btn_bg);
-    border: none;
-    border-radius: var(--border_btn_radius);
-    width: 12.5rem;
-    height: 2rem;
-    margin: 2rem;
-    cursor: pointer;
-}
-
-button a{
+/* Back to shop button */
+.back_to_shop_btn{
     color: var(--color_btn_font);
     font-family: var(--font_paragraph);
     font-size: var(--font_size_p);
+    background-color: var(--color_btn_bg);
+    border: none;
+    border-radius: var(--border_btn_radius);
+    margin-top: 2rem;
+    padding: 0.75rem 1.5rem;
+    cursor: pointer;
 }
 
-/* CONFIRMATION BOX */
+/* Confirmation box */
 #cnfrm_box{
     background-color: var(--color_bg_second);
-    margin: 3rem 1.25rem 19rem 1.5rem;
+    margin: 3rem 1.25rem 15rem 1.5rem;
     border-radius: var(--border_btn_radius);
+    padding: 3rem;
 }
 
 #cnfrm_heading{
     font-family: var(--font_heading);
     font-size: var(--font_size_h3);
     color: var(--color_font);
-    padding-top: 2rem;
 }
 
 #cnfrm_message{
-    margin: 1.25rem 2rem 0 1.25rem;
+    display: block;
+    margin: 1.25rem 1.9rem 1.25rem 1.25rem;
 }
 
 /* Screen minimum 587px */

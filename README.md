@@ -3,7 +3,7 @@
 - Christel Amalie Skaaning Mørup
 - Emilie Lenschau Hansen
 - Julie Elmgaard Jensen
-- Maja Nøhr-Nørgaard
+- Maja Nøhr-Nørgaard <br>
 *2023 | 01/12-2023*
 
 

@@ -1,52 +1,45 @@
 // Only use declared variables
 'use strict';
 
-// GET LOGIN FORM AND RUN ASYNC FUNCTION WHEN SUBMITTED
+// Get login form and run async function when form is submitted
 document.getElementById('frm_login').addEventListener('submit', async function(event) {
-    // PREVENTING DEFAULT TO RUN ASYNC FUNCTION (TROR DEN LADER OS KØRER JAVASCRIPT FØR DEN KØRER FRONTEND VALIDATION, SKAL LIGE TJEKKE OP PÅ DET)
     event.preventDefault();
 
-    // GETTING EMAIL AND PASSWORD INPUT FROM FORM AND DECLARING THEM IN CONSTS
     const email_input = document.getElementById('email');
     const password_input = document.getElementById('password');
 
-    // EMAIL AND PASSWORD INPUT
+    // Email and password input value
     const email = email_input.value;
     const password = password_input.value;
 
-   // LOGGING EMAIL AND PASSWORD IN CONSOLE
-   console.log(email, password);
-
     try {
-        // ASYNC HTTP REQUEST FOR JSON SERVER
+        // Fetch request to JSON server
         const response = await fetch('http://localhost:3000/users');
-        // WAITING FOR DATA FETCH
+        
+        // Check response is ok
+        if (!response.ok) {
+            throw new Error('Error fetching user data!');
+        }
+
         const users = await response.json();
     
-        console.log('Fetched user data:', users);
-    
-        // FIND() METHOD RETURNS FIRST ELEMENT THAT MATCHES THE EMAIL
+        // Using function find() to find email in server
         const user = users.find(u => u.email === email);
-    
-        // IF THE USER EMAIL VALUE IS ASSIGNED IN THE JSON DATABASE AND THE INPUT PASSWORD MATCHES A PASSWORD IN THE DATABASE THE USER WILL BE REDIRECTED TO THE SHOP
-        // ELSE THE USER WILL SEE AN ALERT SAYING WRONG USER CREDENTIALS
+
+        // Redirect to shop.html if user email and password is valid
         if (user) {
             if (user.password === password) {
-                console.log('Login successful!');
-                // SAVING EMAIL IN THE SESSION
+                // Saving user email in session
                 sessionStorage.setItem('user_email', email);
-                // REDIRECT TO THE SHOP IF USER LOGIN IS VALID AND EXISTS IN JSON DATABASE
+                // Redirect to shop.html
                 window.location.href = "shop.html?category=btn_all";
             } else {
-                console.log('Incorrect password');
-                alert('Incorrect password');
+                alert('Invalid password');
             }
         } else {
-            console.log('Email does not exist in the database');
             alert('Invalid email');
         }
     } catch (error) {
         console.error('Error fetching user data:', error);
     }
-   
 });

@@ -6,11 +6,12 @@ async function fetch_products(input) {
     if (params.get('category')) {
         input = params.get('category')
         // Remove the category parameter from the URL to avoid confusion
-        window.history.replaceState({}, document.title, "/" + "html/shop.html");
+        window.history.replaceState({}, document.title, "/" + "html/shop.html?category=" + input);
+        // window.history.replaceState({}, document.title, "/" + "html/shop.html?category=btn_all");
     }
 
     // Default URL
-    let url = 'https://fakestoreapi.com/products/'
+    let url = 'https://arturomora.com/fsa/products'
     
     // Check if the element with the specified ID exists
     let selected_button = document.getElementById(input);
@@ -22,19 +23,19 @@ async function fetch_products(input) {
 
     switch (input) {
         case "btn_all":
-            url = "https://fakestoreapi.com/products/";
+            url = 'https://arturomora.com/fsa/products';
             break;
         case "btn_womens":
-            url = "https://fakestoreapi.com/products/category/women's%20clothing";
+            url = "https://arturomora.com/fsa/products/category/women's%20clothing";
             break;
         case "btn_mens":
-            url = "https://fakestoreapi.com/products/category/men's%20clothing"; 
+            url = "https://arturomora.com/fsa/products/category/men's%20clothing"; 
             break;
         case "btn_jewelry":
-            url = "https://fakestoreapi.com/products/category/jewelery"; 
+            url = 'https://arturomora.com/fsa/products/category/jewelery'; 
             break;
         case "btn_electronics":
-            url = "https://fakestoreapi.com/products/category/electronics"; 
+            url = 'https://arturomora.com/fsa/products/category/electronics'; 
             break;
         
     }
@@ -79,7 +80,7 @@ async function fetch_products(input) {
                                     <div class="product_price_submit">
                                         <p class="product_price">${price} $</p>
                                         <div onclick="add_to_cart(${id})">
-                                            <button type="submit" id="submit" class="btn_submit" value="Add to cart">Add to cart</button>
+                                            <input type="submit" id="submit" class="btn_submit" value="Add to cart"> 
                                         </div>
                                     </div>        
                                 </div>

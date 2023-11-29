@@ -1,4 +1,4 @@
-h3, a{
+h3, a, #user_message p{
     font-family: var(--font_links);
     text-decoration: none;
 }
@@ -14,12 +14,15 @@ header{
 .category_buttons{
     text-align: center;
     background-color: var(--color_bg_second);
-    padding: 1rem;
+    overflow: auto;
+    white-space: nowrap;
+    padding-left: 2rem;
 }
 
 .category_buttons a{
-    text-decoration:none;
+    text-decoration: none;
     margin: 1rem;
+    display: inline-block;
 }
 
 /* NAVBAR STYLE */
@@ -58,16 +61,8 @@ header{
     justify-content: center;
 }
 
-#user_message p{
-    font-family: var(--font_links);
-}
-
 #user_logged_in{
     font-weight: bold;
-}
-
-#navbar a{
-    text-decoration: none;
 }
 
 /* LOGO */
@@ -80,61 +75,24 @@ header{
 @media only screen and (min-width: 768px){
     /* Navbar style */
     #navbar{
-        display: flex;
-        flex-direction: row;
-        justify-content: space-between;
         padding: 0.625rem 1rem;
     }
 
     /* Icon style */
     #navbar a{
-        margin: 0.625rem;
-        color: var(--color_icons);
-        align-self: center;
-        color: inherit;
-        padding-right: 10px;
+        padding-right: 0.625rem;
     }
 
-    .navbar_links{
-        display: flex;
-        align-items: center;
-    }
-
-    #navbar i{
-        color: var(--color_icons);
-    }
-
-    #navbar h3 a{
+    #navbar h3 a, #user_message p, #user_logged_in{
         font-size: var(--font_size_nav);
-        text-decoration: none;
     } 
-
-    #user_message{
-        display: flex;
-        align-items: center;
-    }
-
-    #user_message p{
-        font-size: var(--font_size_nav);
-        font-family: var(--font_links);
-    }
-
-    #user_logged_in{
-        font-weight: bold;
-        font-size: var(--font_size_nav);
-    }
 
     /* Logo */
     #navbar img{
         width: 9.3rem;
-        align-self: center;
     }
 
     .category_buttons{
-        text-align: center;
-    }
-
-    .category_buttons a{
-        margin: 2rem;
+        padding-left: 0;
     }
 }

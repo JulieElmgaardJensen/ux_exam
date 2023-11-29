@@ -23,25 +23,24 @@
 </head>
 
 <body>
-
-    <!-- HEADER -->
-    <header>
+  <!-- HEADER -->
+  <header>
         <!-- Utility navbar -->
-        <section id="navbar" aria-label="Utility navigation">
+        <nav id="navbar">
             <!-- Logo -->
             <a href="shop.html?category=btn_all"><img id="navbar_logo" src="/img/logo_large.png" alt="Paloma Logo"></a>
             <!-- User logged in -->
-            <div id="user_message"><p>Velkommen&nbsp;</p><p id="user_logged_in" aria-hidden="true"></p></div>
+            <div id="user_message"><p>Welcome&nbsp;</p><p id="user_logged_in" aria-hidden="true"></p></div>
             <!-- Navbar icons -->
-            <nav class="navbar_links">
+            <div class="navbar_links">
                 <div class="cart" aria-label="Cart"><a href="/html/cart.html"><i class="fa-solid fa-lg fa-cart-shopping" aria-hidden="true"></i></a></div>
                 <div id="logout_button" aria-label="Logout"><i class="fa-solid fa-lg fa-right-from-bracket" aria-hidden="true"></i></div>
-            </nav>
-        </section>
+            </div>
+        </nav>
 
         <!-- Main navbar -->
-        <section aria-label="Main navigation">
-            <nav class="category_buttons">
+        <section>
+            <nav class="category_buttons scrollbar">
                 <a href="shop.html?category=btn_all" id="btn_all">All products</a>
                 <a href="shop.html?category=btn_womens" id="btn_womens">Women’s clothing</a>
                 <a href="shop.html?category=btn_mens" id="btn_mens">Men’s clothing</a>
@@ -59,7 +58,7 @@
             <div>
                 <h1 id="cnfrm_heading">Order confirmation</h1>
                 <p id="cnfrm_message">Congratulation! Your order has been placed, and will be with you shortly!</p>
-                <button aria-label="Back to shop button"><a href="shop.html">Go back to shop</a></button>
+                <button aria-label="Back to shop button"><a href="shop.html?category=btn_all">Go back to shop</a></button>
             </div>
         </section>
 

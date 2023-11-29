@@ -3,6 +3,7 @@
 @import "header.css";
 @import "footer.css";
 
+/* GLOBAL STYLES */
 body{
     background-color: var(--color_bg_main);
 }
@@ -23,6 +24,7 @@ p, a, span, i{
     color: var(--color_font);
 }
 
+/* FORM ELEMENTS */
 form{
     font-family: var(--font_paragraph);
 }
@@ -71,7 +73,7 @@ ul.breadcrumb{
     text-decoration: none;
 }
 
-/* FORM */
+/* PAYMENT FORM */
 .order_info {
     background-color: var(--color_bg_second);
     padding: 2.2rem;
@@ -84,6 +86,37 @@ ul.breadcrumb{
 .div_city, .div_cvc {
     margin-left: auto;
     width: 65%;
+}
+
+/* BUTTON CONFIRM PURCHASE */
+.btn_purchase {
+    border: none;
+    border-radius: var(--border_btn_radius);
+    background-color: var(--color_btn_bg);
+    color: var(--color_btn_font);
+    width: 90%;
+    justify-content: center;
+    display: flex;
+    margin-right: auto;
+    margin-left: auto;
+    font-family: var(--font_paragraph);
+    font-weight: 300;
+    font-size: var(--font_size_p);
+    margin-bottom: 0.3rem;
+    margin-top: 3.125rem;
+    padding: 0.5rem 0;
+    cursor: pointer;
+}
+
+/* CONTINUE SHOPPING */
+.txt_center {
+    font-family: var(--font_paragraph);
+    font-size: 0.75rem;
+    text-decoration: none;
+    justify-content: center;
+    display: flex;
+    margin-right: auto;
+    margin-left: auto;
 }
 
 /* CART SECTION */
@@ -141,7 +174,7 @@ ul.breadcrumb{
 
 .cart_row {
     display: flex;
-    padding: 0.9rem 0;
+    padding: 1rem 0;
     border-bottom: solid 1px var(--color_bg_second);
 }
 
@@ -154,8 +187,7 @@ ul.breadcrumb{
 }
 
 .cart_item {
-    margin-bottom: 2.5rem;
-    padding-bottom: 0.625rem;
+    margin-bottom: 4rem;
 }
 
 .cart_item:last-child {
@@ -164,8 +196,6 @@ ul.breadcrumb{
 
 div.bg_img {
     background-color: var(--img_bg_color);
-    text-align: center;
-    margin-bottom: 0.3rem;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -189,37 +219,6 @@ div.bg_img {
     margin-left: auto;
     background-color: var(--color_bg_main);
     cursor: pointer;
-}
-
-/* BUTTON CONFIRM PUCHASE */
-.btn_purchase {
-    border: none;
-    border-radius: var(--border_btn_radius);
-    background-color: var(--color_btn_bg);
-    color: var(--color_btn_font);
-    width: 90%;
-    justify-content: center;
-    display: flex;
-    margin-right: auto;
-    margin-left: auto;
-    font-family: var(--font_paragraph);
-    font-weight: 300;
-    font-size: var(--font_size_p);
-    margin-bottom: 0.3rem;
-    margin-top: 3.125rem;
-    padding: 0.5rem 0;
-    cursor: pointer;
-}
-
-/* CONTINUE SHOPPING */
-.txt_center {
-    font-family: var(--font_paragraph);
-    font-size: 0.75rem;
-    text-decoration: none;
-    justify-content: center;
-    display: flex;
-    margin-right: auto;
-    margin-left: auto;
 }
 
 /* ADJUST UNITS BOTTONS */
@@ -271,10 +270,6 @@ div.bg_img {
         background-color: var(--color_bg_main);
         padding: 0;
         width: 90%;
-    }
-
-    .div_city, .div_cvc{
-        width: 65%;
     }
 
     /* BREADCRUMB  */
@@ -384,10 +379,6 @@ div.bg_img {
 
     .cart_item > .grid{
         height: 10.5rem;
-    }
-
-    .div_city, .div_cvc{
-        width: 60%;
     }
 
     form{

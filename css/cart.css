@@ -265,6 +265,7 @@ div.bg_img {
     font-size: 1.5rem;
     margin-top: 0.3rem;
     cursor: pointer;
+    border: none;
 }
 
 /* Cart is empty*/

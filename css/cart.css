@@ -76,7 +76,7 @@ ul.breadcrumb{
     padding: 2.2rem;
 }
 
-.div_exp_date, .div_p_code{
+.div_exp_date, .zip_city{
     margin-right: 0.9rem;
 }
 
@@ -270,6 +270,9 @@ div.bg_img {
     text-align: center;
 }
 
+label.b_address{
+    margin-top: 1.5rem;
+  
 /* Price aligned in center */
 span.cart_price{
     display: flex;

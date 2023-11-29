@@ -35,6 +35,8 @@ input, .btn_submit {
     padding: 0.3rem;
     width: 98%;
     cursor: pointer;
+    height: 2.75rem;
+    font-size: var(--font_size_p);
 }
 
 .bold {
